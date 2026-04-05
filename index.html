@@ -221,7 +221,8 @@ body::before {
   border-color: var(--border-hover);
   box-shadow: 0 0 50px rgba(59, 130, 246, 0.06);
 }
-.chart-card canvas { max-height: 450px; }
+.chart-card canvas { max-height: 500px; }
+.chart-card.chart-tall canvas { max-height: none; }
 
 /* ── Heatmap ── */
 .heatmap-wrap { overflow-x: auto; }
@@ -345,7 +346,10 @@ body::before {
   .stat-number { font-size: 1.5rem; }
   .section-title { font-size: 1.15rem; }
   .chart-card { padding: 1rem; }
+  .chart-card canvas { max-height: none; }
   .nav-pill { font-size: .72rem; padding: .35rem .6rem; }
+  .container { padding: 0 1rem; }
+  .methodology { padding: 1.25rem; }
 }
 
 /* ── Scrollbar ── */
@@ -389,7 +393,7 @@ body::before {
   <div class="section-title"><span class="icon">&#9670;</span> Chi riceve quanto</div>
   <div class="section-desc">Valore totale dei contratti per società di consulenza (milioni di EUR)</div>
   <div class="section-divider"></div>
-  <div class="chart-card"><canvas id="chartFirm"></canvas></div>
+  <div class="chart-card"><div style="position:relative;height:280px"><canvas id="chartFirm"></canvas></div></div>
 </div>
 
 <!-- 3. Annual trend -->
@@ -397,7 +401,7 @@ body::before {
   <div class="section-title"><span class="icon">&#9670;</span> Andamento annuale</div>
   <div class="section-desc">Spesa per consulenze per anno e società — area cumulativa in milioni di EUR</div>
   <div class="section-divider"></div>
-  <div class="chart-card"><canvas id="chartTrend"></canvas></div>
+  <div class="chart-card"><div style="position:relative;height:350px"><canvas id="chartTrend"></canvas></div></div>
 </div>
 
 <!-- 4. Heatmap -->
@@ -413,7 +417,7 @@ body::before {
   <div class="section-title"><span class="icon">&#9670;</span> Concentrazione</div>
   <div class="section-desc">Quota percentuale della società dominante per ogni ministero — quanto dipende da un singolo fornitore</div>
   <div class="section-divider"></div>
-  <div class="chart-card"><canvas id="chartConc"></canvas></div>
+  <div class="chart-card chart-tall"><div id="concWrap"><canvas id="chartConc"></canvas></div></div>
 </div>
 
 <!-- 6. Spend per employee -->
@@ -421,7 +425,7 @@ body::before {
   <div class="section-title"><span class="icon">&#9670;</span> Spesa per dipendente</div>
   <div class="section-desc">Spesa in consulenze Big 4/Big 3 rapportata al numero di dipendenti del ministero (top 20)</div>
   <div class="section-divider"></div>
-  <div class="chart-card"><canvas id="chartSpe"></canvas></div>
+  <div class="chart-card chart-tall"><div id="speWrap"><canvas id="chartSpe"></canvas></div></div>
 </div>
 
 <!-- 7. Repeat suppliers -->
@@ -437,7 +441,7 @@ body::before {
   <div class="section-title"><span class="icon">&#9670;</span> Contratti PNRR</div>
   <div class="section-desc">Contratti finanziati dal Piano Nazionale di Ripresa e Resilienza</div>
   <div class="section-divider"></div>
-  <div class="chart-card"><canvas id="chartPnrr"></canvas></div>
+  <div class="chart-card"><div style="position:relative;height:220px"><canvas id="chartPnrr"></canvas></div></div>
 </div>
 
 <!-- 9. Contract table -->
@@ -554,6 +558,8 @@ function renderFirmChart() {
       }]
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       indexAxis: 'y',
       plugins: {
         legend: { display: false },
@@ -600,6 +606,8 @@ function renderTrendChart() {
         y: { title: { display: true, text: 'Milioni di EUR', color: '#64748b' }, stacked: true, grid: { color: 'rgba(59,130,246,0.06)' } }
       },
       interaction: { mode: 'index', intersect: false },
+      responsive: true,
+      maintainAspectRatio: false,
     }
   });
 }
@@ -643,6 +651,8 @@ function renderHeatmap() {
 // ── 5. Concentration ──
 function renderConcentration() {
   const data = DATA.concentration;
+  const h = Math.max(350, data.length * 40);
+  document.getElementById('concWrap').style.cssText = `position:relative;height:${h}px`;
   new Chart(document.getElementById('chartConc'), {
     type: 'bar',
     data: {
@@ -657,6 +667,8 @@ function renderConcentration() {
       }]
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       indexAxis: 'y',
       plugins: {
         legend: { display: false },
@@ -674,6 +686,8 @@ function renderConcentration() {
 function renderSpendPerEmployee() {
   const data = DATA.spend_per_employee.slice(0, 20);
   const labels = data.map(r => `${r.ministry} (${r.anno})`);
+  const h = Math.max(350, data.length * 36);
+  document.getElementById('speWrap').style.cssText = `position:relative;height:${h}px`;
   new Chart(document.getElementById('chartSpe'), {
     type: 'bar',
     data: {
@@ -694,6 +708,8 @@ function renderSpendPerEmployee() {
       }]
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       indexAxis: 'y',
       plugins: {
         legend: { display: false },
@@ -739,6 +755,8 @@ function renderPnrr() {
       }]
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       indexAxis: 'y',
       plugins: {
         legend: { display: false },
@@ -861,4 +879,3 @@ init();
 </script>
 </body>
 </html>
-
