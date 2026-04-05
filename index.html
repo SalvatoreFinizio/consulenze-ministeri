@@ -342,6 +342,38 @@ body::before {
   font-weight: 700;
   letter-spacing: .02em;
 }
+/* ── Project cards ── */
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: .75rem;
+  transition: all .2s;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+.project-card:hover { border-color: var(--border-hover); box-shadow: 0 0 30px rgba(59,130,246,0.06); }
+.project-amount { font-size: 1.4rem; font-weight: 800; color: var(--accent); }
+.project-cat { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .03em; margin-bottom: .5rem; }
+.cat-sanita { background: #ef444433; color: #fca5a5; }
+.cat-digital { background: #3b82f633; color: #93c5fd; }
+.cat-competenze { background: #8b5cf633; color: #c4b5fd; }
+.cat-cyber { background: #f9731633; color: #fdba74; }
+.cat-software { background: #22c55e33; color: #86efac; }
+.cat-supporto { background: #64748b33; color: #94a3b8; }
+.cat-altro { background: #64748b33; color: #94a3b8; }
+.project-obj { color: var(--muted); font-size: .82rem; line-height: 1.5; margin-top: .4rem; }
+.project-meta { display: flex; gap: .75rem; flex-wrap: wrap; align-items: center; margin-top: .5rem; font-size: .78rem; color: var(--muted); }
+.shared-badge { background: rgba(236,72,153,0.2); color: #f9a8d4; padding: 2px 8px; border-radius: 6px; font-size: .7rem; font-weight: 600; }
+.consip-badge { background: rgba(59,130,246,0.2); color: #93c5fd; padding: 2px 8px; border-radius: 6px; font-size: .7rem; font-weight: 600; }
+
+@media (max-width: 768px) {
+  .project-card { grid-template-columns: 1fr; }
+}
+
 .firm-EY { background: var(--ey); color: #000; }
 .firm-KPMG { background: var(--kpmg); color: #fff; }
 .firm-Deloitte { background: var(--deloitte); color: #000; }
@@ -475,10 +507,13 @@ body::before {
   </div>
 
   <!-- Consip donut + year timeline side by side -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem">
     <div class="chart-card"><div style="position:relative;height:220px"><canvas id="chartPnrrConsip"></canvas></div></div>
     <div class="chart-card"><div style="position:relative;height:220px"><canvas id="chartPnrrYear"></canvas></div></div>
   </div>
+
+  <!-- Project cards -->
+  <div id="pnrrProjects"></div>
 </div>
 
 <!-- 9. Contract table -->
@@ -532,6 +567,10 @@ const I18N = {
       year_title:'Per anno',
       callout_title:'Il mega-contratto 2022',
       callout_text:'Nel 2022, la Presidenza del Consiglio ha assegnato tre contratti esecutivi identici da ~21,5M EUR ciascuno tramite Accordo Quadro Consip a EY, McKinsey e KPMG. Questa singola operazione vale il 65% di tutta la spesa PNRR Big 4/McKinsey.',
+      dedup_note:'Valore reale (deduplicate per CIG)',
+      projects_title:'I 9 progetti PNRR',
+      shared:'Contratto condiviso',
+      consip_tag:'Consip',
     },
     table: { ministry:'Ministero', firm:'Società', contracts:'Contratti', total:'Totale (M EUR)', years:'Anni', year:'Anno', object:'Oggetto', amount:'Importo (EUR)', procedure:'Procedura', all_firms:'Tutte le società', all_ministries:'Tutti i ministeri', search:'Cerca nell\'oggetto del contratto...', shown:'contratti visualizzati', heatmap_total:'Totale' },
     methodology_html: `
@@ -586,6 +625,10 @@ const I18N = {
       year_title:'By year',
       callout_title:'The 2022 mega-contract',
       callout_text:'In 2022, the Prime Minister\'s Office awarded three identical ~EUR 21.5M executive contracts via Consip Framework to EY, McKinsey and KPMG. This single engagement accounts for 65% of all Big 4/McKinsey PNRR spend.',
+      dedup_note:'Real value (deduplicated by CIG)',
+      projects_title:'The 9 PNRR projects',
+      shared:'Shared contract',
+      consip_tag:'Consip',
     },
     table: { ministry:'Ministry', firm:'Firm', contracts:'Contracts', total:'Total (M EUR)', years:'Years', year:'Year', object:'Subject', amount:'Amount (EUR)', procedure:'Procedure', all_firms:'All firms', all_ministries:'All ministries', search:'Search contract subject...', shown:'contracts shown', heatmap_total:'Total' },
     methodology_html: `
@@ -939,10 +982,10 @@ function renderPnrr() {
   const l = t().pnrr_ui;
   const s = p.summary;
 
-  // Hero cards
+  // Hero cards — using deduplicated values
   const cards = [
-    { number: fmtEur(s.total_mln), label: l.total, gradient: 'linear-gradient(135deg, #f97316, #eab308)' },
-    { number: s.n_contracts, label: l.contracts, gradient: 'linear-gradient(135deg, #eab308, #22c55e)' },
+    { number: fmtEur(s.total_dedup_mln), label: l.dedup_note || l.total, gradient: 'linear-gradient(135deg, #f97316, #eab308)' },
+    { number: s.n_contracts_dedup, label: l.contracts, gradient: 'linear-gradient(135deg, #eab308, #22c55e)' },
     { number: s.n_ministries, label: l.ministries, gradient: 'linear-gradient(135deg, #22c55e, #3b82f6)' },
     { number: s.big4_share_pct + '%', label: l.share, gradient: 'linear-gradient(135deg, #3b82f6, #8b5cf6)' },
     { number: s.pcm_share_pct + '%', label: l.pcm_share, gradient: 'linear-gradient(135deg, #8b5cf6, #ec4899)' },
@@ -987,36 +1030,28 @@ function renderPnrr() {
     }
   });
 
-  // By ministry (stacked)
-  const ministries = [...new Set(p.by_ministry.map(r => r.ministry))];
-  const mTotals = {};
-  p.by_ministry.forEach(r => mTotals[r.ministry] = (mTotals[r.ministry]||0) + r.total_mln);
-  ministries.sort((a,b) => mTotals[b] - mTotals[a]);
-  const lookup = {};
-  p.by_ministry.forEach(r => { lookup[r.ministry+'|'+r.firm] = r.total_mln; });
-  const firmsList = FIRM_ORDER.filter(f => p.by_firm.some(r => r.firm === f));
-
+  // By ministry (deduplicated)
   charts.pnrrMin = new Chart(document.getElementById('chartPnrrMin'), {
     type: 'bar',
     data: {
-      labels: ministries,
-      datasets: firmsList.map(firm => ({
-        label: firm,
-        data: ministries.map(m => lookup[m+'|'+firm] || 0),
-        backgroundColor: FIRM_COLORS[firm] + 'cc',
-        borderColor: FIRM_COLORS[firm],
-        borderWidth: 1, borderRadius: 4,
-      }))
+      labels: p.by_ministry.map(r => r.ministry),
+      datasets: [{
+        data: p.by_ministry.map(r => r.total_mln),
+        backgroundColor: '#8b5cf6cc',
+        borderColor: '#8b5cf6',
+        borderWidth: 1, borderRadius: 6, barThickness: 25,
+      }]
     },
     options: {
       responsive: true, maintainAspectRatio: false, indexAxis: 'y',
       plugins: {
         title: { display: true, text: l.by_ministry, color: '#94a3b8', font: { size: 12, weight: '600' }, align: 'start' },
         legend: { display: false },
+        tooltip: { callbacks: { label: ctx => `  ${ctx.raw}M EUR — ${p.by_ministry[ctx.dataIndex].n_contracts} ${t().chart.contracts}` } }
       },
       scales: {
-        x: { stacked: true, grid: { color: 'rgba(59,130,246,0.06)' } },
-        y: { stacked: true, grid: { display: false }, ticks: { font: { size: 10 } } }
+        x: { grid: { color: 'rgba(59,130,246,0.06)' } },
+        y: { grid: { display: false }, ticks: { font: { size: 10 } } }
       }
     }
   });
@@ -1069,6 +1104,31 @@ function renderPnrr() {
       }
     }
   });
+
+  // Project cards
+  const catClass = { 'Sanità Digitale':'sanita', 'Digital Transformation':'digital', 'Competenze Digitali':'competenze', 'Cybersecurity':'cyber', 'Software Development':'software', 'Servizi di Supporto IT':'supporto' };
+  let projHtml = `<div style="font-weight:700;font-size:1rem;margin-bottom:1rem">${l.projects_title}</div>`;
+  p.projects.forEach(proj => {
+    const cls = catClass[proj.category] || 'altro';
+    const badges = proj.firms.map(f => `<span class="firm-badge firm-${f}">${f}</span>`).join(' ');
+    const tags = [];
+    if (proj.shared) tags.push(`<span class="shared-badge">${l.shared} (${proj.n_firms})</span>`);
+    if (proj.consip) tags.push(`<span class="consip-badge">${l.consip_tag}</span>`);
+    projHtml += `
+      <div class="project-card">
+        <div>
+          <div class="project-amount">${proj.importo_mln}M</div>
+          <div style="font-size:.75rem;color:var(--muted)">${proj.anno}</div>
+        </div>
+        <div>
+          <span class="project-cat cat-${cls}">${proj.category}</span>
+          <div style="margin-bottom:.3rem">${badges} ${tags.join(' ')}</div>
+          <div style="font-size:.82rem;font-weight:500;color:var(--text)">${proj.ministry}</div>
+          <div class="project-obj">${proj.oggetto}</div>
+        </div>
+      </div>`;
+  });
+  document.getElementById('pnrrProjects').innerHTML = projHtml;
 }
 
 // ── 9. Contracts table ──

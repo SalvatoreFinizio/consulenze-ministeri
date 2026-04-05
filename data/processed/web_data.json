@@ -1222,14 +1222,17 @@
   ],
   "pnrr": {
     "summary": {
-      "total_mln": 98.5,
-      "n_contracts": 9,
+      "total_raw_mln": 98.5,
+      "total_dedup_mln": 50.3,
+      "n_contracts_raw": 15,
+      "n_contracts_dedup": 9,
+      "n_shared": 4,
       "n_ministries": 4,
       "n_firms": 4,
       "total_pnrr_ministry_mln": 2090,
       "total_pnrr_ministry_contracts": 577,
-      "big4_share_pct": 4.7,
-      "pcm_share_pct": 87.0
+      "big4_share_pct": 2.4,
+      "pcm_share_pct": 82.0
     },
     "by_firm": [
       {
@@ -1255,94 +1258,182 @@
     ],
     "by_ministry": [
       {
-        "ministry": "Ministero dell'Ambiente",
-        "firm": "Deloitte",
-        "n_contracts": 1,
-        "total_mln": 3.0
-      },
-      {
-        "ministry": "Ministero dell'Ambiente",
-        "firm": "EY",
-        "n_contracts": 1,
-        "total_mln": 3.0
-      },
-      {
-        "ministry": "Ministero dell'Interno",
-        "firm": "EY",
-        "n_contracts": 2,
-        "total_mln": 3.1
-      },
-      {
-        "ministry": "Ministero dell'Interno",
-        "firm": "KPMG",
-        "n_contracts": 1,
-        "total_mln": 2.7
-      },
-      {
-        "ministry": "Ministero della Salute",
-        "firm": "EY",
-        "n_contracts": 1,
-        "total_mln": 0.4
-      },
-      {
-        "ministry": "Ministero della Salute",
-        "firm": "KPMG",
-        "n_contracts": 1,
-        "total_mln": 0.4
-      },
-      {
-        "ministry": "Ministero della Salute",
-        "firm": "McKinsey",
-        "n_contracts": 1,
-        "total_mln": 0.4
-      },
-      {
         "ministry": "Presidenza del Consiglio dei Ministri",
-        "firm": "Deloitte",
-        "n_contracts": 1,
-        "total_mln": 1.3
-      },
-      {
-        "ministry": "Presidenza del Consiglio dei Ministri",
-        "firm": "EY",
         "n_contracts": 4,
         "total_mln": 41.1
       },
       {
-        "ministry": "Presidenza del Consiglio dei Ministri",
-        "firm": "KPMG",
-        "n_contracts": 1,
-        "total_mln": 21.5
+        "ministry": "Ministero dell'Interno",
+        "n_contracts": 3,
+        "total_mln": 5.8
       },
       {
-        "ministry": "Presidenza del Consiglio dei Ministri",
-        "firm": "McKinsey",
+        "ministry": "Ministero dell'Ambiente",
         "n_contracts": 1,
-        "total_mln": 21.5
+        "total_mln": 3.0
+      },
+      {
+        "ministry": "Ministero della Salute",
+        "n_contracts": 1,
+        "total_mln": 0.4
       }
     ],
     "by_year": [
       {
         "anno": 2022,
         "n_contracts": 2,
-        "total_mln": 67.5
+        "total_mln": 24.5
       },
       {
         "anno": 2023,
         "n_contracts": 2,
-        "total_mln": 4.0
+        "total_mln": 3.1
       },
       {
         "anno": 2024,
         "n_contracts": 5,
-        "total_mln": 27.0
+        "total_mln": 22.7
       }
     ],
     "consip": {
-      "consip_mln": 68.8,
-      "direct_mln": 29.7,
-      "consip_pct": 70.0
-    }
+      "consip_mln": 25.0,
+      "direct_mln": 25.4,
+      "consip_pct": 50.0
+    },
+    "projects": [
+      {
+        "cig": "94251610E9",
+        "category": "Sanità Digitale",
+        "oggetto": "CONTRATTO ESECUTIVO IN ADESIONE ALL'ACCORDO QUADRO CONSIP AVENTE AD OGGETTO L'AFFIDAMENTO DI SERVIZI APPLICATIVI E L'AFFIDAMENTO DI SERVIZI DI SUPPORTO IN AMBITO 'SANITÀ DIGITALE - SISTEMI INFORMATIVI",
+        "importo_mln": 21.5,
+        "firms": [
+          "EY",
+          "KPMG",
+          "McKinsey"
+        ],
+        "n_firms": 3,
+        "shared": true,
+        "ministry": "Presidenza del Consiglio dei Ministri",
+        "anno": 2022,
+        "consip": true
+      },
+      {
+        "cig": "B2A39512F3",
+        "category": "Digital Transformation",
+        "oggetto": "SERVIZI PER LA DIGITALIZZAZIONE DEI PROCESSI",
+        "importo_mln": 15.3,
+        "firms": [
+          "EY"
+        ],
+        "n_firms": 1,
+        "shared": false,
+        "ministry": "Presidenza del Consiglio dei Ministri",
+        "anno": 2024,
+        "consip": false
+      },
+      {
+        "cig": "955359974B",
+        "category": "Competenze Digitali",
+        "oggetto": "ADESIONE ALL'ACCORDO QUADRO PER L'AFFIDAMENTO DI SERVIZI DI DIGITAL TRANSFORMATION PER LE PA LOTTO 2 - 'SERVIZI PER LA DIGITALIZZAZIONE DEI PROCESSI'-SUB-INVESTIMENTO 2.3.1. 'INVESTIMENTI IN ISTRUZION",
+        "importo_mln": 3.0,
+        "firms": [
+          "EY"
+        ],
+        "n_firms": 1,
+        "shared": false,
+        "ministry": "Presidenza del Consiglio dei Ministri",
+        "anno": 2022,
+        "consip": true
+      },
+      {
+        "cig": "B2BA1841E0",
+        "category": "Digital Transformation",
+        "oggetto": "SERVIZI DI DIGITAL TRANSFORMATION",
+        "importo_mln": 3.0,
+        "firms": [
+          "Deloitte",
+          "EY"
+        ],
+        "n_firms": 2,
+        "shared": true,
+        "ministry": "Ministero dell'Ambiente",
+        "anno": 2024,
+        "consip": false
+      },
+      {
+        "cig": "A0004B1FE7",
+        "category": "Cybersecurity",
+        "oggetto": "AFFIDAMENTO DI SERVIZI DI SICUREZZA DA REMOTO, DI COMPLIANCE E CONTROLLO PER LE PUBBLICHE AMMINISTRAZIONI CENTRALI",
+        "importo_mln": 2.7,
+        "firms": [
+          "KPMG"
+        ],
+        "n_firms": 1,
+        "shared": false,
+        "ministry": "Ministero dell'Interno",
+        "anno": 2023,
+        "consip": false
+      },
+      {
+        "cig": "A05B9BBFEC",
+        "category": "Software Development",
+        "oggetto": "SERVIZI APPLICATIVI PER LA REALIZZAZIONE DEL SOFTWARE PER LA GESTIONE DEI MAGAZZINI VECA",
+        "importo_mln": 1.9,
+        "firms": [
+          "EY"
+        ],
+        "n_firms": 1,
+        "shared": false,
+        "ministry": "Ministero dell'Interno",
+        "anno": 2024,
+        "consip": false
+      },
+      {
+        "cig": "B2D0F369E2",
+        "category": "Competenze Digitali",
+        "oggetto": "AFFIDAMENTO DEI SERVIZI PER LA REALIZZAZIONE DI ATTIVITÀ DI CAPACITY BUILDING, FORMAZIONE E SUPPORTO TECNICO-SPECIALISTICO STRUMENTALI ALL'INVESTIMENTO 1.7 COMPETENZE DIGITALI DI BASE MISSIONE 1, COMP",
+        "importo_mln": 1.3,
+        "firms": [
+          "Deloitte",
+          "EY"
+        ],
+        "n_firms": 2,
+        "shared": true,
+        "ministry": "Presidenza del Consiglio dei Ministri",
+        "anno": 2024,
+        "consip": false
+      },
+      {
+        "cig": "A05C264576",
+        "category": "Software Development",
+        "oggetto": "SERVIZI APPLICATIVI PER IL PROGETTO DI FLEET MANAGEMENT",
+        "importo_mln": 1.2,
+        "firms": [
+          "EY"
+        ],
+        "n_firms": 1,
+        "shared": false,
+        "ministry": "Ministero dell'Interno",
+        "anno": 2024,
+        "consip": false
+      },
+      {
+        "cig": "9814322AB7",
+        "category": "Servizi di Supporto IT",
+        "oggetto": "ADESIONE ALL'ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016, AVENTE AD OGGETTO L'AFFIDAMENTO DEI SERVIZI DI SIPPORTO LOTTO 6 ID 2365",
+        "importo_mln": 0.4,
+        "firms": [
+          "EY",
+          "KPMG",
+          "McKinsey"
+        ],
+        "n_firms": 3,
+        "shared": true,
+        "ministry": "Ministero della Salute",
+        "anno": 2023,
+        "consip": true
+      }
+    ]
   },
   "contracts": [
     {
