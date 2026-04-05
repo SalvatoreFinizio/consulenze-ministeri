@@ -368,6 +368,7 @@ body::before {
   .nav-pill { font-size: .72rem; padding: .35rem .6rem; }
   .container { padding: 0 1rem; }
   .methodology { padding: 1.25rem; }
+  #pnrr [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
 }
 
 /* ── Scrollbar ── */
@@ -457,10 +458,27 @@ body::before {
 
 <!-- 8. PNRR -->
 <div class="section" id="pnrr">
-  <div class="section-title"><span class="icon">&#9670;</span> Contratti PNRR</div>
-  <div class="section-desc">Contratti finanziati dal Piano Nazionale di Ripresa e Resilienza</div>
+  <div class="section-title"><span class="icon">&#9670;</span> <span id="pnrrTitle">Focus PNRR</span></div>
+  <div class="section-desc" id="pnrrDesc">Contratti Big 4 e McKinsey finanziati dal Piano Nazionale di Ripresa e Resilienza</div>
   <div class="section-divider"></div>
-  <div class="chart-card"><div style="position:relative;height:220px"><canvas id="chartPnrr"></canvas></div></div>
+
+  <!-- PNRR hero cards -->
+  <div class="hero-grid" id="pnrrHero" style="margin-bottom:1.5rem"></div>
+
+  <!-- Callout box -->
+  <div id="pnrrCallout" class="chart-card" style="border-left:3px solid var(--orange);margin-bottom:1.5rem"></div>
+
+  <!-- PNRR by firm + by ministry side by side -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem">
+    <div class="chart-card"><div style="position:relative;height:220px"><canvas id="chartPnrrFirm"></canvas></div></div>
+    <div class="chart-card"><div id="pnrrMinWrap" style="position:relative;height:220px"><canvas id="chartPnrrMin"></canvas></div></div>
+  </div>
+
+  <!-- Consip donut + year timeline side by side -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+    <div class="chart-card"><div style="position:relative;height:220px"><canvas id="chartPnrrConsip"></canvas></div></div>
+    <div class="chart-card"><div style="position:relative;height:220px"><canvas id="chartPnrrYear"></canvas></div></div>
+  </div>
 </div>
 
 <!-- 9. Contract table -->
@@ -501,11 +519,20 @@ const I18N = {
       concentration: { title:'Concentrazione', desc:'Quota percentuale della società dominante per ogni ministero — quanto dipende da un singolo fornitore' },
       employees: { title:'Spesa per dipendente', desc:'Spesa in consulenze Big 4/Big 3 rapportata al numero di dipendenti del ministero (top 20)' },
       repeat: { title:'Fornitori ricorrenti', desc:'Relazioni continuative: società con almeno 2 contratti presso lo stesso ministero' },
-      pnrr: { title:'Contratti PNRR', desc:'Contratti finanziati dal Piano Nazionale di Ripresa e Resilienza' },
+      pnrr: { title:'Focus PNRR', desc:'Contratti Big 4 e McKinsey finanziati dal Piano Nazionale di Ripresa e Resilienza' },
       contracts: { title:'Tutti i contratti', desc:'Elenco completo — filtra per società, ministero o parola chiave, clicca sulle intestazioni per ordinare' },
       methodology: { title:'Metodologia e fonti' },
     },
     chart: { mln_eur:'Milioni di EUR', pct_dominant:'% quota società dominante', eur_employee:'EUR per dipendente', contracts:'contratti' },
+    pnrr_ui: {
+      total:'Valore PNRR', contracts:'Contratti', ministries:'Ministeri', share:'Quota su PNRR totale',
+      pcm_share:'A Pres. Consiglio', all_direct:'Aff. diretto',
+      by_firm:'Per società', by_ministry:'Per ministero',
+      consip_title:'Canale di approvvigionamento', consip:'Accordo Quadro Consip', direct:'Affidamento diretto',
+      year_title:'Per anno',
+      callout_title:'Il mega-contratto 2022',
+      callout_text:'Nel 2022, la Presidenza del Consiglio ha assegnato tre contratti esecutivi identici da ~21,5M EUR ciascuno tramite Accordo Quadro Consip a EY, McKinsey e KPMG. Questa singola operazione vale il 65% di tutta la spesa PNRR Big 4/McKinsey.',
+    },
     table: { ministry:'Ministero', firm:'Società', contracts:'Contratti', total:'Totale (M EUR)', years:'Anni', year:'Anno', object:'Oggetto', amount:'Importo (EUR)', procedure:'Procedura', all_firms:'Tutte le società', all_ministries:'Tutti i ministeri', search:'Cerca nell\'oggetto del contratto...', shown:'contratti visualizzati', heatmap_total:'Totale' },
     methodology_html: `
       <h4>Fonti dati</h4>
@@ -546,11 +573,20 @@ const I18N = {
       concentration: { title:'Concentration', desc:'Market share of the dominant firm per ministry — single-supplier dependency' },
       employees: { title:'Spend per employee', desc:'Big 4/Big 3 consulting spend relative to ministry headcount (top 20)' },
       repeat: { title:'Repeat suppliers', desc:'Ongoing relationships: firms with at least 2 contracts at the same ministry' },
-      pnrr: { title:'PNRR contracts', desc:'Contracts funded by the National Recovery and Resilience Plan' },
+      pnrr: { title:'PNRR Focus', desc:'Big 4 and McKinsey contracts funded by the National Recovery and Resilience Plan' },
       contracts: { title:'All contracts', desc:'Full list — filter by firm, ministry or keyword, click headers to sort' },
       methodology: { title:'Methodology and sources' },
     },
     chart: { mln_eur:'Millions EUR', pct_dominant:'% dominant firm share', eur_employee:'EUR per employee', contracts:'contracts' },
+    pnrr_ui: {
+      total:'PNRR value', contracts:'Contracts', ministries:'Ministries', share:'Share of total PNRR',
+      pcm_share:'To PM Office', all_direct:'Direct award',
+      by_firm:'By firm', by_ministry:'By ministry',
+      consip_title:'Procurement channel', consip:'Consip Framework', direct:'Direct award',
+      year_title:'By year',
+      callout_title:'The 2022 mega-contract',
+      callout_text:'In 2022, the Prime Minister\'s Office awarded three identical ~EUR 21.5M executive contracts via Consip Framework to EY, McKinsey and KPMG. This single engagement accounts for 65% of all Big 4/McKinsey PNRR spend.',
+    },
     table: { ministry:'Ministry', firm:'Firm', contracts:'Contracts', total:'Total (M EUR)', years:'Years', year:'Year', object:'Subject', amount:'Amount (EUR)', procedure:'Procedure', all_firms:'All firms', all_ministries:'All ministries', search:'Search contract subject...', shown:'contracts shown', heatmap_total:'Total' },
     methodology_html: `
       <h4>Data sources</h4>
@@ -896,34 +932,140 @@ function renderRepeatSuppliers() {
   document.getElementById('repeatWrap').innerHTML = html;
 }
 
-// ── 8. PNRR ──
+// ── 8. PNRR Focus ──
 function renderPnrr() {
-  const data = DATA.pnrr;
-  if (!data.length) { document.getElementById('chartPnrr').parentElement.innerHTML = '<p style="color:var(--muted)">Nessun contratto PNRR trovato.</p>'; return; }
-  charts.pnrr = new Chart(document.getElementById('chartPnrr'), {
+  const p = DATA.pnrr;
+  if (!p.by_firm || !p.by_firm.length) return;
+  const l = t().pnrr_ui;
+  const s = p.summary;
+
+  // Hero cards
+  const cards = [
+    { number: fmtEur(s.total_mln), label: l.total, gradient: 'linear-gradient(135deg, #f97316, #eab308)' },
+    { number: s.n_contracts, label: l.contracts, gradient: 'linear-gradient(135deg, #eab308, #22c55e)' },
+    { number: s.n_ministries, label: l.ministries, gradient: 'linear-gradient(135deg, #22c55e, #3b82f6)' },
+    { number: s.big4_share_pct + '%', label: l.share, gradient: 'linear-gradient(135deg, #3b82f6, #8b5cf6)' },
+    { number: s.pcm_share_pct + '%', label: l.pcm_share, gradient: 'linear-gradient(135deg, #8b5cf6, #ec4899)' },
+    { number: '100%', label: l.all_direct, gradient: 'linear-gradient(135deg, #ec4899, #f97316)' },
+  ];
+  document.getElementById('pnrrHero').innerHTML = cards.map(c =>
+    `<div class="stat-card">
+      <div class="stat-number" style="background:${c.gradient};-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:1.6rem">${c.number}</div>
+      <div class="stat-label">${c.label}</div>
+    </div>`
+  ).join('');
+
+  // Callout
+  document.getElementById('pnrrCallout').innerHTML = `
+    <div style="font-weight:700;color:var(--orange);margin-bottom:.5rem;font-size:.95rem">${l.callout_title}</div>
+    <div style="color:var(--muted);font-size:.88rem;line-height:1.7">${l.callout_text}</div>
+  `;
+
+  // By firm
+  charts.pnrrFirm = new Chart(document.getElementById('chartPnrrFirm'), {
     type: 'bar',
     data: {
-      labels: data.map(r => r.firm),
+      labels: p.by_firm.map(r => r.firm),
       datasets: [{
-        data: data.map(r => r.total_mln),
-        backgroundColor: data.map(r => FIRM_COLORS[r.firm] + 'cc'),
-        borderColor: data.map(r => FIRM_COLORS[r.firm]),
-        borderWidth: 1,
-        borderRadius: 8,
-        barThickness: 35,
+        data: p.by_firm.map(r => r.total_mln),
+        backgroundColor: p.by_firm.map(r => FIRM_COLORS[r.firm] + 'cc'),
+        borderColor: p.by_firm.map(r => FIRM_COLORS[r.firm]),
+        borderWidth: 1, borderRadius: 6, barThickness: 30,
       }]
     },
     options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      indexAxis: 'y',
+      responsive: true, maintainAspectRatio: false, indexAxis: 'y',
       plugins: {
         legend: { display: false },
-        tooltip: { callbacks: { label: ctx => `  ${ctx.raw.toLocaleString('it-IT',{maximumFractionDigits:1})}M EUR — ${data[ctx.dataIndex].n_contracts} ${t().chart.contracts}` } }
+        title: { display: true, text: l.by_firm, color: '#94a3b8', font: { size: 12, weight: '600' }, align: 'start' },
+        tooltip: { callbacks: { label: ctx => `  ${ctx.raw}M EUR — ${p.by_firm[ctx.dataIndex].n_contracts} ${t().chart.contracts}` } }
       },
       scales: {
         x: { title: { display: true, text: t().chart.mln_eur, color: '#64748b' }, grid: { color: 'rgba(59,130,246,0.06)' } },
-        y: { grid: { display: false }, ticks: { font: { weight: '600', size: 13 } } }
+        y: { grid: { display: false }, ticks: { font: { weight: '600' } } }
+      }
+    }
+  });
+
+  // By ministry (stacked)
+  const ministries = [...new Set(p.by_ministry.map(r => r.ministry))];
+  const mTotals = {};
+  p.by_ministry.forEach(r => mTotals[r.ministry] = (mTotals[r.ministry]||0) + r.total_mln);
+  ministries.sort((a,b) => mTotals[b] - mTotals[a]);
+  const lookup = {};
+  p.by_ministry.forEach(r => { lookup[r.ministry+'|'+r.firm] = r.total_mln; });
+  const firmsList = FIRM_ORDER.filter(f => p.by_firm.some(r => r.firm === f));
+
+  charts.pnrrMin = new Chart(document.getElementById('chartPnrrMin'), {
+    type: 'bar',
+    data: {
+      labels: ministries,
+      datasets: firmsList.map(firm => ({
+        label: firm,
+        data: ministries.map(m => lookup[m+'|'+firm] || 0),
+        backgroundColor: FIRM_COLORS[firm] + 'cc',
+        borderColor: FIRM_COLORS[firm],
+        borderWidth: 1, borderRadius: 4,
+      }))
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+      plugins: {
+        title: { display: true, text: l.by_ministry, color: '#94a3b8', font: { size: 12, weight: '600' }, align: 'start' },
+        legend: { display: false },
+      },
+      scales: {
+        x: { stacked: true, grid: { color: 'rgba(59,130,246,0.06)' } },
+        y: { stacked: true, grid: { display: false }, ticks: { font: { size: 10 } } }
+      }
+    }
+  });
+
+  // Consip donut
+  charts.pnrrConsip = new Chart(document.getElementById('chartPnrrConsip'), {
+    type: 'doughnut',
+    data: {
+      labels: [l.consip, l.direct],
+      datasets: [{
+        data: [p.consip.consip_mln, p.consip.direct_mln],
+        backgroundColor: ['#3b82f6cc', '#f97316cc'],
+        borderColor: ['#3b82f6', '#f97316'],
+        borderWidth: 2,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      cutout: '55%',
+      plugins: {
+        title: { display: true, text: l.consip_title, color: '#94a3b8', font: { size: 12, weight: '600' }, align: 'start' },
+        legend: { position: 'bottom', labels: { usePointStyle: true, pointStyle: 'circle', padding: 15, font: { size: 11 } } },
+        tooltip: { callbacks: { label: ctx => `  ${ctx.raw}M EUR (${ctx.dataIndex === 0 ? p.consip.consip_pct : 100-p.consip.consip_pct}%)` } }
+      }
+    }
+  });
+
+  // Year timeline
+  charts.pnrrYear = new Chart(document.getElementById('chartPnrrYear'), {
+    type: 'bar',
+    data: {
+      labels: p.by_year.map(r => r.anno),
+      datasets: [{
+        data: p.by_year.map(r => r.total_mln),
+        backgroundColor: p.by_year.map(r => r.total_mln > 50 ? '#f97316cc' : '#3b82f6cc'),
+        borderColor: p.by_year.map(r => r.total_mln > 50 ? '#f97316' : '#3b82f6'),
+        borderWidth: 1, borderRadius: 6, barThickness: 40,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        title: { display: true, text: l.year_title, color: '#94a3b8', font: { size: 12, weight: '600' }, align: 'start' },
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => `  ${ctx.raw}M EUR — ${p.by_year[ctx.dataIndex].n_contracts} ${t().chart.contracts}` } }
+      },
+      scales: {
+        x: { grid: { display: false } },
+        y: { title: { display: true, text: t().chart.mln_eur, color: '#64748b' }, grid: { color: 'rgba(59,130,246,0.06)' } }
       }
     }
   });

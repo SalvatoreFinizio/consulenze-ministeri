@@ -1220,28 +1220,130 @@
       "years": "2020-2020"
     }
   ],
-  "pnrr": [
-    {
-      "firm": "EY",
-      "n_contracts": 8,
-      "total_mln": 47.6
+  "pnrr": {
+    "summary": {
+      "total_mln": 98.5,
+      "n_contracts": 9,
+      "n_ministries": 4,
+      "n_firms": 4,
+      "total_pnrr_ministry_mln": 2090,
+      "total_pnrr_ministry_contracts": 577,
+      "big4_share_pct": 4.7,
+      "pcm_share_pct": 87.0
     },
-    {
-      "firm": "KPMG",
-      "n_contracts": 3,
-      "total_mln": 24.6
-    },
-    {
-      "firm": "McKinsey",
-      "n_contracts": 2,
-      "total_mln": 21.9
-    },
-    {
-      "firm": "Deloitte",
-      "n_contracts": 2,
-      "total_mln": 4.3
+    "by_firm": [
+      {
+        "firm": "EY",
+        "n_contracts": 8,
+        "total_mln": 47.6
+      },
+      {
+        "firm": "KPMG",
+        "n_contracts": 3,
+        "total_mln": 24.6
+      },
+      {
+        "firm": "McKinsey",
+        "n_contracts": 2,
+        "total_mln": 21.9
+      },
+      {
+        "firm": "Deloitte",
+        "n_contracts": 2,
+        "total_mln": 4.3
+      }
+    ],
+    "by_ministry": [
+      {
+        "ministry": "Ministero dell'Ambiente",
+        "firm": "Deloitte",
+        "n_contracts": 1,
+        "total_mln": 3.0
+      },
+      {
+        "ministry": "Ministero dell'Ambiente",
+        "firm": "EY",
+        "n_contracts": 1,
+        "total_mln": 3.0
+      },
+      {
+        "ministry": "Ministero dell'Interno",
+        "firm": "EY",
+        "n_contracts": 2,
+        "total_mln": 3.1
+      },
+      {
+        "ministry": "Ministero dell'Interno",
+        "firm": "KPMG",
+        "n_contracts": 1,
+        "total_mln": 2.7
+      },
+      {
+        "ministry": "Ministero della Salute",
+        "firm": "EY",
+        "n_contracts": 1,
+        "total_mln": 0.4
+      },
+      {
+        "ministry": "Ministero della Salute",
+        "firm": "KPMG",
+        "n_contracts": 1,
+        "total_mln": 0.4
+      },
+      {
+        "ministry": "Ministero della Salute",
+        "firm": "McKinsey",
+        "n_contracts": 1,
+        "total_mln": 0.4
+      },
+      {
+        "ministry": "Presidenza del Consiglio dei Ministri",
+        "firm": "Deloitte",
+        "n_contracts": 1,
+        "total_mln": 1.3
+      },
+      {
+        "ministry": "Presidenza del Consiglio dei Ministri",
+        "firm": "EY",
+        "n_contracts": 4,
+        "total_mln": 41.1
+      },
+      {
+        "ministry": "Presidenza del Consiglio dei Ministri",
+        "firm": "KPMG",
+        "n_contracts": 1,
+        "total_mln": 21.5
+      },
+      {
+        "ministry": "Presidenza del Consiglio dei Ministri",
+        "firm": "McKinsey",
+        "n_contracts": 1,
+        "total_mln": 21.5
+      }
+    ],
+    "by_year": [
+      {
+        "anno": 2022,
+        "n_contracts": 2,
+        "total_mln": 67.5
+      },
+      {
+        "anno": 2023,
+        "n_contracts": 2,
+        "total_mln": 4.0
+      },
+      {
+        "anno": 2024,
+        "n_contracts": 5,
+        "total_mln": 27.0
+      }
+    ],
+    "consip": {
+      "consip_mln": 68.8,
+      "direct_mln": 29.7,
+      "consip_pct": 70.0
     }
-  ],
+  },
   "contracts": [
     {
       "anno": 2023,
