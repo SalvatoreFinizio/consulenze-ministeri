@@ -94,6 +94,24 @@ body::before {
   background: rgba(59,130,246,0.12);
   border-color: rgba(59,130,246,0.2);
 }
+.lang-btn {
+  margin-left: auto;
+  padding: .4rem .85rem;
+  border-radius: 8px;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--text);
+  background: rgba(59,130,246,0.15);
+  border: 1px solid rgba(59,130,246,0.25);
+  cursor: pointer;
+  transition: all .2s;
+  white-space: nowrap;
+  font-family: inherit;
+}
+.lang-btn:hover {
+  background: rgba(59,130,246,0.25);
+  border-color: rgba(59,130,246,0.4);
+}
 
 /* ── Header ── */
 .header { padding: 3rem 0 2rem; text-align: center; }
@@ -373,7 +391,8 @@ body::before {
     <a class="nav-pill" href="#repeat">Ricorrenti</a>
     <a class="nav-pill" href="#pnrr">PNRR</a>
     <a class="nav-pill" href="#contracts">Contratti</a>
-    <a class="nav-pill" href="#methodology">Metodologia</a>
+    <a class="nav-pill" href="#methodology" data-i18n-nav="methodology">Metodologia</a>
+    <button class="lang-btn" onclick="toggleLang()">EN</button>
   </div>
 </nav>
 
@@ -468,11 +487,107 @@ body::before {
 </div>
 
 <script>
+let LANG = 'it';
+const I18N = {
+  it: {
+    title: 'Chi consiglia lo Stato?',
+    subtitle: 'Mappa della spesa in consulenze dei ministeri italiani. Contratti pubblici assegnati a EY, KPMG, Deloitte, PwC e McKinsey — dati ANAC, OpenBDAP e Conto Annuale.',
+    nav: { overview:'Panoramica', firms:'Società', trend:'Trend', matrix:'Matrice', concentration:'Concentrazione', employees:'Per dipendente', repeat:'Ricorrenti', pnrr:'PNRR', contracts:'Contratti', methodology:'Metodologia' },
+    hero: { total:'Valore contratti', contracts:'Contratti', ministries:'Ministeri', firms:'Società', period:'Periodo', direct:'Aff. diretto' },
+    sections: {
+      firms: { title:'Chi riceve quanto', desc:'Valore totale dei contratti per società di consulenza (milioni di EUR)' },
+      trend: { title:'Andamento annuale', desc:'Spesa per consulenze per anno e società — area cumulativa in milioni di EUR' },
+      matrix: { title:'Matrice Ministero \u00d7 Società', desc:'Valore dei contratti (M EUR) per ogni combinazione — intensità del colore proporzionale all\'importo' },
+      concentration: { title:'Concentrazione', desc:'Quota percentuale della società dominante per ogni ministero — quanto dipende da un singolo fornitore' },
+      employees: { title:'Spesa per dipendente', desc:'Spesa in consulenze Big 4/Big 3 rapportata al numero di dipendenti del ministero (top 20)' },
+      repeat: { title:'Fornitori ricorrenti', desc:'Relazioni continuative: società con almeno 2 contratti presso lo stesso ministero' },
+      pnrr: { title:'Contratti PNRR', desc:'Contratti finanziati dal Piano Nazionale di Ripresa e Resilienza' },
+      contracts: { title:'Tutti i contratti', desc:'Elenco completo — filtra per società, ministero o parola chiave, clicca sulle intestazioni per ordinare' },
+      methodology: { title:'Metodologia e fonti' },
+    },
+    chart: { mln_eur:'Milioni di EUR', pct_dominant:'% quota società dominante', eur_employee:'EUR per dipendente', contracts:'contratti' },
+    table: { ministry:'Ministero', firm:'Società', contracts:'Contratti', total:'Totale (M EUR)', years:'Anni', year:'Anno', object:'Oggetto', amount:'Importo (EUR)', procedure:'Procedura', all_firms:'Tutte le società', all_ministries:'Tutti i ministeri', search:'Cerca nell\'oggetto del contratto...', shown:'contratti visualizzati', heatmap_total:'Totale' },
+    methodology_html: `
+      <h4>Fonti dati</h4>
+      <ul>
+        <li><strong>ANAC CIG</strong> — Contratti pubblici dal dataset <a href="https://dati.anticorruzione.it/opendata/dataset/cig" target="_blank">dati.anticorruzione.it</a> (2018–2025, file mensili)</li>
+        <li><strong>ANAC Aggiudicatari</strong> — Aggiudicatari dal dataset <a href="https://dati.anticorruzione.it/opendata/dataset/aggiudicatari" target="_blank">dati.anticorruzione.it</a></li>
+        <li><strong>OpenBDAP</strong> — Pagamenti Bilancio dello Stato con Mandati Informatici (<a href="https://bdap-opendata.rgs.mef.gov.it" target="_blank">bdap-opendata.rgs.mef.gov.it</a>)</li>
+        <li><strong>Conto Annuale</strong> — Dipendenti Pubblici - Occupazione Complessiva (<a href="https://contoannuale.rgs.mef.gov.it" target="_blank">contoannuale.rgs.mef.gov.it</a>, 2018–2023)</li>
+      </ul>
+      <h4>Metodologia</h4>
+      <ul>
+        <li>I contratti CIG sono stati filtrati per <strong>stazione appaltante = ministeri italiani</strong> (inclusa Presidenza del Consiglio dei Ministri)</li>
+        <li>Le società sono identificate tramite <strong>codice fiscale</strong> e, in subordine, tramite pattern nel nome</li>
+        <li>Le diverse entità giuridiche di ciascun gruppo sono aggregate sotto il nome del gruppo</li>
+        <li>I nomi dei ministeri sono normalizzati per tenere conto delle ridenominazioni nel tempo</li>
+        <li>Le sotto-unità dei ministeri sono aggregate sotto il ministero principale</li>
+      </ul>
+      <h4>Cosa non è incluso</h4>
+      <ul>
+        <li><strong>Bain & Company</strong> e <strong>BCG</strong> non compaiono perché i loro contratti passano attraverso società partecipate (Hera, CDP, Enel, Invitalia, RAI)</li>
+        <li><strong>SmartCIG</strong> (micro-acquisti sotto 5.000 EUR) non sono inclusi</li>
+        <li>I contratti assegnati a <strong>RTI</strong> in cui una Big 4 partecipa come membro e non come capofila potrebbero non essere catturati</li>
+      </ul>
+      <h4>Licenza</h4>
+      <p>Dati rilasciati con licenza <strong>CC BY 3.0</strong> (ANAC) e <strong>CC BY 3.0 IT</strong> (OpenBDAP).</p>
+      <p style="margin-top:1rem;font-size:.78rem">Ultimo aggiornamento: aprile 2026</p>`,
+    footer: 'Realizzato con <a href="https://spesa.prontia.it" target="_blank">spesa.prontia.it</a> — Dati aperti ANAC, OpenBDAP, Conto Annuale — Licenza CC BY 3.0',
+  },
+  en: {
+    title: 'Who Advises the State?',
+    subtitle: 'Mapping consulting expenditure by Italian ministries. Public contracts awarded to EY, KPMG, Deloitte, PwC and McKinsey — data from ANAC, OpenBDAP and Conto Annuale.',
+    nav: { overview:'Overview', firms:'Firms', trend:'Trend', matrix:'Matrix', concentration:'Concentration', employees:'Per employee', repeat:'Repeat', pnrr:'PNRR', contracts:'Contracts', methodology:'Methodology' },
+    hero: { total:'Total value', contracts:'Contracts', ministries:'Ministries', firms:'Firms', period:'Period', direct:'Direct award' },
+    sections: {
+      firms: { title:'Who gets how much', desc:'Total contract value by consulting firm (millions EUR)' },
+      trend: { title:'Annual trend', desc:'Consulting spend by year and firm — cumulative area in millions EUR' },
+      matrix: { title:'Ministry \u00d7 Firm matrix', desc:'Contract value (M EUR) for each combination — color intensity proportional to amount' },
+      concentration: { title:'Concentration', desc:'Market share of the dominant firm per ministry — single-supplier dependency' },
+      employees: { title:'Spend per employee', desc:'Big 4/Big 3 consulting spend relative to ministry headcount (top 20)' },
+      repeat: { title:'Repeat suppliers', desc:'Ongoing relationships: firms with at least 2 contracts at the same ministry' },
+      pnrr: { title:'PNRR contracts', desc:'Contracts funded by the National Recovery and Resilience Plan' },
+      contracts: { title:'All contracts', desc:'Full list — filter by firm, ministry or keyword, click headers to sort' },
+      methodology: { title:'Methodology and sources' },
+    },
+    chart: { mln_eur:'Millions EUR', pct_dominant:'% dominant firm share', eur_employee:'EUR per employee', contracts:'contracts' },
+    table: { ministry:'Ministry', firm:'Firm', contracts:'Contracts', total:'Total (M EUR)', years:'Years', year:'Year', object:'Subject', amount:'Amount (EUR)', procedure:'Procedure', all_firms:'All firms', all_ministries:'All ministries', search:'Search contract subject...', shown:'contracts shown', heatmap_total:'Total' },
+    methodology_html: `
+      <h4>Data sources</h4>
+      <ul>
+        <li><strong>ANAC CIG</strong> — Public contracts from <a href="https://dati.anticorruzione.it/opendata/dataset/cig" target="_blank">dati.anticorruzione.it</a> (2018–2025, monthly files)</li>
+        <li><strong>ANAC Aggiudicatari</strong> — Contract winners from <a href="https://dati.anticorruzione.it/opendata/dataset/aggiudicatari" target="_blank">dati.anticorruzione.it</a></li>
+        <li><strong>OpenBDAP</strong> — State budget payments (<a href="https://bdap-opendata.rgs.mef.gov.it" target="_blank">bdap-opendata.rgs.mef.gov.it</a>)</li>
+        <li><strong>Conto Annuale</strong> — Public employees census (<a href="https://contoannuale.rgs.mef.gov.it" target="_blank">contoannuale.rgs.mef.gov.it</a>, 2018–2023)</li>
+      </ul>
+      <h4>Methodology</h4>
+      <ul>
+        <li>CIG contracts filtered by <strong>contracting authority = Italian ministries</strong> (including Prime Minister's Office)</li>
+        <li>Firms identified by <strong>tax code</strong> and, secondarily, by name pattern matching</li>
+        <li>Different legal entities within each group are aggregated under the group name</li>
+        <li>Ministry names are normalized to account for renaming over time</li>
+        <li>Ministry sub-units (departments, directorates, regional offices) are aggregated under the parent ministry</li>
+      </ul>
+      <h4>What is not included</h4>
+      <ul>
+        <li><strong>Bain & Company</strong> and <strong>BCG</strong> are absent because their Italian public-sector contracts go through state-owned enterprises (Hera, CDP, Enel, Invitalia, RAI)</li>
+        <li><strong>SmartCIG</strong> (micro-purchases under EUR 5,000) are not included</li>
+        <li>Contracts awarded to <strong>joint ventures (RTI)</strong> where a Big 4 firm participates but is not the lead may be missed</li>
+      </ul>
+      <h4>License</h4>
+      <p>Data released under <strong>CC BY 3.0</strong> (ANAC) and <strong>CC BY 3.0 IT</strong> (OpenBDAP).</p>
+      <p style="margin-top:1rem;font-size:.78rem">Last updated: April 2026</p>`,
+    footer: 'Built with <a href="https://spesa.prontia.it" target="_blank">spesa.prontia.it</a> — Open data from ANAC, OpenBDAP, Conto Annuale — CC BY 3.0 License',
+  }
+};
+
+function t() { return I18N[LANG]; }
+
 const FIRM_COLORS = { EY:'#ffe600', KPMG:'#4e8cff', Deloitte:'#86bc25', PwC:'#e0301e', McKinsey:'#00c2ff' };
 const FIRM_ORDER = ['EY','KPMG','Deloitte','PwC','McKinsey'];
 
-function fmtEur(n) { return n.toLocaleString('it-IT', {maximumFractionDigits:1}) + 'M'; }
-function fmtNum(n) { return n.toLocaleString('it-IT'); }
+function fmtEur(n) { return n.toLocaleString(LANG === 'it' ? 'it-IT' : 'en-GB', {maximumFractionDigits:1}) + 'M'; }
+function fmtNum(n) { return n.toLocaleString(LANG === 'it' ? 'it-IT' : 'en-GB'); }
 
 // Chart.js global config
 Chart.defaults.color = '#94a3b8';
@@ -488,10 +603,23 @@ Chart.defaults.plugins.tooltip.titleFont = { weight: '600' };
 Chart.defaults.plugins.tooltip.boxPadding = 4;
 
 let DATA;
+let charts = {};
+
+function destroyCharts() {
+  Object.values(charts).forEach(c => c.destroy());
+  charts = {};
+}
 
 async function init() {
   const resp = await fetch('data/processed/web_data.json');
   DATA = await resp.json();
+  renderAll();
+  setupNav();
+}
+
+function renderAll() {
+  destroyCharts();
+  renderChromeText();
   renderHero();
   renderFirmChart();
   renderTrendChart();
@@ -502,7 +630,36 @@ async function init() {
   renderPnrr();
   renderContracts();
   renderMethodology();
-  setupNav();
+}
+
+function toggleLang() {
+  LANG = LANG === 'it' ? 'en' : 'it';
+  document.querySelector('.lang-btn').textContent = LANG === 'it' ? 'EN' : 'IT';
+  document.documentElement.lang = LANG;
+  renderAll();
+}
+
+function renderChromeText() {
+  const l = t();
+  document.querySelector('.header h1').textContent = l.title;
+  document.querySelector('.header .subtitle').textContent = l.subtitle;
+  // Nav pills
+  document.querySelectorAll('.nav-pill[href]').forEach(pill => {
+    const key = pill.getAttribute('href').replace('#','');
+    if (l.nav[key]) pill.textContent = l.nav[key];
+  });
+  // Section titles and descs
+  document.querySelectorAll('.section').forEach(sec => {
+    const id = sec.id;
+    if (l.sections[id]) {
+      const titleEl = sec.querySelector('.section-title');
+      if (titleEl && l.sections[id].title) titleEl.innerHTML = `<span class="icon">&#9670;</span> ${l.sections[id].title}`;
+      const descEl = sec.querySelector('.section-desc');
+      if (descEl && l.sections[id].desc) descEl.textContent = l.sections[id].desc;
+    }
+  });
+  // Footer
+  document.querySelector('.footer p').innerHTML = l.footer;
 }
 
 // ── Navigation highlight ──
@@ -525,13 +682,14 @@ function setupNav() {
 // ── 1. Hero cards ──
 function renderHero() {
   const s = DATA.summary;
+  const l = t().hero;
   const cards = [
-    { number: fmtEur(s.total_mln), label: 'Valore contratti', gradient: 'linear-gradient(135deg, #3b82f6, #8b5cf6)' },
-    { number: fmtNum(s.n_contracts), label: 'Contratti', gradient: 'linear-gradient(135deg, #8b5cf6, #ec4899)' },
-    { number: s.n_ministries, label: 'Ministeri', gradient: 'linear-gradient(135deg, #ec4899, #f97316)' },
-    { number: s.n_firms, label: 'Società', gradient: 'linear-gradient(135deg, #f97316, #eab308)' },
-    { number: `${s.year_min}–${s.year_max}`, label: 'Periodo', gradient: 'linear-gradient(135deg, #22c55e, #3b82f6)' },
-    { number: s.direct_award_pct + '%', label: 'Aff. diretto', gradient: 'linear-gradient(135deg, #3b82f6, #22c55e)' },
+    { number: fmtEur(s.total_mln), label: l.total, gradient: 'linear-gradient(135deg, #3b82f6, #8b5cf6)' },
+    { number: fmtNum(s.n_contracts), label: l.contracts, gradient: 'linear-gradient(135deg, #8b5cf6, #ec4899)' },
+    { number: s.n_ministries, label: l.ministries, gradient: 'linear-gradient(135deg, #ec4899, #f97316)' },
+    { number: s.n_firms, label: l.firms, gradient: 'linear-gradient(135deg, #f97316, #eab308)' },
+    { number: `${s.year_min}–${s.year_max}`, label: l.period, gradient: 'linear-gradient(135deg, #22c55e, #3b82f6)' },
+    { number: s.direct_award_pct + '%', label: l.direct, gradient: 'linear-gradient(135deg, #3b82f6, #22c55e)' },
   ];
   document.getElementById('hero').innerHTML = cards.map(c =>
     `<div class="stat-card">
@@ -544,7 +702,7 @@ function renderHero() {
 // ── 2. Total by firm ──
 function renderFirmChart() {
   const firms = DATA.by_firm;
-  new Chart(document.getElementById('chartFirm'), {
+  charts.firm = new Chart(document.getElementById('chartFirm'), {
     type: 'bar',
     data: {
       labels: firms.map(f => f.firm),
@@ -563,10 +721,10 @@ function renderFirmChart() {
       indexAxis: 'y',
       plugins: {
         legend: { display: false },
-        tooltip: { callbacks: { label: ctx => `  ${ctx.raw.toLocaleString('it-IT',{maximumFractionDigits:1})}M EUR — ${firms[ctx.dataIndex].n_contracts} contratti` } }
+        tooltip: { callbacks: { label: ctx => `  ${ctx.raw.toLocaleString('it-IT',{maximumFractionDigits:1})}M EUR — ${firms[ctx.dataIndex].n_contracts} ${t().chart.contracts}` } }
       },
       scales: {
-        x: { title: { display: true, text: 'Milioni di EUR', color: '#64748b' }, grid: { color: 'rgba(59,130,246,0.06)' } },
+        x: { title: { display: true, text: t().chart.mln_eur, color: '#64748b' }, grid: { color: 'rgba(59,130,246,0.06)' } },
         y: { grid: { display: false }, ticks: { font: { weight: '600', size: 13 } } }
       }
     }
@@ -592,7 +750,7 @@ function renderTrendChart() {
       pointBackgroundColor: FIRM_COLORS[firm],
     };
   });
-  new Chart(document.getElementById('chartTrend'), {
+  charts.trend = new Chart(document.getElementById('chartTrend'), {
     type: 'line',
     data: { labels: years, datasets },
     options: {
@@ -603,7 +761,7 @@ function renderTrendChart() {
       },
       scales: {
         x: { grid: { color: 'rgba(59,130,246,0.06)' }, ticks: { font: { weight: '500' } } },
-        y: { title: { display: true, text: 'Milioni di EUR', color: '#64748b' }, stacked: true, grid: { color: 'rgba(59,130,246,0.06)' } }
+        y: { title: { display: true, text: t().chart.mln_eur, color: '#64748b' }, stacked: true, grid: { color: 'rgba(59,130,246,0.06)' } }
       },
       interaction: { mode: 'index', intersect: false },
       responsive: true,
@@ -624,9 +782,9 @@ function renderHeatmap() {
   matrix.forEach(r => { lookup[r.ministry+'|'+r.firm] = r; });
   const maxVal = Math.max(...matrix.map(r => r.total_mln));
 
-  let html = '<table class="heatmap"><thead><tr><th style="min-width:200px">Ministero</th>';
+  let html = `<table class="heatmap"><thead><tr><th style="min-width:200px">${t().table.ministry}</th>`;
   firms.forEach(f => html += `<th>${f}</th>`);
-  html += '<th>Totale</th></tr></thead><tbody>';
+  html += `<th>${t().table.heatmap_total}</th></tr></thead><tbody>`;
 
   ministries.forEach(m => {
     html += `<tr><td title="${m}">${m}</td>`;
@@ -653,7 +811,7 @@ function renderConcentration() {
   const data = DATA.concentration;
   const h = Math.max(350, data.length * 40);
   document.getElementById('concWrap').style.cssText = `position:relative;height:${h}px`;
-  new Chart(document.getElementById('chartConc'), {
+  charts.conc = new Chart(document.getElementById('chartConc'), {
     type: 'bar',
     data: {
       labels: data.map(r => r.ministry),
@@ -675,7 +833,7 @@ function renderConcentration() {
         tooltip: { callbacks: { label: ctx => `  ${data[ctx.dataIndex].top_firm}: ${ctx.raw.toFixed(1)}% (${data[ctx.dataIndex].total_mln}M EUR totali)` } }
       },
       scales: {
-        x: { max: 100, title: { display: true, text: '% quota società dominante', color: '#64748b' }, grid: { color: 'rgba(59,130,246,0.06)' } },
+        x: { max: 100, title: { display: true, text: t().chart.pct_dominant, color: '#64748b' }, grid: { color: 'rgba(59,130,246,0.06)' } },
         y: { grid: { display: false }, ticks: { font: { size: 11 } } }
       }
     }
@@ -688,7 +846,7 @@ function renderSpendPerEmployee() {
   const labels = data.map(r => `${r.ministry} (${r.anno})`);
   const h = Math.max(350, data.length * 36);
   document.getElementById('speWrap').style.cssText = `position:relative;height:${h}px`;
-  new Chart(document.getElementById('chartSpe'), {
+  charts.spe = new Chart(document.getElementById('chartSpe'), {
     type: 'bar',
     data: {
       labels,
@@ -719,7 +877,7 @@ function renderSpendPerEmployee() {
         }}}
       },
       scales: {
-        x: { title: { display: true, text: 'EUR per dipendente', color: '#64748b' }, grid: { color: 'rgba(59,130,246,0.06)' } },
+        x: { title: { display: true, text: t().chart.eur_employee, color: '#64748b' }, grid: { color: 'rgba(59,130,246,0.06)' } },
         y: { grid: { display: false }, ticks: { font: { size: 10 } } }
       }
     }
@@ -729,7 +887,8 @@ function renderSpendPerEmployee() {
 // ── 7. Repeat suppliers ──
 function renderRepeatSuppliers() {
   const data = DATA.repeat_suppliers.filter(r => r.n_contracts >= 2);
-  let html = '<table class="data-table"><thead><tr><th>Ministero</th><th>Società</th><th class="num">Contratti</th><th class="num">Totale (M EUR)</th><th>Anni</th></tr></thead><tbody>';
+  const l = t().table;
+  let html = `<table class="data-table"><thead><tr><th>${l.ministry}</th><th>${l.firm}</th><th class="num">${l.contracts}</th><th class="num">${l.total}</th><th>${l.years}</th></tr></thead><tbody>`;
   data.forEach(r => {
     html += `<tr><td>${r.ministry}</td><td><span class="firm-badge firm-${r.firm}">${r.firm}</span></td><td class="num">${r.n_contracts}</td><td class="num">${r.total_mln.toLocaleString('it-IT',{maximumFractionDigits:1})}</td><td>${r.years}</td></tr>`;
   });
@@ -741,7 +900,7 @@ function renderRepeatSuppliers() {
 function renderPnrr() {
   const data = DATA.pnrr;
   if (!data.length) { document.getElementById('chartPnrr').parentElement.innerHTML = '<p style="color:var(--muted)">Nessun contratto PNRR trovato.</p>'; return; }
-  new Chart(document.getElementById('chartPnrr'), {
+  charts.pnrr = new Chart(document.getElementById('chartPnrr'), {
     type: 'bar',
     data: {
       labels: data.map(r => r.firm),
@@ -760,10 +919,10 @@ function renderPnrr() {
       indexAxis: 'y',
       plugins: {
         legend: { display: false },
-        tooltip: { callbacks: { label: ctx => `  ${ctx.raw.toLocaleString('it-IT',{maximumFractionDigits:1})}M EUR — ${data[ctx.dataIndex].n_contracts} contratti` } }
+        tooltip: { callbacks: { label: ctx => `  ${ctx.raw.toLocaleString('it-IT',{maximumFractionDigits:1})}M EUR — ${data[ctx.dataIndex].n_contracts} ${t().chart.contracts}` } }
       },
       scales: {
-        x: { title: { display: true, text: 'Milioni di EUR', color: '#64748b' }, grid: { color: 'rgba(59,130,246,0.06)' } },
+        x: { title: { display: true, text: t().chart.mln_eur, color: '#64748b' }, grid: { color: 'rgba(59,130,246,0.06)' } },
         y: { grid: { display: false }, ticks: { font: { weight: '600', size: 13 } } }
       }
     }
@@ -777,14 +936,15 @@ let contractFilters = { firm: '', ministry: '', search: '' };
 function renderContracts() {
   const firms = ['', ...FIRM_ORDER.filter(f => DATA.contracts.some(c => c.firm === f))];
   const ministries = ['', ...[...new Set(DATA.contracts.map(c => c.ministry))].sort()];
+  const l = t().table;
   document.getElementById('filters').innerHTML = `
     <select id="fFirm" onchange="contractFilters.firm=this.value;renderContractTable()">
-      ${firms.map(f => `<option value="${f}">${f || 'Tutte le società'}</option>`).join('')}
+      ${firms.map(f => `<option value="${f}">${f || l.all_firms}</option>`).join('')}
     </select>
     <select id="fMinistry" onchange="contractFilters.ministry=this.value;renderContractTable()">
-      ${ministries.map(m => `<option value="${m}">${m || 'Tutti i ministeri'}</option>`).join('')}
+      ${ministries.map(m => `<option value="${m}">${m || l.all_ministries}</option>`).join('')}
     </select>
-    <input type="text" placeholder="Cerca nell'oggetto del contratto..." oninput="contractFilters.search=this.value.toLowerCase();renderContractTable()">
+    <input type="text" placeholder="${l.search}" oninput="contractFilters.search=this.value.toLowerCase();renderContractTable()">
   `;
   renderContractTable();
 }
@@ -804,13 +964,14 @@ function renderContractTable() {
     return 0;
   });
 
+  const tl = t().table;
   const cols = [
-    { key:'anno', label:'Anno', cls:'' },
-    { key:'ministry', label:'Ministero', cls:'' },
-    { key:'firm', label:'Società', cls:'' },
-    { key:'oggetto', label:'Oggetto', cls:'' },
-    { key:'importo', label:'Importo (EUR)', cls:'num' },
-    { key:'procedura', label:'Procedura', cls:'' },
+    { key:'anno', label:tl.year, cls:'' },
+    { key:'ministry', label:tl.ministry, cls:'' },
+    { key:'firm', label:tl.firm, cls:'' },
+    { key:'oggetto', label:tl.object, cls:'' },
+    { key:'importo', label:tl.amount, cls:'num' },
+    { key:'procedura', label:tl.procedure, cls:'' },
     { key:'pnrr', label:'PNRR', cls:'' },
   ];
 
@@ -832,7 +993,7 @@ function renderContractTable() {
       <td>${r.pnrr ? '<span style="color:#22c55e;font-weight:600">PNRR</span>' : ''}</td>
     </tr>`;
   });
-  html += `</tbody></table><p style="color:var(--muted);font-size:.78rem;margin-top:.75rem">${data.length} contratti visualizzati</p>`;
+  html += `</tbody></table><p style="color:var(--muted);font-size:.78rem;margin-top:.75rem">${data.length} ${t().table.shown}</p>`;
   document.getElementById('contractsWrap').innerHTML = html;
 }
 
@@ -844,35 +1005,7 @@ function sortContracts(col) {
 
 // ── 10. Methodology ──
 function renderMethodology() {
-  document.getElementById('methodologyContent').innerHTML = `
-    <h4>Fonti dati</h4>
-    <ul>
-      <li><strong>ANAC CIG</strong> — Contratti pubblici dal dataset <a href="https://dati.anticorruzione.it/opendata/dataset/cig" target="_blank">dati.anticorruzione.it</a> (2018–2025, file mensili)</li>
-      <li><strong>ANAC Aggiudicatari</strong> — Aggiudicatari dal dataset <a href="https://dati.anticorruzione.it/opendata/dataset/aggiudicatari" target="_blank">dati.anticorruzione.it</a></li>
-      <li><strong>OpenBDAP</strong> — Pagamenti Bilancio dello Stato con Mandati Informatici (<a href="https://bdap-opendata.rgs.mef.gov.it" target="_blank">bdap-opendata.rgs.mef.gov.it</a>)</li>
-      <li><strong>Conto Annuale</strong> — Dipendenti Pubblici - Occupazione Complessiva (<a href="https://contoannuale.rgs.mef.gov.it" target="_blank">contoannuale.rgs.mef.gov.it</a>, 2018–2023)</li>
-    </ul>
-
-    <h4>Metodologia</h4>
-    <ul>
-      <li>I contratti CIG sono stati filtrati per <strong>stazione appaltante = ministeri italiani</strong> (inclusa Presidenza del Consiglio dei Ministri)</li>
-      <li>Le società sono identificate tramite <strong>codice fiscale</strong> e, in subordine, tramite pattern nel nome (es. "DELOITTE", "PRICEWATERHOUSE")</li>
-      <li>Le diverse entità giuridiche di ciascun gruppo (es. Deloitte Consulting S.r.l., Deloitte Risk Advisory S.r.l.) sono aggregate sotto il nome del gruppo</li>
-      <li>I nomi dei ministeri sono normalizzati per tenere conto delle ridenominazioni nel tempo (es. Ministero dello Sviluppo Economico &rarr; Ministero delle Imprese e del Made in Italy)</li>
-      <li>Le sotto-unità dei ministeri (dipartimenti, direzioni generali, uffici periferici) sono aggregate sotto il ministero principale</li>
-    </ul>
-
-    <h4>Cosa non è incluso</h4>
-    <ul>
-      <li><strong>Bain & Company</strong> e <strong>Boston Consulting Group (BCG)</strong> non compaiono perché i loro contratti nel settore pubblico italiano passano attraverso società partecipate dallo Stato (Hera, CDP, Enel, Invitalia, RAI) e non direttamente attraverso i ministeri</li>
-      <li><strong>SmartCIG</strong> (micro-acquisti sotto 5.000 EUR) non sono inclusi nel dataset CIG utilizzato</li>
-      <li>I contratti assegnati a <strong>RTI (Raggruppamenti Temporanei d'Impresa)</strong> in cui una Big 4 partecipa come membro e non come capofila potrebbero non essere catturati</li>
-    </ul>
-
-    <h4>Licenza</h4>
-    <p>Dati rilasciati con licenza <strong>CC BY 3.0</strong> (ANAC) e <strong>CC BY 3.0 IT</strong> (OpenBDAP). Questa analisi è a scopo informativo e di trasparenza pubblica.</p>
-    <p style="margin-top:1rem;font-size:.78rem">Ultimo aggiornamento: aprile 2026</p>
-  `;
+  document.getElementById('methodologyContent').innerHTML = t().methodology_html;
 }
 
 init();
