@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chi consiglia lo Stato? Mappa della spesa in consulenze dei ministeri italiani</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #0a0e1a;
+  --card: rgba(30, 41, 59, 0.6);
+  --card-solid: #1e293b;
+  --border: rgba(59, 130, 246, 0.15);
+  --border-hover: rgba(59, 130, 246, 0.35);
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #3b82f6;
+  --purple: #8b5cf6;
+  --pink: #ec4899;
+  --green: #22c55e;
+  --orange: #f97316;
+  --grid: rgba(59, 130, 246, 0.08);
+  --ey: #ffe600;
+  --kpmg: #4e8cff;
+  --deloitte: #86bc25;
+  --pwc: #e0301e;
+  --mckinsey: #00c2ff;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Ambient background glow */
+body::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at 30% 20%, rgba(59,130,246,0.06) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 60%, rgba(139,92,246,0.04) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 80%, rgba(236,72,153,0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; position: relative; z-index: 1; }
+
+/* ── Navigation ── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 14, 26, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: .75rem 0;
+  margin-bottom: 2rem;
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: .5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.nav-inner::-webkit-scrollbar { display: none; }
+.nav-pill {
+  padding: .4rem .85rem;
+  border-radius: 8px;
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all .2s;
+  border: 1px solid transparent;
+}
+.nav-pill:hover, .nav-pill.active {
+  color: var(--accent);
+  background: rgba(59,130,246,0.12);
+  border-color: rgba(59,130,246,0.2);
+}
+
+/* ── Header ── */
+.header { padding: 3rem 0 2rem; text-align: center; }
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: .75rem;
+}
+.header .subtitle {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ── Section titles ── */
+.section { padding: 2rem 0; scroll-margin-top: 70px; }
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: .35rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+.section-title .icon { font-size: 1.2rem; }
+.section-desc {
+  color: var(--muted);
+  font-size: .9rem;
+  margin-bottom: 1.5rem;
+}
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 1rem 0 2rem;
+}
+
+/* ── Glass cards ── */
+.glass {
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all .25s;
+}
+.glass:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.08);
+}
+
+/* ── Hero stat cards ── */
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.stat-card {
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+}
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--purple));
+  opacity: 0;
+  transition: opacity .3s;
+}
+.stat-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-hover);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.12);
+}
+.stat-card:hover::before { opacity: 1; }
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: countUp .6s ease-out;
+}
+.stat-label {
+  font-size: .8rem;
+  color: var(--muted);
+  margin-top: .35rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Chart cards ── */
+.chart-card {
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  transition: all .25s;
+}
+.chart-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 0 50px rgba(59, 130, 246, 0.06);
+}
+.chart-card canvas { max-height: 450px; }
+
+/* ── Heatmap ── */
+.heatmap-wrap { overflow-x: auto; }
+.heatmap { width: 100%; border-collapse: separate; border-spacing: 3px; font-size: .82rem; }
+.heatmap th {
+  padding: .6rem .5rem;
+  text-align: center;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.heatmap th:first-child { text-align: left; }
+.heatmap td {
+  padding: .55rem .5rem;
+  text-align: center;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  transition: all .2s;
+}
+.heatmap td:hover { transform: scale(1.05); box-shadow: 0 0 12px rgba(59,130,246,0.2); }
+.heatmap tr td:first-child {
+  text-align: left;
+  font-weight: 500;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: .8rem;
+}
+.heatmap tr td:last-child { font-weight: 700; color: var(--text); }
+
+/* ── Tables ── */
+.data-table-wrap { overflow-x: auto; }
+.data-table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+.data-table th {
+  padding: .75rem .6rem;
+  text-align: left;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  border-bottom: 2px solid rgba(59,130,246,0.15);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: color .2s;
+}
+.data-table th:hover { color: var(--accent); }
+.data-table td { padding: .65rem .6rem; border-bottom: 1px solid rgba(59,130,246,0.06); }
+.data-table tr { transition: background .15s; }
+.data-table tr:hover { background: rgba(59, 130, 246, 0.06); }
+.data-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ── Filters ── */
+.filters { display: flex; gap: .75rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.filters select, .filters input {
+  background: var(--card-solid);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .55rem .85rem;
+  font-size: .85rem;
+  font-family: inherit;
+  transition: border-color .2s, box-shadow .2s;
+  outline: none;
+}
+.filters select:focus, .filters input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+.filters input { min-width: 220px; }
+
+/* ── Methodology ── */
+.methodology {
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  font-size: .88rem;
+  line-height: 1.9;
+  color: var(--muted);
+}
+.methodology a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(59,130,246,0.3); transition: border-color .2s; }
+.methodology a:hover { border-color: var(--accent); }
+.methodology h4 { color: var(--text); margin: 1.25rem 0 .5rem; font-size: .95rem; font-weight: 600; }
+.methodology ul { padding-left: 1.5rem; }
+.methodology li { margin-bottom: .35rem; }
+
+/* ── Firm badges ── */
+.firm-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.firm-EY { background: var(--ey); color: #000; }
+.firm-KPMG { background: var(--kpmg); color: #fff; }
+.firm-Deloitte { background: var(--deloitte); color: #000; }
+.firm-PwC { background: var(--pwc); color: #fff; }
+.firm-McKinsey { background: var(--mckinsey); color: #000; }
+
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  padding: 3rem 0 2rem;
+  color: var(--muted);
+  font-size: .8rem;
+}
+.footer a { color: var(--accent); text-decoration: none; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: repeat(2, 1fr); }
+  .header h1 { font-size: 1.75rem; }
+  .stat-number { font-size: 1.5rem; }
+  .section-title { font-size: 1.15rem; }
+  .chart-card { padding: 1rem; }
+  .nav-pill { font-size: .72rem; padding: .35rem .6rem; }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(59,130,246,0.2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(59,130,246,0.4); }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-pill active" href="#overview">Panoramica</a>
+    <a class="nav-pill" href="#firms">Società</a>
+    <a class="nav-pill" href="#trend">Trend</a>
+    <a class="nav-pill" href="#matrix">Matrice</a>
+    <a class="nav-pill" href="#concentration">Concentrazione</a>
+    <a class="nav-pill" href="#employees">Per dipendente</a>
+    <a class="nav-pill" href="#repeat">Ricorrenti</a>
+    <a class="nav-pill" href="#pnrr">PNRR</a>
+    <a class="nav-pill" href="#contracts">Contratti</a>
+    <a class="nav-pill" href="#methodology">Metodologia</a>
+  </div>
+</nav>
+
+<div class="container">
+
+<!-- Header -->
+<div class="header" id="overview">
+  <h1>Chi consiglia lo Stato?</h1>
+  <p class="subtitle">Mappa della spesa in consulenze dei ministeri italiani. Contratti pubblici assegnati a EY, KPMG, Deloitte, PwC e McKinsey — dati ANAC, OpenBDAP e Conto Annuale.</p>
+</div>
+
+<!-- 1. Hero -->
+<div class="hero-grid" id="hero"></div>
+
+<!-- 2. Total by firm -->
+<div class="section" id="firms">
+  <div class="section-title"><span class="icon">&#9670;</span> Chi riceve quanto</div>
+  <div class="section-desc">Valore totale dei contratti per società di consulenza (milioni di EUR)</div>
+  <div class="section-divider"></div>
+  <div class="chart-card"><canvas id="chartFirm"></canvas></div>
+</div>
+
+<!-- 3. Annual trend -->
+<div class="section" id="trend">
+  <div class="section-title"><span class="icon">&#9670;</span> Andamento annuale</div>
+  <div class="section-desc">Spesa per consulenze per anno e società — area cumulativa in milioni di EUR</div>
+  <div class="section-divider"></div>
+  <div class="chart-card"><canvas id="chartTrend"></canvas></div>
+</div>
+
+<!-- 4. Heatmap -->
+<div class="section" id="matrix">
+  <div class="section-title"><span class="icon">&#9670;</span> Matrice Ministero &times; Società</div>
+  <div class="section-desc">Valore dei contratti (M EUR) per ogni combinazione — intensità del colore proporzionale all'importo</div>
+  <div class="section-divider"></div>
+  <div class="chart-card heatmap-wrap" id="heatmapWrap"></div>
+</div>
+
+<!-- 5. Concentration -->
+<div class="section" id="concentration">
+  <div class="section-title"><span class="icon">&#9670;</span> Concentrazione</div>
+  <div class="section-desc">Quota percentuale della società dominante per ogni ministero — quanto dipende da un singolo fornitore</div>
+  <div class="section-divider"></div>
+  <div class="chart-card"><canvas id="chartConc"></canvas></div>
+</div>
+
+<!-- 6. Spend per employee -->
+<div class="section" id="employees">
+  <div class="section-title"><span class="icon">&#9670;</span> Spesa per dipendente</div>
+  <div class="section-desc">Spesa in consulenze Big 4/Big 3 rapportata al numero di dipendenti del ministero (top 20)</div>
+  <div class="section-divider"></div>
+  <div class="chart-card"><canvas id="chartSpe"></canvas></div>
+</div>
+
+<!-- 7. Repeat suppliers -->
+<div class="section" id="repeat">
+  <div class="section-title"><span class="icon">&#9670;</span> Fornitori ricorrenti</div>
+  <div class="section-desc">Relazioni continuative: società con almeno 2 contratti presso lo stesso ministero</div>
+  <div class="section-divider"></div>
+  <div class="chart-card data-table-wrap" id="repeatWrap"></div>
+</div>
+
+<!-- 8. PNRR -->
+<div class="section" id="pnrr">
+  <div class="section-title"><span class="icon">&#9670;</span> Contratti PNRR</div>
+  <div class="section-desc">Contratti finanziati dal Piano Nazionale di Ripresa e Resilienza</div>
+  <div class="section-divider"></div>
+  <div class="chart-card"><canvas id="chartPnrr"></canvas></div>
+</div>
+
+<!-- 9. Contract table -->
+<div class="section" id="contracts">
+  <div class="section-title"><span class="icon">&#9670;</span> Tutti i contratti</div>
+  <div class="section-desc">Elenco completo — filtra per società, ministero o parola chiave, clicca sulle intestazioni per ordinare</div>
+  <div class="section-divider"></div>
+  <div class="filters" id="filters"></div>
+  <div class="chart-card data-table-wrap" id="contractsWrap"></div>
+</div>
+
+<!-- 10. Methodology -->
+<div class="section" id="methodology">
+  <div class="section-title"><span class="icon">&#9670;</span> Metodologia e fonti</div>
+  <div class="section-divider"></div>
+  <div class="methodology" id="methodologyContent"></div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>Realizzato con <a href="https://spesa.prontia.it" target="_blank">spesa.prontia.it</a> &mdash; Dati aperti ANAC, OpenBDAP, Conto Annuale &mdash; Licenza CC BY 3.0</p>
+</div>
+
+</div>
+
+<script>
+const FIRM_COLORS = { EY:'#ffe600', KPMG:'#4e8cff', Deloitte:'#86bc25', PwC:'#e0301e', McKinsey:'#00c2ff' };
+const FIRM_ORDER = ['EY','KPMG','Deloitte','PwC','McKinsey'];
+
+function fmtEur(n) { return n.toLocaleString('it-IT', {maximumFractionDigits:1}) + 'M'; }
+function fmtNum(n) { return n.toLocaleString('it-IT'); }
+
+// Chart.js global config
+Chart.defaults.color = '#94a3b8';
+Chart.defaults.borderColor = 'rgba(59,130,246,0.08)';
+Chart.defaults.font.family = "'Inter', -apple-system, system-ui, sans-serif";
+Chart.defaults.font.size = 12;
+Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(15,23,42,0.95)';
+Chart.defaults.plugins.tooltip.borderColor = 'rgba(59,130,246,0.3)';
+Chart.defaults.plugins.tooltip.borderWidth = 1;
+Chart.defaults.plugins.tooltip.cornerRadius = 10;
+Chart.defaults.plugins.tooltip.padding = 12;
+Chart.defaults.plugins.tooltip.titleFont = { weight: '600' };
+Chart.defaults.plugins.tooltip.boxPadding = 4;
+
+let DATA;
+
+async function init() {
+  const resp = await fetch('data/processed/web_data.json');
+  DATA = await resp.json();
+  renderHero();
+  renderFirmChart();
+  renderTrendChart();
+  renderHeatmap();
+  renderConcentration();
+  renderSpendPerEmployee();
+  renderRepeatSuppliers();
+  renderPnrr();
+  renderContracts();
+  renderMethodology();
+  setupNav();
+}
+
+// ── Navigation highlight ──
+function setupNav() {
+  const sections = document.querySelectorAll('.section, .header');
+  const pills = document.querySelectorAll('.nav-pill');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        pills.forEach(p => p.classList.remove('active'));
+        const id = e.target.id || e.target.closest('.section')?.id;
+        const pill = document.querySelector(`.nav-pill[href="#${id}"]`);
+        if (pill) pill.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(s => observer.observe(s));
+}
+
+// ── 1. Hero cards ──
+function renderHero() {
+  const s = DATA.summary;
+  const cards = [
+    { number: fmtEur(s.total_mln), label: 'Valore contratti', gradient: 'linear-gradient(135deg, #3b82f6, #8b5cf6)' },
+    { number: fmtNum(s.n_contracts), label: 'Contratti', gradient: 'linear-gradient(135deg, #8b5cf6, #ec4899)' },
+    { number: s.n_ministries, label: 'Ministeri', gradient: 'linear-gradient(135deg, #ec4899, #f97316)' },
+    { number: s.n_firms, label: 'Società', gradient: 'linear-gradient(135deg, #f97316, #eab308)' },
+    { number: `${s.year_min}–${s.year_max}`, label: 'Periodo', gradient: 'linear-gradient(135deg, #22c55e, #3b82f6)' },
+    { number: s.direct_award_pct + '%', label: 'Aff. diretto', gradient: 'linear-gradient(135deg, #3b82f6, #22c55e)' },
+  ];
+  document.getElementById('hero').innerHTML = cards.map(c =>
+    `<div class="stat-card">
+      <div class="stat-number" style="background:${c.gradient};-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">${c.number}</div>
+      <div class="stat-label">${c.label}</div>
+    </div>`
+  ).join('');
+}
+
+// ── 2. Total by firm ──
+function renderFirmChart() {
+  const firms = DATA.by_firm;
+  new Chart(document.getElementById('chartFirm'), {
+    type: 'bar',
+    data: {
+      labels: firms.map(f => f.firm),
+      datasets: [{
+        data: firms.map(f => f.total_mln),
+        backgroundColor: firms.map(f => FIRM_COLORS[f.firm] + 'cc'),
+        borderColor: firms.map(f => FIRM_COLORS[f.firm]),
+        borderWidth: 1,
+        borderRadius: 8,
+        barThickness: 38,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => `  ${ctx.raw.toLocaleString('it-IT',{maximumFractionDigits:1})}M EUR — ${firms[ctx.dataIndex].n_contracts} contratti` } }
+      },
+      scales: {
+        x: { title: { display: true, text: 'Milioni di EUR', color: '#64748b' }, grid: { color: 'rgba(59,130,246,0.06)' } },
+        y: { grid: { display: false }, ticks: { font: { weight: '600', size: 13 } } }
+      }
+    }
+  });
+}
+
+// ── 3. Annual trend ──
+function renderTrendChart() {
+  const years = [...new Set(DATA.annual_trend.map(r => r.anno))].sort();
+  const datasets = FIRM_ORDER.filter(f => DATA.annual_trend.some(r => r.firm === f)).map(firm => {
+    const byYear = {};
+    DATA.annual_trend.filter(r => r.firm === firm).forEach(r => byYear[r.anno] = r.total_mln);
+    return {
+      label: firm,
+      data: years.map(y => byYear[y] || 0),
+      backgroundColor: FIRM_COLORS[firm] + '55',
+      borderColor: FIRM_COLORS[firm],
+      borderWidth: 2.5,
+      fill: true,
+      tension: .35,
+      pointRadius: 3,
+      pointHoverRadius: 6,
+      pointBackgroundColor: FIRM_COLORS[firm],
+    };
+  });
+  new Chart(document.getElementById('chartTrend'), {
+    type: 'line',
+    data: { labels: years, datasets },
+    options: {
+      plugins: {
+        tooltip: { mode: 'index', intersect: false,
+          callbacks: { label: ctx => `  ${ctx.dataset.label}: ${ctx.raw.toLocaleString('it-IT',{maximumFractionDigits:1})}M` } },
+        legend: { labels: { usePointStyle: true, pointStyle: 'circle', padding: 20, font: { size: 12, weight: '500' } } }
+      },
+      scales: {
+        x: { grid: { color: 'rgba(59,130,246,0.06)' }, ticks: { font: { weight: '500' } } },
+        y: { title: { display: true, text: 'Milioni di EUR', color: '#64748b' }, stacked: true, grid: { color: 'rgba(59,130,246,0.06)' } }
+      },
+      interaction: { mode: 'index', intersect: false },
+    }
+  });
+}
+
+// ── 4. Heatmap ──
+function renderHeatmap() {
+  const matrix = DATA.ministry_firm_matrix;
+  const ministries = [...new Set(matrix.map(r => r.ministry))];
+  const firms = FIRM_ORDER.filter(f => matrix.some(r => r.firm === f));
+  const totals = {};
+  matrix.forEach(r => { totals[r.ministry] = (totals[r.ministry]||0) + r.total_mln; });
+  ministries.sort((a,b) => totals[b] - totals[a]);
+  const lookup = {};
+  matrix.forEach(r => { lookup[r.ministry+'|'+r.firm] = r; });
+  const maxVal = Math.max(...matrix.map(r => r.total_mln));
+
+  let html = '<table class="heatmap"><thead><tr><th style="min-width:200px">Ministero</th>';
+  firms.forEach(f => html += `<th>${f}</th>`);
+  html += '<th>Totale</th></tr></thead><tbody>';
+
+  ministries.forEach(m => {
+    html += `<tr><td title="${m}">${m}</td>`;
+    let rowTotal = 0;
+    firms.forEach(f => {
+      const d = lookup[m+'|'+f];
+      const val = d ? d.total_mln : 0;
+      rowTotal += val;
+      const intensity = val > 0 ? Math.max(0.08, Math.pow(val / maxVal, 0.6)) : 0;
+      const color = d ? FIRM_COLORS[f] : 'transparent';
+      const alpha = Math.round(intensity * 200).toString(16).padStart(2,'0');
+      const bg = val > 0 ? `${color}${alpha}` : 'rgba(30,41,59,0.3)';
+      const textColor = intensity > 0.4 ? '#fff' : (val > 0 ? '#cbd5e1' : '#475569');
+      html += `<td style="background:${bg};color:${textColor}" title="${m}: ${f} — ${val.toLocaleString('it-IT',{maximumFractionDigits:1})}M EUR">${val > 0 ? val.toLocaleString('it-IT',{maximumFractionDigits:1}) : '—'}</td>`;
+    });
+    html += `<td>${rowTotal.toLocaleString('it-IT',{maximumFractionDigits:1})}</td></tr>`;
+  });
+  html += '</tbody></table>';
+  document.getElementById('heatmapWrap').innerHTML = html;
+}
+
+// ── 5. Concentration ──
+function renderConcentration() {
+  const data = DATA.concentration;
+  new Chart(document.getElementById('chartConc'), {
+    type: 'bar',
+    data: {
+      labels: data.map(r => r.ministry),
+      datasets: [{
+        data: data.map(r => r.share_pct),
+        backgroundColor: data.map(r => FIRM_COLORS[r.top_firm] + 'bb'),
+        borderColor: data.map(r => FIRM_COLORS[r.top_firm]),
+        borderWidth: 1,
+        borderRadius: 6,
+        barThickness: 20,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => `  ${data[ctx.dataIndex].top_firm}: ${ctx.raw.toFixed(1)}% (${data[ctx.dataIndex].total_mln}M EUR totali)` } }
+      },
+      scales: {
+        x: { max: 100, title: { display: true, text: '% quota società dominante', color: '#64748b' }, grid: { color: 'rgba(59,130,246,0.06)' } },
+        y: { grid: { display: false }, ticks: { font: { size: 11 } } }
+      }
+    }
+  });
+}
+
+// ── 6. Spend per employee ──
+function renderSpendPerEmployee() {
+  const data = DATA.spend_per_employee.slice(0, 20);
+  const labels = data.map(r => `${r.ministry} (${r.anno})`);
+  new Chart(document.getElementById('chartSpe'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        data: data.map(r => r.per_employee),
+        backgroundColor: data.map((_, i) => {
+          const t = i / data.length;
+          return `rgba(${59 + t*180}, ${130 - t*40}, ${246 - t*100}, 0.65)`;
+        }),
+        borderColor: data.map((_, i) => {
+          const t = i / data.length;
+          return `rgba(${59 + t*180}, ${130 - t*40}, ${246 - t*100}, 1)`;
+        }),
+        borderWidth: 1,
+        borderRadius: 5,
+        barThickness: 16,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => {
+          const d = data[ctx.dataIndex];
+          return `  ${fmtNum(d.per_employee)} EUR/dip. — ${d.spend_mln}M su ${fmtNum(d.employees)} dipendenti`;
+        }}}
+      },
+      scales: {
+        x: { title: { display: true, text: 'EUR per dipendente', color: '#64748b' }, grid: { color: 'rgba(59,130,246,0.06)' } },
+        y: { grid: { display: false }, ticks: { font: { size: 10 } } }
+      }
+    }
+  });
+}
+
+// ── 7. Repeat suppliers ──
+function renderRepeatSuppliers() {
+  const data = DATA.repeat_suppliers.filter(r => r.n_contracts >= 2);
+  let html = '<table class="data-table"><thead><tr><th>Ministero</th><th>Società</th><th class="num">Contratti</th><th class="num">Totale (M EUR)</th><th>Anni</th></tr></thead><tbody>';
+  data.forEach(r => {
+    html += `<tr><td>${r.ministry}</td><td><span class="firm-badge firm-${r.firm}">${r.firm}</span></td><td class="num">${r.n_contracts}</td><td class="num">${r.total_mln.toLocaleString('it-IT',{maximumFractionDigits:1})}</td><td>${r.years}</td></tr>`;
+  });
+  html += '</tbody></table>';
+  document.getElementById('repeatWrap').innerHTML = html;
+}
+
+// ── 8. PNRR ──
+function renderPnrr() {
+  const data = DATA.pnrr;
+  if (!data.length) { document.getElementById('chartPnrr').parentElement.innerHTML = '<p style="color:var(--muted)">Nessun contratto PNRR trovato.</p>'; return; }
+  new Chart(document.getElementById('chartPnrr'), {
+    type: 'bar',
+    data: {
+      labels: data.map(r => r.firm),
+      datasets: [{
+        data: data.map(r => r.total_mln),
+        backgroundColor: data.map(r => FIRM_COLORS[r.firm] + 'cc'),
+        borderColor: data.map(r => FIRM_COLORS[r.firm]),
+        borderWidth: 1,
+        borderRadius: 8,
+        barThickness: 35,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => `  ${ctx.raw.toLocaleString('it-IT',{maximumFractionDigits:1})}M EUR — ${data[ctx.dataIndex].n_contracts} contratti` } }
+      },
+      scales: {
+        x: { title: { display: true, text: 'Milioni di EUR', color: '#64748b' }, grid: { color: 'rgba(59,130,246,0.06)' } },
+        y: { grid: { display: false }, ticks: { font: { weight: '600', size: 13 } } }
+      }
+    }
+  });
+}
+
+// ── 9. Contracts table ──
+let contractSort = { col: 'importo', asc: false };
+let contractFilters = { firm: '', ministry: '', search: '' };
+
+function renderContracts() {
+  const firms = ['', ...FIRM_ORDER.filter(f => DATA.contracts.some(c => c.firm === f))];
+  const ministries = ['', ...[...new Set(DATA.contracts.map(c => c.ministry))].sort()];
+  document.getElementById('filters').innerHTML = `
+    <select id="fFirm" onchange="contractFilters.firm=this.value;renderContractTable()">
+      ${firms.map(f => `<option value="${f}">${f || 'Tutte le società'}</option>`).join('')}
+    </select>
+    <select id="fMinistry" onchange="contractFilters.ministry=this.value;renderContractTable()">
+      ${ministries.map(m => `<option value="${m}">${m || 'Tutti i ministeri'}</option>`).join('')}
+    </select>
+    <input type="text" placeholder="Cerca nell'oggetto del contratto..." oninput="contractFilters.search=this.value.toLowerCase();renderContractTable()">
+  `;
+  renderContractTable();
+}
+
+function renderContractTable() {
+  let data = DATA.contracts.filter(c => {
+    if (contractFilters.firm && c.firm !== contractFilters.firm) return false;
+    if (contractFilters.ministry && c.ministry !== contractFilters.ministry) return false;
+    if (contractFilters.search && !c.oggetto.toLowerCase().includes(contractFilters.search)) return false;
+    return true;
+  });
+  data.sort((a, b) => {
+    let va = a[contractSort.col], vb = b[contractSort.col];
+    if (typeof va === 'string') { va = va.toLowerCase(); vb = (vb||'').toLowerCase(); }
+    if (va < vb) return contractSort.asc ? -1 : 1;
+    if (va > vb) return contractSort.asc ? 1 : -1;
+    return 0;
+  });
+
+  const cols = [
+    { key:'anno', label:'Anno', cls:'' },
+    { key:'ministry', label:'Ministero', cls:'' },
+    { key:'firm', label:'Società', cls:'' },
+    { key:'oggetto', label:'Oggetto', cls:'' },
+    { key:'importo', label:'Importo (EUR)', cls:'num' },
+    { key:'procedura', label:'Procedura', cls:'' },
+    { key:'pnrr', label:'PNRR', cls:'' },
+  ];
+
+  let html = '<table class="data-table"><thead><tr>';
+  cols.forEach(c => {
+    const arrow = contractSort.col === c.key ? (contractSort.asc ? ' &#9650;' : ' &#9660;') : '';
+    html += `<th class="${c.cls}" onclick="sortContracts('${c.key}')">${c.label}${arrow}</th>`;
+  });
+  html += '</tr></thead><tbody>';
+
+  data.forEach(r => {
+    html += `<tr>
+      <td>${r.anno || ''}</td>
+      <td title="${r.ministry}" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${r.ministry}</td>
+      <td><span class="firm-badge firm-${r.firm}">${r.firm}</span></td>
+      <td title="${r.oggetto}" style="max-width:320px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${r.oggetto}</td>
+      <td class="num" style="white-space:nowrap">${r.importo > 0 ? r.importo.toLocaleString('it-IT',{maximumFractionDigits:0}) + ' \u20AC' : '—'}</td>
+      <td title="${r.procedura}" style="max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.78rem">${r.procedura}</td>
+      <td>${r.pnrr ? '<span style="color:#22c55e;font-weight:600">PNRR</span>' : ''}</td>
+    </tr>`;
+  });
+  html += `</tbody></table><p style="color:var(--muted);font-size:.78rem;margin-top:.75rem">${data.length} contratti visualizzati</p>`;
+  document.getElementById('contractsWrap').innerHTML = html;
+}
+
+function sortContracts(col) {
+  if (contractSort.col === col) contractSort.asc = !contractSort.asc;
+  else { contractSort.col = col; contractSort.asc = col === 'importo' ? false : true; }
+  renderContractTable();
+}
+
+// ── 10. Methodology ──
+function renderMethodology() {
+  document.getElementById('methodologyContent').innerHTML = `
+    <h4>Fonti dati</h4>
+    <ul>
+      <li><strong>ANAC CIG</strong> — Contratti pubblici dal dataset <a href="https://dati.anticorruzione.it/opendata/dataset/cig" target="_blank">dati.anticorruzione.it</a> (2018–2025, file mensili)</li>
+      <li><strong>ANAC Aggiudicatari</strong> — Aggiudicatari dal dataset <a href="https://dati.anticorruzione.it/opendata/dataset/aggiudicatari" target="_blank">dati.anticorruzione.it</a></li>
+      <li><strong>OpenBDAP</strong> — Pagamenti Bilancio dello Stato con Mandati Informatici (<a href="https://bdap-opendata.rgs.mef.gov.it" target="_blank">bdap-opendata.rgs.mef.gov.it</a>)</li>
+      <li><strong>Conto Annuale</strong> — Dipendenti Pubblici - Occupazione Complessiva (<a href="https://contoannuale.rgs.mef.gov.it" target="_blank">contoannuale.rgs.mef.gov.it</a>, 2018–2023)</li>
+    </ul>
+
+    <h4>Metodologia</h4>
+    <ul>
+      <li>I contratti CIG sono stati filtrati per <strong>stazione appaltante = ministeri italiani</strong> (inclusa Presidenza del Consiglio dei Ministri)</li>
+      <li>Le società sono identificate tramite <strong>codice fiscale</strong> e, in subordine, tramite pattern nel nome (es. "DELOITTE", "PRICEWATERHOUSE")</li>
+      <li>Le diverse entità giuridiche di ciascun gruppo (es. Deloitte Consulting S.r.l., Deloitte Risk Advisory S.r.l.) sono aggregate sotto il nome del gruppo</li>
+      <li>I nomi dei ministeri sono normalizzati per tenere conto delle ridenominazioni nel tempo (es. Ministero dello Sviluppo Economico &rarr; Ministero delle Imprese e del Made in Italy)</li>
+      <li>Le sotto-unità dei ministeri (dipartimenti, direzioni generali, uffici periferici) sono aggregate sotto il ministero principale</li>
+    </ul>
+
+    <h4>Cosa non è incluso</h4>
+    <ul>
+      <li><strong>Bain & Company</strong> e <strong>Boston Consulting Group (BCG)</strong> non compaiono perché i loro contratti nel settore pubblico italiano passano attraverso società partecipate dallo Stato (Hera, CDP, Enel, Invitalia, RAI) e non direttamente attraverso i ministeri</li>
+      <li><strong>SmartCIG</strong> (micro-acquisti sotto 5.000 EUR) non sono inclusi nel dataset CIG utilizzato</li>
+      <li>I contratti assegnati a <strong>RTI (Raggruppamenti Temporanei d'Impresa)</strong> in cui una Big 4 partecipa come membro e non come capofila potrebbero non essere catturati</li>
+    </ul>
+
+    <h4>Licenza</h4>
+    <p>Dati rilasciati con licenza <strong>CC BY 3.0</strong> (ANAC) e <strong>CC BY 3.0 IT</strong> (OpenBDAP). Questa analisi è a scopo informativo e di trasparenza pubblica.</p>
+    <p style="margin-top:1rem;font-size:.78rem">Ultimo aggiornamento: aprile 2026</p>
+  `;
+}
+
+init();
+</script>
+</body>
+</html>

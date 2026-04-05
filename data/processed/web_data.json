@@ -1,0 +1,3443 @@
+{
+  "summary": {
+    "total_eur": 693061963.8900001,
+    "total_mln": 693.1,
+    "n_contracts": 167,
+    "n_ministries": 15,
+    "n_firms": 5,
+    "firms_list": [
+      "Deloitte",
+      "EY",
+      "KPMG",
+      "McKinsey",
+      "PwC"
+    ],
+    "year_min": 2018,
+    "year_max": 2025,
+    "direct_award_pct": 0.0
+  },
+  "by_firm": [
+    {
+      "firm": "EY",
+      "type": "Big 4",
+      "n_contracts": 58,
+      "total_mln": 366.9
+    },
+    {
+      "firm": "KPMG",
+      "type": "Big 4",
+      "n_contracts": 50,
+      "total_mln": 139.5
+    },
+    {
+      "firm": "Deloitte",
+      "type": "Big 4",
+      "n_contracts": 36,
+      "total_mln": 105.1
+    },
+    {
+      "firm": "PwC",
+      "type": "Big 4",
+      "n_contracts": 25,
+      "total_mln": 42.7
+    },
+    {
+      "firm": "McKinsey",
+      "type": "Big 3",
+      "n_contracts": 7,
+      "total_mln": 38.9
+    }
+  ],
+  "annual_trend": [
+    {
+      "anno": 2018,
+      "firm": "Deloitte",
+      "n_contracts": 5,
+      "total_mln": 18.37
+    },
+    {
+      "anno": 2018,
+      "firm": "EY",
+      "n_contracts": 3,
+      "total_mln": 12.52
+    },
+    {
+      "anno": 2018,
+      "firm": "PwC",
+      "n_contracts": 10,
+      "total_mln": 31.48
+    },
+    {
+      "anno": 2019,
+      "firm": "EY",
+      "n_contracts": 2,
+      "total_mln": 6.13
+    },
+    {
+      "anno": 2019,
+      "firm": "KPMG",
+      "n_contracts": 1,
+      "total_mln": 0.14
+    },
+    {
+      "anno": 2019,
+      "firm": "PwC",
+      "n_contracts": 4,
+      "total_mln": 1.45
+    },
+    {
+      "anno": 2020,
+      "firm": "Deloitte",
+      "n_contracts": 3,
+      "total_mln": 2.55
+    },
+    {
+      "anno": 2020,
+      "firm": "EY",
+      "n_contracts": 1,
+      "total_mln": 0.13
+    },
+    {
+      "anno": 2020,
+      "firm": "KPMG",
+      "n_contracts": 1,
+      "total_mln": 0.03
+    },
+    {
+      "anno": 2020,
+      "firm": "PwC",
+      "n_contracts": 7,
+      "total_mln": 4.57
+    },
+    {
+      "anno": 2021,
+      "firm": "Deloitte",
+      "n_contracts": 3,
+      "total_mln": 6.36
+    },
+    {
+      "anno": 2021,
+      "firm": "EY",
+      "n_contracts": 4,
+      "total_mln": 9.51
+    },
+    {
+      "anno": 2021,
+      "firm": "KPMG",
+      "n_contracts": 3,
+      "total_mln": 51.29
+    },
+    {
+      "anno": 2021,
+      "firm": "PwC",
+      "n_contracts": 3,
+      "total_mln": 4.42
+    },
+    {
+      "anno": 2022,
+      "firm": "Deloitte",
+      "n_contracts": 4,
+      "total_mln": 17.9
+    },
+    {
+      "anno": 2022,
+      "firm": "EY",
+      "n_contracts": 13,
+      "total_mln": 112.98
+    },
+    {
+      "anno": 2022,
+      "firm": "KPMG",
+      "n_contracts": 4,
+      "total_mln": 26.53
+    },
+    {
+      "anno": 2022,
+      "firm": "McKinsey",
+      "n_contracts": 1,
+      "total_mln": 21.5
+    },
+    {
+      "anno": 2022,
+      "firm": "PwC",
+      "n_contracts": 1,
+      "total_mln": 0.73
+    },
+    {
+      "anno": 2023,
+      "firm": "Deloitte",
+      "n_contracts": 4,
+      "total_mln": 17.44
+    },
+    {
+      "anno": 2023,
+      "firm": "EY",
+      "n_contracts": 7,
+      "total_mln": 71.56
+    },
+    {
+      "anno": 2023,
+      "firm": "KPMG",
+      "n_contracts": 8,
+      "total_mln": 19.44
+    },
+    {
+      "anno": 2023,
+      "firm": "McKinsey",
+      "n_contracts": 3,
+      "total_mln": 3.04
+    },
+    {
+      "anno": 2024,
+      "firm": "Deloitte",
+      "n_contracts": 11,
+      "total_mln": 34.45
+    },
+    {
+      "anno": 2024,
+      "firm": "EY",
+      "n_contracts": 16,
+      "total_mln": 119.63
+    },
+    {
+      "anno": 2024,
+      "firm": "KPMG",
+      "n_contracts": 19,
+      "total_mln": 27.25
+    },
+    {
+      "anno": 2024,
+      "firm": "McKinsey",
+      "n_contracts": 1,
+      "total_mln": 11.9
+    },
+    {
+      "anno": 2025,
+      "firm": "Deloitte",
+      "n_contracts": 6,
+      "total_mln": 7.99
+    },
+    {
+      "anno": 2025,
+      "firm": "EY",
+      "n_contracts": 12,
+      "total_mln": 34.46
+    },
+    {
+      "anno": 2025,
+      "firm": "KPMG",
+      "n_contracts": 14,
+      "total_mln": 14.86
+    },
+    {
+      "anno": 2025,
+      "firm": "McKinsey",
+      "n_contracts": 2,
+      "total_mln": 2.47
+    }
+  ],
+  "ministry_firm_matrix": [
+    {
+      "ministry": "Ministero degli Affari Esteri",
+      "firm": "Deloitte",
+      "n_contracts": 1,
+      "total_mln": 0.11
+    },
+    {
+      "ministry": "Ministero degli Affari Esteri",
+      "firm": "EY",
+      "n_contracts": 1,
+      "total_mln": 0.02
+    },
+    {
+      "ministry": "Ministero degli Affari Esteri",
+      "firm": "PwC",
+      "n_contracts": 2,
+      "total_mln": 0.44
+    },
+    {
+      "ministry": "Ministero del Turismo",
+      "firm": "EY",
+      "n_contracts": 1,
+      "total_mln": 0.14
+    },
+    {
+      "ministry": "Ministero del Turismo",
+      "firm": "KPMG",
+      "n_contracts": 5,
+      "total_mln": 3.53
+    },
+    {
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "Deloitte",
+      "n_contracts": 3,
+      "total_mln": 3.75
+    },
+    {
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "EY",
+      "n_contracts": 2,
+      "total_mln": 10.55
+    },
+    {
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "KPMG",
+      "n_contracts": 2,
+      "total_mln": 1.49
+    },
+    {
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "PwC",
+      "n_contracts": 2,
+      "total_mln": 3.54
+    },
+    {
+      "ministry": "Ministero dell'Ambiente",
+      "firm": "Deloitte",
+      "n_contracts": 2,
+      "total_mln": 20.76
+    },
+    {
+      "ministry": "Ministero dell'Ambiente",
+      "firm": "EY",
+      "n_contracts": 1,
+      "total_mln": 3.0
+    },
+    {
+      "ministry": "Ministero dell'Ambiente",
+      "firm": "PwC",
+      "n_contracts": 2,
+      "total_mln": 8.0
+    },
+    {
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "Deloitte",
+      "n_contracts": 1,
+      "total_mln": 1.65
+    },
+    {
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "n_contracts": 15,
+      "total_mln": 61.68
+    },
+    {
+      "ministry": "Ministero dell'Interno",
+      "firm": "Deloitte",
+      "n_contracts": 10,
+      "total_mln": 25.06
+    },
+    {
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "n_contracts": 18,
+      "total_mln": 201.95
+    },
+    {
+      "ministry": "Ministero dell'Interno",
+      "firm": "KPMG",
+      "n_contracts": 9,
+      "total_mln": 15.93
+    },
+    {
+      "ministry": "Ministero dell'Interno",
+      "firm": "McKinsey",
+      "n_contracts": 1,
+      "total_mln": 1.4
+    },
+    {
+      "ministry": "Ministero dell'Interno",
+      "firm": "PwC",
+      "n_contracts": 7,
+      "total_mln": 22.79
+    },
+    {
+      "ministry": "Ministero dell'Istruzione",
+      "firm": "Deloitte",
+      "n_contracts": 1,
+      "total_mln": 3.0
+    },
+    {
+      "ministry": "Ministero dell'Istruzione",
+      "firm": "EY",
+      "n_contracts": 3,
+      "total_mln": 14.77
+    },
+    {
+      "ministry": "Ministero dell'Istruzione",
+      "firm": "KPMG",
+      "n_contracts": 2,
+      "total_mln": 9.4
+    },
+    {
+      "ministry": "Ministero dell'Istruzione",
+      "firm": "PwC",
+      "n_contracts": 1,
+      "total_mln": 0.81
+    },
+    {
+      "ministry": "Ministero dell'Università e della Ricerca",
+      "firm": "EY",
+      "n_contracts": 2,
+      "total_mln": 10.7
+    },
+    {
+      "ministry": "Ministero dell'Università e della Ricerca",
+      "firm": "KPMG",
+      "n_contracts": 2,
+      "total_mln": 3.01
+    },
+    {
+      "ministry": "Ministero della Cultura",
+      "firm": "Deloitte",
+      "n_contracts": 2,
+      "total_mln": 0.36
+    },
+    {
+      "ministry": "Ministero della Cultura",
+      "firm": "KPMG",
+      "n_contracts": 1,
+      "total_mln": 0.8
+    },
+    {
+      "ministry": "Ministero della Difesa",
+      "firm": "PwC",
+      "n_contracts": 3,
+      "total_mln": 0.32
+    },
+    {
+      "ministry": "Ministero della Giustizia",
+      "firm": "EY",
+      "n_contracts": 3,
+      "total_mln": 0.67
+    },
+    {
+      "ministry": "Ministero della Salute",
+      "firm": "EY",
+      "n_contracts": 2,
+      "total_mln": 12.35
+    },
+    {
+      "ministry": "Ministero della Salute",
+      "firm": "KPMG",
+      "n_contracts": 2,
+      "total_mln": 12.35
+    },
+    {
+      "ministry": "Ministero della Salute",
+      "firm": "McKinsey",
+      "n_contracts": 2,
+      "total_mln": 12.35
+    },
+    {
+      "ministry": "Ministero della Salute",
+      "firm": "PwC",
+      "n_contracts": 5,
+      "total_mln": 4.75
+    },
+    {
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "EY",
+      "n_contracts": 4,
+      "total_mln": 16.59
+    },
+    {
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "KPMG",
+      "n_contracts": 3,
+      "total_mln": 1.97
+    },
+    {
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "McKinsey",
+      "n_contracts": 1,
+      "total_mln": 1.64
+    },
+    {
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "PwC",
+      "n_contracts": 1,
+      "total_mln": 0.24
+    },
+    {
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "Deloitte",
+      "n_contracts": 11,
+      "total_mln": 42.96
+    },
+    {
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "EY",
+      "n_contracts": 3,
+      "total_mln": 6.88
+    },
+    {
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "KPMG",
+      "n_contracts": 1,
+      "total_mln": 0.06
+    },
+    {
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "PwC",
+      "n_contracts": 2,
+      "total_mln": 1.76
+    },
+    {
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "Deloitte",
+      "n_contracts": 5,
+      "total_mln": 7.4
+    },
+    {
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "n_contracts": 18,
+      "total_mln": 89.31
+    },
+    {
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "KPMG",
+      "n_contracts": 8,
+      "total_mln": 29.31
+    },
+    {
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "McKinsey",
+      "n_contracts": 3,
+      "total_mln": 23.51
+    }
+  ],
+  "concentration": [
+    {
+      "ministry": "Ministero della Difesa",
+      "top_firm": "PwC",
+      "share_pct": 100.0,
+      "total_mln": 0.3
+    },
+    {
+      "ministry": "Ministero della Giustizia",
+      "top_firm": "EY",
+      "share_pct": 100.0,
+      "total_mln": 0.7
+    },
+    {
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "top_firm": "KPMG",
+      "share_pct": 97.4,
+      "total_mln": 63.3
+    },
+    {
+      "ministry": "Ministero del Turismo",
+      "top_firm": "KPMG",
+      "share_pct": 96.2,
+      "total_mln": 3.7
+    },
+    {
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "top_firm": "Deloitte",
+      "share_pct": 83.2,
+      "total_mln": 51.7
+    },
+    {
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "top_firm": "EY",
+      "share_pct": 81.1,
+      "total_mln": 20.5
+    },
+    {
+      "ministry": "Ministero dell'Università e della Ricerca",
+      "top_firm": "EY",
+      "share_pct": 78.0,
+      "total_mln": 13.7
+    },
+    {
+      "ministry": "Ministero degli Affari Esteri",
+      "top_firm": "PwC",
+      "share_pct": 77.9,
+      "total_mln": 0.6
+    },
+    {
+      "ministry": "Ministero dell'Interno",
+      "top_firm": "EY",
+      "share_pct": 75.6,
+      "total_mln": 267.1
+    },
+    {
+      "ministry": "Ministero della Cultura",
+      "top_firm": "KPMG",
+      "share_pct": 69.2,
+      "total_mln": 1.2
+    },
+    {
+      "ministry": "Ministero dell'Ambiente",
+      "top_firm": "Deloitte",
+      "share_pct": 65.4,
+      "total_mln": 31.8
+    },
+    {
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "top_firm": "EY",
+      "share_pct": 59.7,
+      "total_mln": 149.5
+    },
+    {
+      "ministry": "Ministero dell'Agricoltura",
+      "top_firm": "EY",
+      "share_pct": 54.6,
+      "total_mln": 19.3
+    },
+    {
+      "ministry": "Ministero dell'Istruzione",
+      "top_firm": "EY",
+      "share_pct": 52.8,
+      "total_mln": 28.0
+    },
+    {
+      "ministry": "Ministero della Salute",
+      "top_firm": "McKinsey",
+      "share_pct": 29.5,
+      "total_mln": 41.8
+    }
+  ],
+  "spend_per_employee": [
+    {
+      "anno": 2018,
+      "ministry": "Ministero dell'Ambiente",
+      "spend_mln": 25.76,
+      "employees": 533,
+      "per_employee": 48337.0
+    },
+    {
+      "anno": 2022,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "spend_mln": 67.5,
+      "employees": 2244,
+      "per_employee": 30076.0
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero dell'Università e della Ricerca",
+      "spend_mln": 6.6,
+      "employees": 230,
+      "per_employee": 28698.0
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "spend_mln": 15.44,
+      "employees": 1896,
+      "per_employee": 8142.0
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Agricoltura",
+      "spend_mln": 8.95,
+      "employees": 1322,
+      "per_employee": 6772.0
+    },
+    {
+      "anno": 2023,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "spend_mln": 6.45,
+      "employees": 2400,
+      "per_employee": 2688.0
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Università e della Ricerca",
+      "spend_mln": 0.5,
+      "employees": 271,
+      "per_employee": 1862.0
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero della Salute",
+      "spend_mln": 2.88,
+      "employees": 1888,
+      "per_employee": 1525.0
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero dell'Agricoltura",
+      "spend_mln": 2.0,
+      "employees": 1450,
+      "per_employee": 1379.0
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero dell'Agricoltura",
+      "spend_mln": 1.54,
+      "employees": 1282,
+      "per_employee": 1202.0
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "spend_mln": 1.64,
+      "employees": 1920,
+      "per_employee": 854.0
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "spend_mln": 51.29,
+      "employees": 67876,
+      "per_employee": 756.0
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero della Salute",
+      "spend_mln": 1.35,
+      "employees": 2045,
+      "per_employee": 659.0
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero della Salute",
+      "spend_mln": 1.14,
+      "employees": 1780,
+      "per_employee": 639.0
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero dell'Interno",
+      "spend_mln": 96.58,
+      "employees": 151177,
+      "per_employee": 639.0
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "spend_mln": 10.12,
+      "employees": 16652,
+      "per_employee": 608.0
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "spend_mln": 1.16,
+      "employees": 1901,
+      "per_employee": 608.0
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero dell'Agricoltura",
+      "spend_mln": 0.65,
+      "employees": 1322,
+      "per_employee": 492.0
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Interno",
+      "spend_mln": 71.46,
+      "employees": 150394,
+      "per_employee": 475.0
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "spend_mln": 6.81,
+      "employees": 18015,
+      "per_employee": 378.0
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero della Salute",
+      "spend_mln": 0.73,
+      "employees": 1989,
+      "per_employee": 367.0
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "spend_mln": 5.26,
+      "employees": 16563,
+      "per_employee": 317.0
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "spend_mln": 3.67,
+      "employees": 17266,
+      "per_employee": 212.0
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero dell'Interno",
+      "spend_mln": 21.03,
+      "employees": 153175,
+      "per_employee": 137.0
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "spend_mln": 0.24,
+      "employees": 2617,
+      "per_employee": 93.0
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "spend_mln": 5.37,
+      "employees": 68594,
+      "per_employee": 78.0
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero degli Affari Esteri",
+      "spend_mln": 0.28,
+      "employees": 6516,
+      "per_employee": 43.0
+    },
+    {
+      "anno": 2019,
+      "ministry": "Ministero degli Affari Esteri",
+      "spend_mln": 0.27,
+      "employees": 6558,
+      "per_employee": 41.0
+    },
+    {
+      "anno": 2021,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "spend_mln": 0.06,
+      "employees": 2057,
+      "per_employee": 31.0
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero della Cultura",
+      "spend_mln": 0.36,
+      "employees": 15617,
+      "per_employee": 23.0
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero dell'Interno",
+      "spend_mln": 2.79,
+      "employees": 151373,
+      "per_employee": 18.0
+    },
+    {
+      "anno": 2020,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "spend_mln": 0.03,
+      "employees": 2044,
+      "per_employee": 14.0
+    },
+    {
+      "anno": 2019,
+      "ministry": "Ministero dell'Interno",
+      "spend_mln": 1.35,
+      "employees": 153353,
+      "per_employee": 9.0
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero dell'Interno",
+      "spend_mln": 0.89,
+      "employees": 151009,
+      "per_employee": 6.0
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero della Giustizia",
+      "spend_mln": 0.53,
+      "employees": 92145,
+      "per_employee": 6.0
+    },
+    {
+      "anno": 2019,
+      "ministry": "Ministero dell'Istruzione",
+      "spend_mln": 6.0,
+      "employees": 1168288,
+      "per_employee": 5.0
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero dell'Istruzione",
+      "spend_mln": 5.76,
+      "employees": 1133531,
+      "per_employee": 5.0
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "spend_mln": 0.08,
+      "employees": 16307,
+      "per_employee": 5.0
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Istruzione",
+      "spend_mln": 4.4,
+      "employees": 1198779,
+      "per_employee": 4.0
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero dell'Istruzione",
+      "spend_mln": 0.81,
+      "employees": 1186869,
+      "per_employee": 1.0
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero della Difesa",
+      "spend_mln": 0.13,
+      "employees": 303128,
+      "per_employee": 0.0
+    },
+    {
+      "anno": 2019,
+      "ministry": "Ministero della Difesa",
+      "spend_mln": 0.1,
+      "employees": 304135,
+      "per_employee": 0.0
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero della Difesa",
+      "spend_mln": 0.09,
+      "employees": 297043,
+      "per_employee": 0.0
+    }
+  ],
+  "repeat_suppliers": [
+    {
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "n_contracts": 18,
+      "total_mln": 89.3,
+      "years": "2021-2025"
+    },
+    {
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "n_contracts": 18,
+      "total_mln": 201.9,
+      "years": "2018-2024"
+    },
+    {
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "n_contracts": 15,
+      "total_mln": 61.7,
+      "years": "2021-2025"
+    },
+    {
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "Deloitte",
+      "n_contracts": 11,
+      "total_mln": 43.0,
+      "years": "2018-2025"
+    },
+    {
+      "ministry": "Ministero dell'Interno",
+      "firm": "Deloitte",
+      "n_contracts": 10,
+      "total_mln": 25.1,
+      "years": "2020-2025"
+    },
+    {
+      "ministry": "Ministero dell'Interno",
+      "firm": "KPMG",
+      "n_contracts": 9,
+      "total_mln": 15.9,
+      "years": "2019-2025"
+    },
+    {
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "KPMG",
+      "n_contracts": 8,
+      "total_mln": 29.3,
+      "years": "2020-2025"
+    },
+    {
+      "ministry": "Ministero dell'Interno",
+      "firm": "PwC",
+      "n_contracts": 7,
+      "total_mln": 22.8,
+      "years": "2018-2020"
+    },
+    {
+      "ministry": "Ministero della Salute",
+      "firm": "PwC",
+      "n_contracts": 5,
+      "total_mln": 4.7,
+      "years": "2020-2022"
+    },
+    {
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "Deloitte",
+      "n_contracts": 5,
+      "total_mln": 7.4,
+      "years": "2024-2025"
+    },
+    {
+      "ministry": "Ministero del Turismo",
+      "firm": "KPMG",
+      "n_contracts": 5,
+      "total_mln": 3.5,
+      "years": "2024-2025"
+    },
+    {
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "EY",
+      "n_contracts": 4,
+      "total_mln": 16.6,
+      "years": "2021-2022"
+    },
+    {
+      "ministry": "Ministero della Giustizia",
+      "firm": "EY",
+      "n_contracts": 3,
+      "total_mln": 0.7,
+      "years": "2022-2025"
+    },
+    {
+      "ministry": "Ministero della Difesa",
+      "firm": "PwC",
+      "n_contracts": 3,
+      "total_mln": 0.3,
+      "years": "2018-2020"
+    },
+    {
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "EY",
+      "n_contracts": 3,
+      "total_mln": 6.9,
+      "years": "2018-2022"
+    },
+    {
+      "ministry": "Ministero dell'Istruzione",
+      "firm": "EY",
+      "n_contracts": 3,
+      "total_mln": 14.8,
+      "years": "2018-2024"
+    },
+    {
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "McKinsey",
+      "n_contracts": 3,
+      "total_mln": 23.5,
+      "years": "2022-2025"
+    },
+    {
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "KPMG",
+      "n_contracts": 3,
+      "total_mln": 2.0,
+      "years": "2024-2025"
+    },
+    {
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "Deloitte",
+      "n_contracts": 3,
+      "total_mln": 3.7,
+      "years": "2020-2025"
+    },
+    {
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "PwC",
+      "n_contracts": 2,
+      "total_mln": 3.5,
+      "years": "2018-2021"
+    },
+    {
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "KPMG",
+      "n_contracts": 2,
+      "total_mln": 1.5,
+      "years": "2025-2025"
+    },
+    {
+      "ministry": "Ministero degli Affari Esteri",
+      "firm": "PwC",
+      "n_contracts": 2,
+      "total_mln": 0.4,
+      "years": "2018-2019"
+    },
+    {
+      "ministry": "Ministero della Salute",
+      "firm": "McKinsey",
+      "n_contracts": 2,
+      "total_mln": 12.3,
+      "years": "2023-2024"
+    },
+    {
+      "ministry": "Ministero della Salute",
+      "firm": "KPMG",
+      "n_contracts": 2,
+      "total_mln": 12.3,
+      "years": "2023-2024"
+    },
+    {
+      "ministry": "Ministero della Salute",
+      "firm": "EY",
+      "n_contracts": 2,
+      "total_mln": 12.3,
+      "years": "2023-2024"
+    },
+    {
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "EY",
+      "n_contracts": 2,
+      "total_mln": 10.6,
+      "years": "2022-2025"
+    },
+    {
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "PwC",
+      "n_contracts": 2,
+      "total_mln": 1.8,
+      "years": "2020-2020"
+    },
+    {
+      "ministry": "Ministero della Cultura",
+      "firm": "Deloitte",
+      "n_contracts": 2,
+      "total_mln": 0.4,
+      "years": "2018-2018"
+    },
+    {
+      "ministry": "Ministero dell'Università e della Ricerca",
+      "firm": "KPMG",
+      "n_contracts": 2,
+      "total_mln": 3.0,
+      "years": "2022-2024"
+    },
+    {
+      "ministry": "Ministero dell'Università e della Ricerca",
+      "firm": "EY",
+      "n_contracts": 2,
+      "total_mln": 10.7,
+      "years": "2021-2025"
+    },
+    {
+      "ministry": "Ministero dell'Ambiente",
+      "firm": "Deloitte",
+      "n_contracts": 2,
+      "total_mln": 20.8,
+      "years": "2018-2024"
+    },
+    {
+      "ministry": "Ministero dell'Istruzione",
+      "firm": "KPMG",
+      "n_contracts": 2,
+      "total_mln": 9.4,
+      "years": "2022-2024"
+    },
+    {
+      "ministry": "Ministero dell'Ambiente",
+      "firm": "PwC",
+      "n_contracts": 2,
+      "total_mln": 8.0,
+      "years": "2018-2018"
+    },
+    {
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "KPMG",
+      "n_contracts": 1,
+      "total_mln": 0.1,
+      "years": "2024-2024"
+    },
+    {
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "PwC",
+      "n_contracts": 1,
+      "total_mln": 0.2,
+      "years": "2018-2018"
+    },
+    {
+      "ministry": "Ministero degli Affari Esteri",
+      "firm": "Deloitte",
+      "n_contracts": 1,
+      "total_mln": 0.1,
+      "years": "2018-2018"
+    },
+    {
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "McKinsey",
+      "n_contracts": 1,
+      "total_mln": 1.6,
+      "years": "2023-2023"
+    },
+    {
+      "ministry": "Ministero della Cultura",
+      "firm": "KPMG",
+      "n_contracts": 1,
+      "total_mln": 0.8,
+      "years": "2024-2024"
+    },
+    {
+      "ministry": "Ministero degli Affari Esteri",
+      "firm": "EY",
+      "n_contracts": 1,
+      "total_mln": 0.0,
+      "years": "2025-2025"
+    },
+    {
+      "ministry": "Ministero dell'Istruzione",
+      "firm": "Deloitte",
+      "n_contracts": 1,
+      "total_mln": 3.0,
+      "years": "2024-2024"
+    },
+    {
+      "ministry": "Ministero dell'Interno",
+      "firm": "McKinsey",
+      "n_contracts": 1,
+      "total_mln": 1.4,
+      "years": "2025-2025"
+    },
+    {
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "Deloitte",
+      "n_contracts": 1,
+      "total_mln": 1.6,
+      "years": "2023-2023"
+    },
+    {
+      "ministry": "Ministero dell'Ambiente",
+      "firm": "EY",
+      "n_contracts": 1,
+      "total_mln": 3.0,
+      "years": "2024-2024"
+    },
+    {
+      "ministry": "Ministero del Turismo",
+      "firm": "EY",
+      "n_contracts": 1,
+      "total_mln": 0.1,
+      "years": "2025-2025"
+    },
+    {
+      "ministry": "Ministero dell'Istruzione",
+      "firm": "PwC",
+      "n_contracts": 1,
+      "total_mln": 0.8,
+      "years": "2020-2020"
+    }
+  ],
+  "pnrr": [
+    {
+      "firm": "EY",
+      "n_contracts": 8,
+      "total_mln": 47.6
+    },
+    {
+      "firm": "KPMG",
+      "n_contracts": 3,
+      "total_mln": 24.6
+    },
+    {
+      "firm": "McKinsey",
+      "n_contracts": 2,
+      "total_mln": 21.9
+    },
+    {
+      "firm": "Deloitte",
+      "n_contracts": 2,
+      "total_mln": 4.3
+    }
+  ],
+  "contracts": [
+    {
+      "anno": 2023,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SERVIZIO DI SUPPORTO SPECIALISTICO PER LA GESTIONE, L'ATTUAZIONE, IL MONITORAGGIO E LA SORVEGLIANZA DEL PROGRAMMA NAZIONALE DEL FONDO SICUREZZA INTERNA 2021-2027 E DEL PROGRAMMA NAZIONALE DELLO STRUME",
+      "importo": 49319352.0,
+      "importo_mln": 49.32,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "98860767FE"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SERVIZI APPLICATIVI PER LE ESIGENZE DI DIGITALIZZAZIONE DEL DIPARTIMENTO DELLA PUBBLICA SICUREZZA",
+      "importo": 30744110.0,
+      "importo_mln": 30.74,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI PROGRAMMAZIONE DI SOFTWARE DI SISTEMI E DI UTENTE",
+      "pnrr": false,
+      "cig": "A05BB64EA5"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SERVIZI APPLICATIVI PER LA DIGITALIZZAZIONE DEL DIPARTIMENTO DELLA PUBBLICA SICUREZZA",
+      "importo": 30744110.0,
+      "importo_mln": 30.74,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "Cpv prevalente non disponibile",
+      "pnrr": false,
+      "cig": "B1CE78AC98"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SERVIZIO DI ASSISTENZA TECNICA A SUPPORTO DELLA GESTIONE E CONTROLLO DEL PROGRAMMA NAZIONALE FAMI 2021-2027",
+      "importo": 28504590.0,
+      "importo_mln": 28.5,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "930474567A"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SERVIZIO DI ASSISTENZA TECNICA A SUPPORTO DELLA GESTIONE E CONTROLLO DEL PROGRAMMA NAZIONALE FAMI 2021-2027",
+      "importo": 28504590.0,
+      "importo_mln": 28.5,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "930474567A"
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "LOTTO 2 - SERVIZI SPECIALISTICI DI SUPPORTO ALLE GRANDI AUTORITÀ DI AUDIT PER IL FONDO FESR",
+      "importo": 25672442.0,
+      "importo_mln": 25.67,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "89829916AD"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "CONTRATTO ESECUTIVO IN ADESIONE ALL'ACCORDO QUADRO CONSIP AVENTE AD OGGETTO L'AFFIDAMENTO DI SERVIZI APPLICATIVI E L'AFFIDAMENTO DI SERVIZI DI SUPPORTO IN AMBITO 'SANITÀ DIGITALE - SISTEMI INFORMATIVI",
+      "importo": 21498762.0,
+      "importo_mln": 21.5,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA PER LA GESTIONE DI PROGETTI",
+      "pnrr": true,
+      "cig": "94251610E9"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "KPMG",
+      "oggetto": "CONTRATTO ESECUTIVO IN ADESIONE ALL'ACCORDO QUADRO CONSIP AVENTE AD OGGETTO L'AFFIDAMENTO DI SERVIZI APPLICATIVI E L'AFFIDAMENTO DI SERVIZI DI SUPPORTO IN AMBITO 'SANITÀ DIGITALE - SISTEMI INFORMATIVI",
+      "importo": 21498762.0,
+      "importo_mln": 21.5,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA PER LA GESTIONE DI PROGETTI",
+      "pnrr": true,
+      "cig": "94251610E9"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "McKinsey",
+      "oggetto": "CONTRATTO ESECUTIVO IN ADESIONE ALL'ACCORDO QUADRO CONSIP AVENTE AD OGGETTO L'AFFIDAMENTO DI SERVIZI APPLICATIVI E L'AFFIDAMENTO DI SERVIZI DI SUPPORTO IN AMBITO 'SANITÀ DIGITALE - SISTEMI INFORMATIVI",
+      "importo": 21498762.0,
+      "importo_mln": 21.5,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA PER LA GESTIONE DI PROGETTI",
+      "pnrr": true,
+      "cig": "94251610E9"
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "LOTTO 1 - SERVIZI SPECIALISTICI DI SUPPORTO ALLE GRANDI AUTORITÀ DI AUDIT PER IL FONDO FSE",
+      "importo": 20807532.0,
+      "importo_mln": 20.81,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "89829737D2"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero dell'Ambiente",
+      "firm": "Deloitte",
+      "oggetto": "AFFIDAMENTO DI SERVIZI DI SUPPORTO SPECIALISTICO ALLA GESTIONE, ATTUAZIONE E GOVERNANCE DEL PIANO OPERATIVO AMBIENTE FSC 2014/2020",
+      "importo": 17763500.0,
+      "importo_mln": 17.76,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "7658912E1C"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero dell'Interno",
+      "firm": "PwC",
+      "oggetto": "PR.474-REALIZZAZIONE SISTEMA INFORMATICO PER LA RACCOLTA E TRASFERIMENTO DATI PNR/API E TRATTAMENTO DATI API",
+      "importo": 17098890.0,
+      "importo_mln": 17.1,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI PROGRAMMAZIONE DI SOFTWARE PER GESTIONE DI PROGETTI",
+      "pnrr": false,
+      "cig": "7363954F11"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "SERVIZI PER LA DIGITALIZZAZIONE DEI PROCESSI",
+      "importo": 15304682.0,
+      "importo_mln": 15.3,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": true,
+      "cig": "B2A39512F3"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "SERVIZI APPLICATIVI IN OTTICA CLOUD E L'AFFIDAMENTO DI SERVIZI DI DEMAND E PMO PER LE PUBBLICHE AMMINISTRAZIONI CENTRALI",
+      "importo": 14662404.0,
+      "importo_mln": 14.66,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI INFORMATICI: CONSULENZA, SVILUPPO DI SOFTWARE, INTERNET E SUPPORTO",
+      "pnrr": false,
+      "cig": "B99DE608E1"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "EY",
+      "oggetto": "DIGITAL TRANSFORMATION - DIGITALIZZAZIONE DEI PROCESSI",
+      "importo": 14019041.0,
+      "importo_mln": 14.02,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "9277373A62"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SERVIZI DI SUPPORTO SPECIALISTICO AI PROCESSI DI PROGRAMMAZIONE, ATTUAZIONE, MONITORAGGIO, CONTROLLO E COMUNICAZIONE DEL PROGRAMMA NAZIONALE SICUREZZA PER LA LEGALITÀ 2021-2027",
+      "importo": 13784600.0,
+      "importo_mln": 13.78,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "989602060B"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero dell'Interno",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZIO DI SUPPORTO SPECIALISTICO PER L'ESPLETAMENTO DELLE VERIFICHE AMMINISTRATIVO-CONTABILI E LA GESTIONE DI RISCHI, FRODI E IRREGOLARITÀ PER IL PROGRAMMA NAZIONALE DEL FONDO SICUREZZA INTERNA 2021",
+      "importo": 12050692.0,
+      "importo_mln": 12.05,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI DI VERIFICA CONTABILE FINANZIARIA",
+      "pnrr": false,
+      "cig": "9886170591"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero della Salute",
+      "firm": "McKinsey",
+      "oggetto": "RAFFORZAMENTO DELLA COLLEZIONE, ELABORAZIONE E PRODUZIONE DI DATI A LIVELLO LOCALE",
+      "importo": 11899630.0,
+      "importo_mln": 11.9,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI REVISIONE STRATEGICA E PROGRAMMAZIONE DI SISTEMI O TECNOLOGIE DELL’INFORMAZIONE",
+      "pnrr": false,
+      "cig": "B29704D0D1"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero della Salute",
+      "firm": "EY",
+      "oggetto": "RAFFORZAMENTO DELLA COLLEZIONE, ELABORAZIONE E PRODUZIONE DI DATI A LIVELLO LOCALE",
+      "importo": 11899630.0,
+      "importo_mln": 11.9,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI REVISIONE STRATEGICA E PROGRAMMAZIONE DI SISTEMI O TECNOLOGIE DELL’INFORMAZIONE",
+      "pnrr": false,
+      "cig": "B29704D0D1"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero della Salute",
+      "firm": "KPMG",
+      "oggetto": "RAFFORZAMENTO DELLA COLLEZIONE, ELABORAZIONE E PRODUZIONE DI DATI A LIVELLO LOCALE",
+      "importo": 11899630.0,
+      "importo_mln": 11.9,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI REVISIONE STRATEGICA E PROGRAMMAZIONE DI SISTEMI O TECNOLOGIE DELL’INFORMAZIONE",
+      "pnrr": false,
+      "cig": "B29704D0D1"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "SERVIZI PER LA DIGITALIZZAZIONE DEI PROCESSI",
+      "importo": 10679671.0,
+      "importo_mln": 10.68,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "B2A443A3CE"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "Deloitte",
+      "oggetto": "SUPPORTO SPECIALISTICO AL POSIZIONAMENTO ISTITUZIONALE DEL COMANDO GENERALE DEL CORPO DELLE CAPITANERIE DI PORTO E SUPPORTO OPERATIVO, NONCHÉ PER L'ESPLETAMENTO DEGLI ADEMPIMENTI TECNICO-AMMINISTRATIV",
+      "importo": 10047688.0,
+      "importo_mln": 10.05,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI DI SUPPORTO TECNICO",
+      "pnrr": false,
+      "cig": "91596026AF"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "EY",
+      "oggetto": "CONTRATTO ESECUTIVO LOTTO 4 GARA SIAN",
+      "importo": 8952840.0,
+      "importo_mln": 8.95,
+      "procedura": "CONFRONTO COMPETITIVO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA PER LA GESTIONE DI PROGETTI",
+      "pnrr": false,
+      "cig": "910520198E"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZIO DI SUPPORTO SPECIALISTICO E ASSISTENZA TECNICA AL COMITATO CENTRALE PER L'ALBO NAZIONALE DEGLI AUTOTRASPORTATORI E AGLI UFFICI DI MOTORIZZAZIONE, PER LA VERIFICA DELLA REGOLARITA' DELLE IMPRE",
+      "importo": 8461780.0,
+      "importo_mln": 8.46,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI CONNESSI ALLA GESTIONE",
+      "pnrr": false,
+      "cig": "B109E86343"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZIO DI SUPPORTO SPECIALISTICO E ASSISTENZA TECNICA AL COMITATO CENTRALE PER L'ALBO NAZIONALE DEGLI AUTOTRASPORTATORI E AGLI UFFICI DI MOTORIZZAZIONE, PER LA VERIFICA DELLA REGOLARITA' DELLE IMPRE",
+      "importo": 8461780.0,
+      "importo_mln": 8.46,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI CONNESSI ALLA GESTIONE",
+      "pnrr": false,
+      "cig": "B109E86343"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero dell'Interno",
+      "firm": "KPMG",
+      "oggetto": "ADESIONE ALL'ACCORDO QUADRO PER L'AFFIDAMENTO DI SERVIZI DI SICUREZZA DA REMOTO, DI COMPLIANCE E CONTROLLO PER LE PUBBLICHE AMMINISTRAZIONI CENTRALI, LOTTO 1, ID 2296 - CIG MASTER 88846293CA, PER LA F",
+      "importo": 7499932.0,
+      "importo_mln": 7.5,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI GESTIONE CONNESSI ALL'INFORMATICA",
+      "pnrr": false,
+      "cig": "A04047EDE4"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "EY",
+      "oggetto": "SERVIZI DI SUPPORTO AL PROCUREMENT E SUPPORTO PROFESSIONALE SPECIALISTICO PER S.I.-D.T.",
+      "importo": 6668960.0,
+      "importo_mln": 6.67,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI DI ASSISTENZA TECNICA INFORMATICA",
+      "pnrr": false,
+      "cig": "740770578B"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Interno",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZIO DI SUPPORTO ALLE ATTIVITÀ DI INFORMAZIONE E COMUNICAZIONE DEL PROGRAMMA NAZIONALE FAMI 2021-2027",
+      "importo": 6620500.0,
+      "importo_mln": 6.62,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI DI EDITORIA",
+      "pnrr": false,
+      "cig": "93047770E4"
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero dell'Università e della Ricerca",
+      "firm": "EY",
+      "oggetto": "SERVIZI DI DIGITAL TRASFORMATION PER IL DISEGNO DEL MODELLO ORGANIZZATIVO E OPERATIVO DELLA UNITÀ DI MISSIONE DEL MUR, E DEI PROCESSI DIGITALI PER LA GESTIONE DI INVESTIMENTI AFFERENTI ALLA COMPONENTE",
+      "importo": 6600525.0,
+      "importo_mln": 6.6,
+      "procedura": "CONFRONTO COMPETITIVO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "9288231AB0"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "Deloitte",
+      "oggetto": "PROCEDURA DI GARA APERTA PER L'AFFIDAMENTO DEI SERVIZI DI ASSISTENZA TECNICA ALLE ATTIVITÀ DI MONITORAGGIO UNITARIO E DI SUPPORTO SPECIALISTICO FINALIZZATI ALLA PRESA IN CARICO, GESTIONE E MANUTENZION",
+      "importo": 6025480.0,
+      "importo_mln": 6.03,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "B5C1EFFF77"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero dell'Ambiente",
+      "firm": "PwC",
+      "oggetto": "SVILUPPO E MESSA IN ESERCIZIO DEL SISTEMA INFORMATIVO PER LA GESTIONE ED IL MONITORAGGIO DELLE INFORMAZIONI E DEI PROCEDIMENTI AMBIENTALI",
+      "importo": 6000000.0,
+      "importo_mln": 6.0,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA IN SISTEMI INFORMATICI E ASSISTENZA TECNICA",
+      "pnrr": false,
+      "cig": "7418314A5D"
+    },
+    {
+      "anno": 2019,
+      "ministry": "Ministero dell'Istruzione",
+      "firm": "EY",
+      "oggetto": "SERVIZIO DI CONTROLLI DI I LIVELLO E COMUNICAZIONE",
+      "importo": 6000000.0,
+      "importo_mln": 6.0,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "8035140749"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero dell'Istruzione",
+      "firm": "EY",
+      "oggetto": "SERVIZI DI ASSISTENZA TECNICA PER LE AUTORITÀ DI GESTIONE E DI CERTIFICAZIONE PO 2014-202",
+      "importo": 5762915.0,
+      "importo_mln": 5.76,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "803273027F"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "KPMG",
+      "oggetto": "ACCORDO QUADRO PER L'AFFIDAMENTO DI SERVIZI DI SICUREZZA DA REMOTO, DI COMPLIANCE E CONTROLLO PER LE PUBBLICHE AMMINISTRAZIONI - LOTTO 1 SERVIZI DI SICUREZZA DA REMOTO",
+      "importo": 5600200.0,
+      "importo_mln": 5.6,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "PROGRAMMAZIONE DI SOFTWARE E SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "B5992F4A41"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero dell'Interno",
+      "firm": "KPMG",
+      "oggetto": "PR.384.023.B - SERVIZI DI ASSISTENZA SPECIALISTICA SUI PRODOTTI SW 'CA' TECHNOLOGIES",
+      "importo": 5086373.0,
+      "importo_mln": 5.09,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI GESTIONE CONNESSI ALL'INFORMATICA",
+      "pnrr": false,
+      "cig": "A02CA70360"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Istruzione",
+      "firm": "KPMG",
+      "oggetto": "STRATEGIA DELLA TRASFORMAZIONE DIGITALE",
+      "importo": 5000336.0,
+      "importo_mln": 5.0,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA PER LA GESTIONE DI PROGETTI",
+      "pnrr": false,
+      "cig": "B2ADE14A27"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "REINGEGNERIZZAZIONE SISTEMI APPLICATIVI COESIONE",
+      "importo": 4968972.0,
+      "importo_mln": 4.97,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI INFORMATICI: CONSULENZA, SVILUPPO DI SOFTWARE, INTERNET E SUPPORTO",
+      "pnrr": false,
+      "cig": "B9A5B54637"
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "LOTTO 6 - SERVIZI SPECIALISTICI DI SUPPORTO ALL'ORGANISMO NAZIONALE DI COORDINAMENTO - IGRUE",
+      "importo": 4809600.0,
+      "importo_mln": 4.81,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "89830539D6"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "PR.584.C - DIGITALIZZAZIONE DEI PROCESSI",
+      "importo": 4403992.0,
+      "importo_mln": 4.4,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "90503454F5"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Istruzione",
+      "firm": "KPMG",
+      "oggetto": "FORNITURA DI SERVIZI CLOUD IAAS E PAAS IN UN MODELLO DI EROGAZIONE PUBBLICO NONCHÉ PER LA PRESTAZIONE DI SERVIZI CONNESSI, SERVIZI PROFESSIONALI DI SUPPORTO ALL'ADOZIONE DEL CLOUD, SERVIZI PROFESSIONA",
+      "importo": 4400375.0,
+      "importo_mln": 4.4,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA IN SISTEMI INFORMATICI E ASSISTENZA TECNICA",
+      "pnrr": false,
+      "cig": "9116471DD9"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "SERVIZI APPLICATIVI IN OTTICA CLOUD E L'AFFIDAMENTO DI SERVIZI DI DEMAND E PMO PER LE PUBBLICHE AMMINISTRAZIONI CENTRALI",
+      "importo": 4250127.0,
+      "importo_mln": 4.25,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI INFORMATICI: CONSULENZA, SVILUPPO DI SOFTWARE, INTERNET E SUPPORTO",
+      "pnrr": false,
+      "cig": "B9B56D84E0"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero dell'Università e della Ricerca",
+      "firm": "EY",
+      "oggetto": "SERVIZI APPLICATIVI IN OTTICA CLOUD E PMO 2 PAC",
+      "importo": 4098360.0,
+      "importo_mln": 4.1,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI INFORMATICI: CONSULENZA, SVILUPPO DI SOFTWARE, INTERNET E SUPPORTO",
+      "pnrr": false,
+      "cig": "B9AD10ECDF"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SERVIZI APPLICATIVI PER L'UFFICIO PER IL COORDINAMENTO E LA PIANIFICAZIONE DELLE FORZE DI POLIZIA - SISFOR PLUS",
+      "importo": 4056785.0,
+      "importo_mln": 4.06,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI PROGRAMMAZIONE DI SOFTWARE DI SISTEMI E DI UTENTE",
+      "pnrr": false,
+      "cig": "A05BB6C542"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero dell'Interno",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZIO DI SUPPORTO VOLTO A RAFFORZARE L'EMPOWERMENT DELLE PREFETTURE-UU.TT. G. PER LA REALIZZAZIONE DI INTERVENTI SUL TERRITORIO PER LA GESTIONE DEL FENOMENO MIGRATORIO DA ATTIVARE ATTRAVERSO FONDI ",
+      "importo": 3660000.0,
+      "importo_mln": 3.66,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "PROGETTAZIONE E REALIZZAZIONE DI RICERCA E SVILUPPO",
+      "pnrr": false,
+      "cig": "98784567C5"
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZIO DI IDEAZIONE E REALIZZAZIONE DI CAMPAGNE DI COMUNICAZIONE DELL'ALBO NAZIONALE DEGLI AUTOTRASPORTATORI",
+      "importo": 3500000.0,
+      "importo_mln": 3.5,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI DI CAMPAGNE PUBBLICITARIE",
+      "pnrr": false,
+      "cig": "86679667D2"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "ADESIONE ALL'ACCORDO QUADRO PER L'AFFIDAMENTO DI SERVIZI DI DIGITAL TRANSFORMATION PER LE PA LOTTO 2 - 'SERVIZI PER LA DIGITALIZZAZIONE DEI PROCESSI'-SUB-INVESTIMENTO 2.3.1. 'INVESTIMENTI IN ISTRUZION",
+      "importo": 3006241.0,
+      "importo_mln": 3.01,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": true,
+      "cig": "955359974B"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Istruzione",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZI DI SUPPORTO ALL'ADOZIONE DEL CLOUD",
+      "importo": 3004000.0,
+      "importo_mln": 3.0,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA IN SISTEMI INFORMATICI E ASSISTENZA TECNICA",
+      "pnrr": false,
+      "cig": "B469BF955D"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Istruzione",
+      "firm": "EY",
+      "oggetto": "SERVIZI DI SUPPORTO ALL'ADOZIONE DEL CLOUD",
+      "importo": 3004000.0,
+      "importo_mln": 3.0,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA IN SISTEMI INFORMATICI E ASSISTENZA TECNICA",
+      "pnrr": false,
+      "cig": "B469BF955D"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Ambiente",
+      "firm": "EY",
+      "oggetto": "SERVIZI DI DIGITAL TRANSFORMATION",
+      "importo": 3000000.0,
+      "importo_mln": 3.0,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": true,
+      "cig": "B2BA1841E0"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Ambiente",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZI DI DIGITAL TRANSFORMATION",
+      "importo": 3000000.0,
+      "importo_mln": 3.0,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": true,
+      "cig": "B2BA1841E0"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZI CLOUD ENABLING A SUPPORTO DEL DTD",
+      "importo": 2999120.0,
+      "importo_mln": 3.0,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA IN SISTEMI INFORMATICI E ASSISTENZA TECNICA",
+      "pnrr": false,
+      "cig": "B4780C1136"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZI DI CLOUD ENABLING PER IL DTD",
+      "importo": 2999120.0,
+      "importo_mln": 3.0,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA IN SISTEMI INFORMATICI E ASSISTENZA TECNICA",
+      "pnrr": false,
+      "cig": "B46B8A91D4"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero dell'Interno",
+      "firm": "PwC",
+      "oggetto": "REALIZZAZIONE DEL SISTEMA INFORMATIVO ERA (ELECTRONIC REPORTING AUTOMATION)",
+      "importo": 2795993.0,
+      "importo_mln": 2.8,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI PROGRAMMAZIONE DI SOFTWARE PER INTERNET E INTRANET",
+      "pnrr": false,
+      "cig": "76663811BD"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero dell'Interno",
+      "firm": "KPMG",
+      "oggetto": "AFFIDAMENTO DI SERVIZI DI SICUREZZA DA REMOTO, DI COMPLIANCE E CONTROLLO PER LE PUBBLICHE AMMINISTRAZIONI CENTRALI",
+      "importo": 2677150.0,
+      "importo_mln": 2.68,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI GESTIONE CONNESSI ALL'INFORMATICA",
+      "pnrr": true,
+      "cig": "A0004B1FE7"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Università e della Ricerca",
+      "firm": "KPMG",
+      "oggetto": "TRANSIZIONE DIGITALE",
+      "importo": 2506240.0,
+      "importo_mln": 2.51,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA PER LA GESTIONE DI PROGETTI",
+      "pnrr": false,
+      "cig": "B2B1C58C41"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SERVIZIO DI SUPPORTO SPECIALISTICO PER LA CHIUSURA DEL PROGRAMMA NAZIONALE FONDO SICUREZZA INTERNA 2014-2020",
+      "importo": 2500790.0,
+      "importo_mln": 2.5,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "9881468D58"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "SERVIZI DI SUPPORTO SPECIALISTICO E ASSISTENZA TECNICA ALL'OI-DFP DEL PON 'GOV' 2014-2020 E DEL RELATIVO PROGRAMMA COMPLEMENTARE - CHIUSURA PON 'GOV' E ATTUAZIONE POC - SERVIZI COMPLEMENTARI EX ART. 5",
+      "importo": 2459016.0,
+      "importo_mln": 2.46,
+      "procedura": "PROCEDURA NEGOZIATA SENZA PREVIA PUBBLICAZIONE",
+      "cpv": "SERVIZI DI CONSULENZA PER LA GESTIONE DI PROGETTI",
+      "pnrr": false,
+      "cig": "A02AD4516A"
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero della Salute",
+      "firm": "PwC",
+      "oggetto": "INTELLERA CE LOTTO1-INTELLERA",
+      "importo": 2305900.0,
+      "importo_mln": 2.31,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "9028468F79"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "SERVIZI PER LA DIGITALIZZAZIONE DEI PROCESSI",
+      "importo": 2212540.0,
+      "importo_mln": 2.21,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "B2A495E1CE"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero dell'Ambiente",
+      "firm": "PwC",
+      "oggetto": "LOTTO 3 SPC - SVILUPPO SISTEMA INFORMATIVO PER LA GESTIONE ED IL MONITORAGGIO DELLE INFORMAZIONI E DEI PROCEDIMENTI AMBIENTALI",
+      "importo": 2000000.0,
+      "importo_mln": 2.0,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA IN SISTEMI INFORMATICI E ASSISTENZA TECNICA",
+      "pnrr": false,
+      "cig": "75009836FC"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "PwC",
+      "oggetto": "REALIZZAZIONE PORTALE WEB E GESTIONE DEI CONTENUTI",
+      "importo": 1999718.0,
+      "importo_mln": 2.0,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "PACCHETTI SOFTWARE PER L'ELABORAZIONE DI PAGINE WEB",
+      "pnrr": false,
+      "cig": "7416357B65"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SERVIZI APPLICATIVI PER LA PIATTAFORMA DI TRACCIABILITÀ DELLE ARMI SITAM",
+      "importo": 1967177.0,
+      "importo_mln": 1.97,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI PROGRAMMAZIONE DI SOFTWARE DI SISTEMI E DI UTENTE",
+      "pnrr": false,
+      "cig": "A05BB45513"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "PIATTAFORMA ASSUNZIONI CAPCOE",
+      "importo": 1924284.0,
+      "importo_mln": 1.92,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI INFORMATICI: CONSULENZA, SVILUPPO DI SOFTWARE, INTERNET E SUPPORTO",
+      "pnrr": false,
+      "cig": "B625B0974F"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SERVIZI APPLICATIVI PER LA REALIZZAZIONE DEL SOFTWARE PER LA GESTIONE DEI MAGAZZINI VECA",
+      "importo": 1852993.0,
+      "importo_mln": 1.85,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI PROGRAMMAZIONE DI SOFTWARE DI SISTEMI E DI UTENTE",
+      "pnrr": true,
+      "cig": "A05B9BBFEC"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "CONTRATTO ESECUTIVO IN ACCORDO QUADRO CONSIP LOTTO 1 - SERVIZI DI DIGITAL TRASFORMATION - STRATEGIA DELLA TRASFORMAZIONE DIGITALE PER IL DTD",
+      "importo": 1832430.0,
+      "importo_mln": 1.83,
+      "procedura": "CONFRONTO COMPETITIVO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "A01FCD793E"
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "Deloitte",
+      "oggetto": "AFFIDAMENTO AI SENSI DELL'ART. 57, COMMA 5, LETT. A) DEL D. LGS. N. 163/2006 SERVIZI DI SUPPORTO PER LA REALIZZAZIONE E LA GESTIONE DEL SISTEMA DI MONITORAGGIO UNITARIO (SMU) PON/PAC/FSC 2014-2020 DEL",
+      "importo": 1777662.0,
+      "importo_mln": 1.78,
+      "procedura": "PROCEDURA NEGOZIATA SENZA PREVIA PUBBLICAZIONE",
+      "cpv": "SERVIZI DI BANCHE DATI A VALORE AGGIUNTO",
+      "pnrr": false,
+      "cig": "81202881A5"
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "LOTTO 1 - DEFINIZIONE DELLA STRATEGIA DELLA TRASFORMAZIONE DIGITALE",
+      "importo": 1690090.0,
+      "importo_mln": 1.69,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "9191894EE0"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZI DI BENCHMARK PER IL DIPARTIMENTO DELLE FINANZE 1 - MEF - ID 2620",
+      "importo": 1650000.0,
+      "importo_mln": 1.65,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI DI CONSULENZA PER ANALISI ECONOMICHE",
+      "pnrr": false,
+      "cig": "96943048BB"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "McKinsey",
+      "oggetto": "PIATTAFORMA BUSINESS MATCHING",
+      "importo": 1639400.0,
+      "importo_mln": 1.64,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI PROGRAMMAZIONE DI SOFTWARE DI SISTEMI E DI UTENTE",
+      "pnrr": false,
+      "cig": "A032D8EEA6"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZI DI DEMAND MANAGEMENT FINALIZZATI ALLA DEFINIZIONE, RACCOLTA E ORGANIZZAZIONE DELLE ESIGENZE PROGETTUALI E DI EVOLUZIONE DEI PROCESSI CONNESSE AI SERVIZI APPLICATIVI",
+      "importo": 1605405.0,
+      "importo_mln": 1.61,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA PER LA GESTIONE DI PROGETTI",
+      "pnrr": false,
+      "cig": "B70B5643DF"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "EY",
+      "oggetto": "PIANO FABBISOGNI II LOTTO 4 SIAN",
+      "importo": 1599585.0,
+      "importo_mln": 1.6,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA IN SISTEMI INFORMATICI E ASSISTENZA TECNICA",
+      "pnrr": false,
+      "cig": "B60FA3E504"
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "PwC",
+      "oggetto": "CERTIFICAZIONE SPESE ORGANISMI PAGATORI FEAGA E FEARS. ESERCIZI FINANZIARI 2022 E 2023",
+      "importo": 1540984.0,
+      "importo_mln": 1.54,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI DI CONTABILITÀ E REVISIONE DEI CONTI",
+      "pnrr": false,
+      "cig": "8763461CC8"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "SVILUPPO E MANUTENZIONE SOFTWARE PROGETTO CPT",
+      "importo": 1507122.0,
+      "importo_mln": 1.51,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI INFORMATICI: CONSULENZA, SVILUPPO DI SOFTWARE, INTERNET E SUPPORTO",
+      "pnrr": false,
+      "cig": "B9AC3EB5A5"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZI PROFESSIONALI TECNICI E DI SUPPORTO ALL'ADOZIONE DEL CLOUD PER LE PUBBLICHE AMMINISTRAZIONI - LOTTO 1",
+      "importo": 1500000.0,
+      "importo_mln": 1.5,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA IN SISTEMI INFORMATICI E ASSISTENZA TECNICA",
+      "pnrr": false,
+      "cig": "B3E5A743B4"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "Deloitte",
+      "oggetto": "FORNITURA SERVIZI",
+      "importo": 1493800.0,
+      "importo_mln": 1.49,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI INFORMATICI: CONSULENZA, SVILUPPO DI SOFTWARE, INTERNET E SUPPORTO",
+      "pnrr": false,
+      "cig": "B492A839E5"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero dell'Interno",
+      "firm": "McKinsey",
+      "oggetto": "SERVIZI APPLICATIVI IN OTTICA CLOUD",
+      "importo": 1401000.0,
+      "importo_mln": 1.4,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI PROGRAMMAZIONE DI SOFTWARE DI SISTEMI E DI UTENTE",
+      "pnrr": false,
+      "cig": "B786A98A94"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero del Turismo",
+      "firm": "KPMG",
+      "oggetto": "AFFIDAMENTO DI SERVIZI DI SICUREZZADA REMOTO, DI COMPLIANCE E CONTROLLO",
+      "importo": 1399322.0,
+      "importo_mln": 1.4,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI PROGRAMMAZIONE DI SOFTWARE APPLICATIVI",
+      "pnrr": false,
+      "cig": "B64F93633B"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "KPMG",
+      "oggetto": "L1.S3 DISEGNO DELLA MAPPA DEI SERVIZI DIGITALI DELL'AMMINISTRAZIONE",
+      "importo": 1396984.0,
+      "importo_mln": 1.4,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "B5399432E5"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "ADESIONE AQ ID 2405 AT - LOTTO 2",
+      "importo": 1379942.0,
+      "importo_mln": 1.38,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "9866074DD0"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "AFFIDAMENTO DEI SERVIZI PER LA REALIZZAZIONE DI ATTIVITÀ DI CAPACITY BUILDING, FORMAZIONE E SUPPORTO TECNICO-SPECIALISTICO STRUMENTALI ALL'INVESTIMENTO 1.7 COMPETENZE DIGITALI DI BASE MISSIONE 1, COMP",
+      "importo": 1293291.0,
+      "importo_mln": 1.29,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA PER LA GESTIONE DI PROGETTI",
+      "pnrr": true,
+      "cig": "B2D0F369E2"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "Deloitte",
+      "oggetto": "AFFIDAMENTO DEI SERVIZI PER LA REALIZZAZIONE DI ATTIVITÀ DI CAPACITY BUILDING, FORMAZIONE E SUPPORTO TECNICO-SPECIALISTICO STRUMENTALI ALL'INVESTIMENTO 1.7 COMPETENZE DIGITALI DI BASE MISSIONE 1, COMP",
+      "importo": 1293291.0,
+      "importo_mln": 1.29,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA PER LA GESTIONE DI PROGETTI",
+      "pnrr": true,
+      "cig": "B2D0F369E2"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SERVIZI APPLICATIVI PER IL PROGETTO DI FLEET MANAGEMENT",
+      "importo": 1235178.0,
+      "importo_mln": 1.24,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI PROGRAMMAZIONE DI SOFTWARE DI SISTEMI E DI UTENTE",
+      "pnrr": true,
+      "cig": "A05C264576"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "CONTRATTO ESECUTIVO IN ACCORDO QUADRO CONSIP LOTTO 2 - SERVIZI DI DIGITAL TRASFORMATION - DIGITALIZZAZIONE DEI PROCESSI PER IL DTD",
+      "importo": 1214829.0,
+      "importo_mln": 1.21,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "A01FCDDE30"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "SERVIZI APPLICATIVI IN OTTICA CLOUD",
+      "importo": 1209564.0,
+      "importo_mln": 1.21,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI INFORMATICI: CONSULENZA, SVILUPPO DI SOFTWARE, INTERNET E SUPPORTO",
+      "pnrr": false,
+      "cig": "B9B8F0B567"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "ADESIONE ALL'ACCORDO QUADRO STIPULATO IN DATA 1 DICEMBRE 2022, REPERTORIO N. 105, TRA IL MEF-RGS- IGRUE E KPMG ADVISORY S.P.A., AVENTE AD OGGETTO 'SERVIZI DI SUPPORTO E ASSISTENZA TECNICA PER L'ESERCI",
+      "importo": 1202400.0,
+      "importo_mln": 1.2,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "9846475039"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "SERVIZI PER LA DIGITALIZZAZIONE DEI PROCESSI",
+      "importo": 1183602.0,
+      "importo_mln": 1.18,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "B2A65D4E63"
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "EY",
+      "oggetto": "SERVIZI DI DIGITAL TRANFORMATION",
+      "importo": 1155387.0,
+      "importo_mln": 1.16,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "9029412A7E"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "ASSISTENZA TECNICA AQ 2405",
+      "importo": 1154518.0,
+      "importo_mln": 1.15,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "B824EDAA01"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "KPMG",
+      "oggetto": "SERVIZI DI STRATEGIA DELLA TRASFORMAZIONE DIGITALE",
+      "importo": 1150843.0,
+      "importo_mln": 1.15,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "B2CB804531"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "ADESIONE ACCORDO QUADRO ID 2405 ASSISTENZA TECNICA LOTTO 1",
+      "importo": 1111225.0,
+      "importo_mln": 1.11,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "9865976CF1"
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero dell'Interno",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZIO DI SUPPORTO SPECIALISTICO PER LA RICOGNIZIONE DEI PRODOTTI REALIZZATI DAI PROGETTI FINANZIATI DAL FONDO ASILO MIGRAZIONE E INTEGRAZIONE 2014-2020 E DEFINIZIONE DI UN REPORT DELLE ATTIVITÀ SVO",
+      "importo": 1100000.0,
+      "importo_mln": 1.1,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "PROGETTAZIONE E REALIZZAZIONE DI RICERCA E SVILUPPO",
+      "pnrr": false,
+      "cig": "8951140A65"
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "PwC",
+      "oggetto": "REALIZZAZIONE DEL PORTALE PER LA GESTIONE DEI DATI DEL PERSONALE DEL CORPO - HUMAN RESOURCE (HR).",
+      "importo": 1095988.0,
+      "importo_mln": 1.1,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI SVILUPPO DI SOFTWARE PERSONALIZZATI",
+      "pnrr": false,
+      "cig": "8392775108"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "SERVIZI SPECIALISTICI DI SUPPORTO ALLE GRANDI AUTORITÀ DI AUDIT PER IL FONDO FESR - LOTTO 2",
+      "importo": 1081064.0,
+      "importo_mln": 1.08,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "B8ABD26F3A"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "SERVIZI SPECIALISTICI DI SUPPORTO ALLE GRANDI AUTORITA DI AUDIT PER IL FONDO FSE ID 2405. ORDINE DI ACQUISTO N. 2 LOTTO 1",
+      "importo": 1081064.0,
+      "importo_mln": 1.08,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "B8ABE024CA"
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero della Salute",
+      "firm": "PwC",
+      "oggetto": "CONTRATTO ESECUTIVO PER SERVIZI DI SUPPORTO, GESTIONE E SVILUPPO DEL SISTEMA INFORMATIVO SANITARIO NAZIONALE",
+      "importo": 1065504.0,
+      "importo_mln": 1.07,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI REVISIONE STRATEGICA E PROGRAMMAZIONE DI SISTEMI O TECNOLOGIE DELLU2019INFORMAZIONE",
+      "pnrr": false,
+      "cig": "8483485948"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "McKinsey",
+      "oggetto": "IMPLEMENTAZIONE DELL'INTELLIGENZA ARTIFICIALE NEL PORTALE LA TUA PA",
+      "importo": 1065350.0,
+      "importo_mln": 1.07,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI INFORMATICI: CONSULENZA, SVILUPPO DI SOFTWARE, INTERNET E SUPPORTO",
+      "pnrr": false,
+      "cig": "B79BEE09AD"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "EY",
+      "oggetto": "DIGITAL TRANSFORMATION - STRATEGIA DELLA TRASFORMAZIONE DIGITALE",
+      "importo": 1051190.0,
+      "importo_mln": 1.05,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "PACCHETTI SOFTWARE PER SISTEMA OPERATIVO IN RETE",
+      "pnrr": false,
+      "cig": "92771588F6"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "KPMG",
+      "oggetto": "DIGITAL TRASFORMATION",
+      "importo": 999750.0,
+      "importo_mln": 1.0,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA PER LA GESTIONE DI PROGETTI",
+      "pnrr": false,
+      "cig": "B2D2EE4E76"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "ASSISTENZA TECNICA AQ 2405",
+      "importo": 988862.0,
+      "importo_mln": 0.99,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "B823FCEF3A"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "McKinsey",
+      "oggetto": "SERVIZI DI SVILUPPO E MANUTENZIONE PER IL PORTALE GIOVANI2030",
+      "importo": 948600.0,
+      "importo_mln": 0.95,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI PROGRAMMAZIONE DI SOFTWARE DI SISTEMI E DI UTENTE",
+      "pnrr": false,
+      "cig": "9982266A7D"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Interno",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZI SUPPLEMENTARI -'SUPPORTO SPECIALISTICO PER LA RICOGNIZIONE DEI PRODOTTI REALIZZATI DAI PROGETTI FINANZIATI DAL FONDO ASILO MIGRAZIONE E INTEGRAZIONE 2014-2020 E DEFINIZIONE DI UN REPORT DELLE ",
+      "importo": 904200.0,
+      "importo_mln": 0.9,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "PROGETTAZIONE E REALIZZAZIONE DI RICERCA E SVILUPPO",
+      "pnrr": false,
+      "cig": "9537341EC2"
+    },
+    {
+      "anno": 2019,
+      "ministry": "Ministero dell'Interno",
+      "firm": "PwC",
+      "oggetto": "PON.2018.B.3 - PON LEGALITÀ 2014-202 - ASSE I - AZIONE 1.1.2.A - PROGETTO ARGO PANOPTES - REALIZZAZIONE PIATTAFORMA DI INTEGRAZIONE, GESTIONE E CORRELAZIONE DEI DATI DI RILEVAMENTO E RICONOSCIMENTO TA",
+      "importo": 901330.0,
+      "importo_mln": 0.9,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI PROGRAMMAZIONE DI SOFTWARE DI SISTEMI E DI UTENTE",
+      "pnrr": false,
+      "cig": "80446807F1"
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZIO DI ASSISTENZA TECNICA ALLE ATTIVITÀ DI MONITORAGGIO. PASSIM3",
+      "importo": 879145.0,
+      "importo_mln": 0.88,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI DI SUPPORTO TECNICO",
+      "pnrr": false,
+      "cig": "86874885E3"
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZIO DI ASSISTENZA TECNICA ALLE ATTIVITÀ DI MONITORAGGIO. PASSIM3",
+      "importo": 879145.0,
+      "importo_mln": 0.88,
+      "procedura": "PROCEDURA APERTA",
+      "cpv": "SERVIZI DI SUPPORTO TECNICO",
+      "pnrr": false,
+      "cig": "86874885E3"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SERVIZI DI SUPPORTO AL PUNTO DI CONTATTO NAZIONALE DELLO EUROPEAN MIGRATION NETWORK (EMN)",
+      "importo": 845000.0,
+      "importo_mln": 0.84,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "PROGETTAZIONE E REALIZZAZIONE DI RICERCA E SVILUPPO",
+      "pnrr": false,
+      "cig": "955200216A"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero del Turismo",
+      "firm": "KPMG",
+      "oggetto": "ADESIONE ACCORDO QUADRO",
+      "importo": 819528.0,
+      "importo_mln": 0.82,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI INFORMATICI",
+      "pnrr": false,
+      "cig": "B31FE03283"
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero dell'Istruzione",
+      "firm": "PwC",
+      "oggetto": "REALIZZAZIONE E GESTIONE DI PORTALI E SERVIZI ON-LINE IN FAVORE DELLE PA.",
+      "importo": 814091.0,
+      "importo_mln": 0.81,
+      "procedura": "CONFRONTO COMPETITIVO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI SVILUPPO DI SOFTWARE PERSONALIZZATI",
+      "pnrr": false,
+      "cig": "82282842C3"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero della Cultura",
+      "firm": "KPMG",
+      "oggetto": "SERVIZI SPECIALISTICI DI SUPPORTO ALLA DIGITAL TRANSFORMATION",
+      "importo": 799800.0,
+      "importo_mln": 0.8,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI SUPPORTO PER IL GOVERNO",
+      "pnrr": false,
+      "cig": "B34B82C658"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "Deloitte",
+      "oggetto": "ACQUISIZIONE SERVIZI SUPPORTO ADOZIONE CLOUD E PMO",
+      "importo": 799000.0,
+      "importo_mln": 0.8,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA IN SISTEMI INFORMATICI E ASSISTENZA TECNICA",
+      "pnrr": false,
+      "cig": "B45D3DD2AF"
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero dell'Interno",
+      "firm": "PwC",
+      "oggetto": "SERVIZI DI REALIZZAZIONE E GESTIONE DI PORTALI E SERVIZI ON-LINE",
+      "importo": 772279.0,
+      "importo_mln": 0.77,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI GESTIONE DATI",
+      "pnrr": false,
+      "cig": "83417516B0"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero della Salute",
+      "firm": "PwC",
+      "oggetto": "EROGAZIONE DEI SERVIZI DI SUPPORTO PER IL POTENZIAMENTO DATI A LIVELLO LOCALE",
+      "importo": 730000.0,
+      "importo_mln": 0.73,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "9160359761"
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "PwC",
+      "oggetto": "REALIZZAZIONE SISTEMA VMS E MODULO PWU (PORTALE WEB UNICO).",
+      "importo": 661421.0,
+      "importo_mln": 0.66,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI SVILUPPO DI SOFTWARE PERSONALIZZATI",
+      "pnrr": false,
+      "cig": "8397088839"
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZIO CERTIFICAZIONE CONTI OP",
+      "importo": 650000.0,
+      "importo_mln": 0.65,
+      "procedura": "PROCEDURA NEGOZIATA SENZA PREVIA INDIZIONE DI GARA (SETTORI SPECIALI)",
+      "cpv": "SERVIZI DI CONTABILITÀ E REVISIONE DEI CONTI",
+      "pnrr": false,
+      "cig": "8359307E59"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero dell'Interno",
+      "firm": "PwC",
+      "oggetto": "PR.500-ELABORAZIONE MASSIVA POSIZIONI ASSICURATIVE INPS",
+      "importo": 642960.0,
+      "importo_mln": 0.64,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI PROGRAMMAZIONE DI SOFTWARE DI GESTIONE DI SISTEMI",
+      "pnrr": false,
+      "cig": "7500353F15"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SERVIZI DI DIGITAL TRANSFORMATION PER LE PA - LOTTO 1 - DEFINIZIONE DELLA STRATEGIA DELLA TRASFORMAZIONE DIGITALE",
+      "importo": 631280.0,
+      "importo_mln": 0.63,
+      "procedura": "CONFRONTO COMPETITIVO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "95177610D9"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "PR.584. B - STRATEGIA DELLA TRASFORMAZIONE DIGITALE",
+      "importo": 587534.0,
+      "importo_mln": 0.59,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "90503866CA"
+    },
+    {
+      "anno": 2021,
+      "ministry": "Ministero della Salute",
+      "firm": "PwC",
+      "oggetto": "GARA PER L'AFFIDAMENTO DEI SERVIZI DI SUPPORTO, GESTIONE E SVILUPPO DEL SISTEMA INFORMATIVO SANITARIO NAZIONALE PER IL MINISTERO DELLA SALUTE - ID 1974 CONTRATTO ESECUTIVO - LOTTO 1",
+      "importo": 574090.0,
+      "importo_mln": 0.57,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "8919088840"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "KPMG",
+      "oggetto": "SERVIZI PROFESSIONALI SUPPORTO UMGP",
+      "importo": 573700.0,
+      "importo_mln": 0.57,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "B3F10BF288"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero del Turismo",
+      "firm": "KPMG",
+      "oggetto": "DIGITAL TRANSFORMATION PER GLI OBIETTIVI DEL PIANO DI SVILUPPO E COESIONE 2014-2020 DEL MINISTERO DEL TURISMO (PSC TURISMO14-20)",
+      "importo": 531600.0,
+      "importo_mln": 0.53,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA IN SISTEMI INFORMATICI E ASSISTENZA TECNICA",
+      "pnrr": false,
+      "cig": "B8AD2A1927"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero della Giustizia",
+      "firm": "EY",
+      "oggetto": "DIGITALIZZAZIONE DEI PROCESSI",
+      "importo": 530700.0,
+      "importo_mln": 0.53,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "9362920DFF"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero del Turismo",
+      "firm": "KPMG",
+      "oggetto": "SUPPORTO SPECIALISTICO BDSR",
+      "importo": 529300.0,
+      "importo_mln": 0.53,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "B33081A815"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Università e della Ricerca",
+      "firm": "KPMG",
+      "oggetto": "ADESIONE ACCORDO QUADRO FORNITURA DEI SERVIZI CLOUD IAAS E PAAS - LOTTO 2",
+      "importo": 504666.0,
+      "importo_mln": 0.5,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA IN SISTEMI INFORMATICI E ASSISTENZA TECNICA",
+      "pnrr": false,
+      "cig": "9383858C95"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "KPMG",
+      "oggetto": "ADESIONE ALL'ACCORDO QUADRO DI SERVIZI SPECIALISTICI DI SUPPORTO ALLA DIGITAL TRANSFORMATION PER LA PUBBLICA AMMINISTRAZIONE",
+      "importo": 501208.0,
+      "importo_mln": 0.5,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA PER LA GESTIONE DI PROGETTI",
+      "pnrr": false,
+      "cig": "B7A8148788"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "AQ 2405 LOTTO 6 II ORDINE SERVIZI DI SUPPORTO E ASSISTENZA TECNICA PER L'ESERCIZIO E LO SVILUPPO DELLA FUNZIONE DI SORVEGLIANZA E AUDIT DEI PROGRAMMI COFINANZIATI DALL'UNIONE EUROPEA",
+      "importo": 499835.0,
+      "importo_mln": 0.5,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "B8BBD05606"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero della Salute",
+      "firm": "EY",
+      "oggetto": "ADESIONE ALL'ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016, AVENTE AD OGGETTO L'AFFIDAMENTO DEI SERVIZI DI SIPPORTO LOTTO 6 ID 2365",
+      "importo": 449102.0,
+      "importo_mln": 0.45,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI REVISIONE STRATEGICA E PROGRAMMAZIONE DI SISTEMI O TECNOLOGIE DELLU2019INFORMAZIONE",
+      "pnrr": true,
+      "cig": "9814322AB7"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero della Salute",
+      "firm": "McKinsey",
+      "oggetto": "ADESIONE ALL'ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016, AVENTE AD OGGETTO L'AFFIDAMENTO DEI SERVIZI DI SIPPORTO LOTTO 6 ID 2365",
+      "importo": 449102.0,
+      "importo_mln": 0.45,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI REVISIONE STRATEGICA E PROGRAMMAZIONE DI SISTEMI O TECNOLOGIE DELLU2019INFORMAZIONE",
+      "pnrr": true,
+      "cig": "9814322AB7"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero della Salute",
+      "firm": "KPMG",
+      "oggetto": "ADESIONE ALL'ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016, AVENTE AD OGGETTO L'AFFIDAMENTO DEI SERVIZI DI SIPPORTO LOTTO 6 ID 2365",
+      "importo": 449102.0,
+      "importo_mln": 0.45,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI REVISIONE STRATEGICA E PROGRAMMAZIONE DI SISTEMI O TECNOLOGIE DELLU2019INFORMAZIONE",
+      "pnrr": true,
+      "cig": "9814322AB7"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "Deloitte",
+      "oggetto": "SECONDO ORDINATIVO PER IL SERVIZIO DI SUPPORTO SPECIALISTICO. PASSIM 4.",
+      "importo": 409676.0,
+      "importo_mln": 0.41,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI SUPPORTO TECNICO",
+      "pnrr": false,
+      "cig": "A05A90559E"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero dell'Interno",
+      "firm": "PwC",
+      "oggetto": "PR.447.18.A - PROGETTO CRAIM",
+      "importo": 400124.0,
+      "importo_mln": 0.4,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI PROGRAMMAZIONE DI SOFTWARE DI GESTIONE DI SISTEMI",
+      "pnrr": false,
+      "cig": "766351222A"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "KPMG",
+      "oggetto": "DISEGNO DELLA MAPPA DEI SERVIZI DIGITALI DELL'AMMINISTRAZIONE",
+      "importo": 399900.0,
+      "importo_mln": 0.4,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA PER LA GESTIONE DI PROGETTI",
+      "pnrr": false,
+      "cig": "B63A3C70B2"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "EY",
+      "oggetto": "PROGETTO BIG DATA",
+      "importo": 368751.0,
+      "importo_mln": 0.37,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "94013374B8"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SERVIZI CONSISTENTI NELLA RIPETIZIONE DEI SERVIZI ANALOGHI (ART.63 COMMA 5 E ART.106 C 1 D.LGS 50/2016)",
+      "importo": 350000.0,
+      "importo_mln": 0.35,
+      "procedura": "PROCEDURA NEGOZIATA SENZA PREVIA PUBBLICAZIONE",
+      "cpv": "ALTRI SERVIZI",
+      "pnrr": false,
+      "cig": "B25AB5E6FB"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Interno",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZI SUPPLEMENARI - RELATIVI AL 'SERVIZIO SUPPORTO VOLTO A RAFFORZARE L'EMPOWERMENT DELLE PREFETTURE - UU.TT.G.'",
+      "importo": 328161.0,
+      "importo_mln": 0.33,
+      "procedura": "AFFIDAMENTO DIRETTO A SOCIETA' RAGGRUPPATE/CONSORZIATE O CONTROLLATE NELLE CONCESSIONI E NEI PARTENARIATI",
+      "cpv": "SERVIZI DI RICERCA",
+      "pnrr": false,
+      "cig": "94912066F6"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "ORDINE DI ACQUISTO CONTRATTO ATTUATIVO SERVIZI DI CUI AL LOTTO 1 - ID2405",
+      "importo": 270266.0,
+      "importo_mln": 0.27,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI AUDIT INTERNO",
+      "pnrr": false,
+      "cig": "B401656173"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "ORDINE DI ACQUISTO CONTRATTO ATTUATIVO SERVIZI DI CUI AL LOTTO 1 - ID2405",
+      "importo": 270266.0,
+      "importo_mln": 0.27,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA DI VALUTAZIONE",
+      "pnrr": false,
+      "cig": "B401656173"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "ORDINE DI ACQUISTO CONTRATTO ATTUATIVO SERVIZI DI CUI AL LOTTO 1 - ID2405",
+      "importo": 270266.0,
+      "importo_mln": 0.27,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "B401656173"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "ORDINE DI ACQUISTO CONTRATTO ATTUATIVO SERVIZI DI CUI AL LOTTO 2 - ID2405",
+      "importo": 270226.0,
+      "importo_mln": 0.27,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI AUDIT INTERNO",
+      "pnrr": false,
+      "cig": "B40167AF24"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "ORDINE DI ACQUISTO CONTRATTO ATTUATIVO SERVIZI DI CUI AL LOTTO 2 - ID2405",
+      "importo": 270226.0,
+      "importo_mln": 0.27,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA DI VALUTAZIONE",
+      "pnrr": false,
+      "cig": "B40167AF24"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "ORDINE DI ACQUISTO CONTRATTO ATTUATIVO SERVIZI DI CUI AL LOTTO 2 - ID2405",
+      "importo": 270226.0,
+      "importo_mln": 0.27,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA",
+      "pnrr": false,
+      "cig": "B40167AF24"
+    },
+    {
+      "anno": 2019,
+      "ministry": "Ministero degli Affari Esteri",
+      "firm": "PwC",
+      "oggetto": "SERVIZI DI ASSISTENZA, MANUTENZIONE CORRETTIVA, HELP DESK DEDICATI ALL'UTENZA, GESTIONE E SVILUPPO DELLE PIATTAFORME 'EXTENDER', 'GESTIONE EVENTI', 'INFOMERCATIESTERI', 'INVEST YOUR TALENT IN ITALY' E",
+      "importo": 270000.0,
+      "importo_mln": 0.27,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI GESTIONE CONNESSI ALL'INFORMATICA",
+      "pnrr": false,
+      "cig": "786554443E"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "KPMG",
+      "oggetto": "ACCORDO QUADRO SERVIZI SPECIALISTICI DI SUPPORTO ALLA DIGITAL TRANSFORMATION» PER LA PUBBLICA AMMINISTRAZIONE - L1.S3 DISEGNO DELLA MAPPA DEI SERVIZI DIGITALI",
+      "importo": 258602.0,
+      "importo_mln": 0.26,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA PER LA GESTIONE DI PROGETTI",
+      "pnrr": false,
+      "cig": "B46B2FA120"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero del Turismo",
+      "firm": "KPMG",
+      "oggetto": "AFFIDAMENTO DI SERVIZI DI DIGITAL TRANSFORMATION PER LE PUBBLICHE AMMINISTRAZIONI",
+      "importo": 245390.0,
+      "importo_mln": 0.25,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA PER LA GESTIONE DI PROGETTI",
+      "pnrr": false,
+      "cig": "B2E7766656"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero delle Imprese e del Made in Italy",
+      "firm": "PwC",
+      "oggetto": "SPS LOTTO 4",
+      "importo": 244574.0,
+      "importo_mln": 0.24,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI ASSISTENZA INFORMATICA",
+      "pnrr": false,
+      "cig": "7629580098"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "SERVIZIO L1.S1 DISEGNO DELLA STRATEGIA DIGITALE, AQ DT 2",
+      "importo": 240400.0,
+      "importo_mln": 0.24,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "B4E2EFD5B3"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero della Cultura",
+      "firm": "Deloitte",
+      "oggetto": "LOTTO 5 PROROGA FORNITURA DI SERVIZI RELATIVI ALLA GESTIONE INTEGRATA DELLA SALUTE E DELLA SICUREZZA SUI LUOGHI DI LAVORO RIGUARDA TUTTE LE SEDI DEL MINISTERO, CENTRALI E PERIFERICHE, COMPRESI GLI UFF",
+      "importo": 239731.0,
+      "importo_mln": 0.24,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA PER LA PROTEZIONE E IL CONTROLLO DI RISCHI",
+      "pnrr": false,
+      "cig": "74639072E8"
+    },
+    {
+      "anno": 2019,
+      "ministry": "Ministero dell'Interno",
+      "firm": "PwC",
+      "oggetto": "185/010/018-REALIZZAZIONE SISTEMA INFORMATICO PER LA CONTABILIZZAZIONE DEI PERMESSI SINDACALI",
+      "importo": 179524.0,
+      "importo_mln": 0.18,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SISTEMA DI GESTIONE DI BASE DATI",
+      "pnrr": false,
+      "cig": "8129942061"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero degli Affari Esteri",
+      "firm": "PwC",
+      "oggetto": "SERVIZI DI REALIZZAZIONE E GESTIONE PORTALI E SERVIZI ON-LINE PORTALE IMMOBILI MAECI",
+      "importo": 174145.0,
+      "importo_mln": 0.17,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SVILUPPO DI SOFTWARE PER TRATTAMENTO TRANSAZIONALE E SOFTWARE PERSONALIZZATI",
+      "pnrr": false,
+      "cig": "7442238913"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZIO DI SEGRETERIA TECNICA E PROJECT MANAGEMENT PER L'ATTUAZIONE DEL PROGETTO PASSIM 2",
+      "importo": 140000.0,
+      "importo_mln": 0.14,
+      "procedura": "AFFIDAMENTO IN ECONOMIA - COTTIMO FIDUCIARIO",
+      "cpv": "SERVIZI DI ASSISTENZA TECNICA",
+      "pnrr": false,
+      "cig": "7543545A41"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero del Turismo",
+      "firm": "EY",
+      "oggetto": "ACQUISIZIONE DI SERVIZI DI SUPPORTO SPECIALISTICO PER L'ANALISI E LA VALUTAZIONE DI PROGETTUALITÀ STRATEGICHE NEL SETTORE TURISMO",
+      "importo": 139000.0,
+      "importo_mln": 0.14,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA DI VALUTAZIONE",
+      "pnrr": false,
+      "cig": "B91A9838F3"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "KPMG",
+      "oggetto": "SUPPORTO SPECIALISTICO E SERVIZIO DI ASSISTENZA TECNICA FINALIZZATO ALL'ESPLETAMENTO DELLE VERIFICHE FINANZIATE NELL'AMBITO DELL'AVVISO PUBBLICO PER LA SELEZIONE ED IL SOSTEGNO DI INIZIATIVE DELLE IMP",
+      "importo": 138750.0,
+      "importo_mln": 0.14,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA DI SISTEMI",
+      "pnrr": false,
+      "cig": "B2AECAD607"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Interno",
+      "firm": "KPMG",
+      "oggetto": "LICENZE SOFTWARE PER UN SISTEMA DI DIGITAL FORENSICS E WORKSTATION PER ESIGENZE DELLA DIREZIONE CENTRALE PER LA POLIZIA SCIENTIFICA E LA SICUREZZA CIBERNETICA",
+      "importo": 138000.0,
+      "importo_mln": 0.14,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI GESTIONE E SUPPORTO DI RETI DI TRASMISSIONE DATI",
+      "pnrr": false,
+      "cig": "B47BF3179E"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero dell'Interno",
+      "firm": "Deloitte",
+      "oggetto": "CICLI DI FORMAZIONE PER ANALISI MALWARE PER I C-LAB E UFO DELLA POLIZIA POSTALE E PER LA SICUREZZA CIBERNETICA",
+      "importo": 137000.0,
+      "importo_mln": 0.14,
+      "procedura": "PROCEDURA RISTRETTA",
+      "cpv": "CORSI INFORMATICI",
+      "pnrr": false,
+      "cig": "B68C7B9483"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "KPMG",
+      "oggetto": "SUPPORTO SPECIALISTICO PER ATTIVITÀ DI CONTROLLO E ASSISTENZA TECNICA DI INVESTIMENTI PUBBLICI",
+      "importo": 135000.0,
+      "importo_mln": 0.14,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA E ASSISTENZA INFORMATICA",
+      "pnrr": false,
+      "cig": "B936F635A0"
+    },
+    {
+      "anno": 2019,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SUPPORTO SPECIALISTICO E DI COMUNICAZIONE PER LA STAZIONE APPALTANTE",
+      "importo": 135000.0,
+      "importo_mln": 0.14,
+      "procedura": "AFFIDAMENTO IN ECONOMIA - COTTIMO FIDUCIARIO",
+      "cpv": "SERVIZI DI FORMAZIONE SPECIALISTICA",
+      "pnrr": false,
+      "cig": "79402494C2"
+    },
+    {
+      "anno": 2019,
+      "ministry": "Ministero dell'Interno",
+      "firm": "KPMG",
+      "oggetto": "SERVIZIO DI ASSISTENZA TECNICA, AMMINISTRATIVA, CONTABILE PER LA GESTIONE E LA RENDICONTAZIONE DEL PROGETTO PON",
+      "importo": 135000.0,
+      "importo_mln": 0.14,
+      "procedura": "AFFIDAMENTO IN ECONOMIA - COTTIMO FIDUCIARIO",
+      "cpv": "SERVIZI DI CONTABILITÀ E REVISIONE DEI CONTI",
+      "pnrr": false,
+      "cig": "7814691704"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Interno",
+      "firm": "KPMG",
+      "oggetto": "FORNITURA SOFTWARE SPECIFICO PENTERA PER ESIGENZE DELLA DIREZIONE CENTRALE PER LA POLIZIA SCIENTIFICA E LA SICUREZZA CIBERNETICA",
+      "importo": 135000.0,
+      "importo_mln": 0.14,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI GESTIONE E SUPPORTO DI RETI DI TRASMISSIONE DATI",
+      "pnrr": false,
+      "cig": "B47CB74601"
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "EY",
+      "oggetto": "PROCEDURA AI SENSI DELL'ART. 36 COMMA 2, LETT. B) DEL D.LGS. 50/2016, PER L'AFFIDAMENTO DI UN SERVIZIO DI ASSISTENZA TECNICA PER L'ATTUAZIONE DEI PROGETTI FINANZIATI NELL'AMBITO DEL PIANO DI AZIONE CO",
+      "importo": 133000.0,
+      "importo_mln": 0.13,
+      "procedura": "PROCEDURA NEGOZIATA PER AFFIDAMENTI SOTTO SOGLIA",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "8340661332"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero dell'Interno",
+      "firm": "KPMG",
+      "oggetto": "SERVIZIO DI SUPPORTO ALLA DEFINIZIONE DI NUOVI PROCESSI DI INDAGINE ATTRAVERSO L'IMPLEMENTAZIONE DELLA PIATTAFORMA",
+      "importo": 130000.0,
+      "importo_mln": 0.13,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI CONNESSI AL SOFTWARE",
+      "pnrr": false,
+      "cig": "929125060D"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero dell'Interno",
+      "firm": "KPMG",
+      "oggetto": "AFFIDAMENTO DI UN SERVIZIO DI ASSISTENZA TECNICO-AMMINISTRATIVA A SUPPORTO DELLA PIANIFICAZIONE, GESTIONE E RENDICONTAZIONE DI UN PROGETTO",
+      "importo": 129000.0,
+      "importo_mln": 0.13,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "B3F4FC009B"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero della Difesa",
+      "firm": "PwC",
+      "oggetto": "SERVIZI PROFESSIONALI PER ASSISTENZA SPECIALISTICA PER LA MANUTENZIONE E L'EVOLUZIONE DEL PORTALE INTRANET DELL'AREA T.A. DELL'A.D.",
+      "importo": 128481.0,
+      "importo_mln": 0.13,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "PACCHETTI SOFTWARE PER L'ELABORAZIONE DI PAGINE WEB",
+      "pnrr": false,
+      "cig": "7657629B59"
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero dell'Interno",
+      "firm": "Deloitte",
+      "oggetto": "IPA2019 SERVIZIO DI SUPPORTO SPECIALISTICO",
+      "importo": 122615.0,
+      "importo_mln": 0.12,
+      "procedura": "PROCEDURA COMPETITIVA CON NEGOZIAZIONE",
+      "cpv": "SERVIZI DI ASSISTENZA TECNICA",
+      "pnrr": false,
+      "cig": "8400097B53"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero della Cultura",
+      "firm": "Deloitte",
+      "oggetto": "LOTTO 2 PROROGA FORNITURA DI SERVIZI RELATIVI ALLA GESTIONE INTEGRATA DELLA SALUTE E DELLA SICUREZZA SUI LUOGHI DI LAVORO RIGUARDA TUTTE LE SEDI DEL MINISTERO, CENTRALI E PERIFERICHE, COMPRESI GLI UFF",
+      "importo": 115494.0,
+      "importo_mln": 0.12,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI CONSULENZA PER LA PROTEZIONE E IL CONTROLLO DI RISCHI",
+      "pnrr": false,
+      "cig": "7463846092"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero degli Affari Esteri",
+      "firm": "Deloitte",
+      "oggetto": "AFFIDAMENTO DI SERVIZI DI AUDITING",
+      "importo": 107000.0,
+      "importo_mln": 0.11,
+      "procedura": "PROCEDURA NEGOZIATA SENZA PREVIA INDIZIONE DI GARA (SETTORI SPECIALI)",
+      "cpv": "SERVIZI DI AUDIT INTERNO",
+      "pnrr": false,
+      "cig": "7524027F7C"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero della Giustizia",
+      "firm": "EY",
+      "oggetto": "SERVIZIO DI CONSULENZA E ASSISTENZA TECNICA NELL'AMBITO DEL PROGRAMMA OPERATIVO NAZIONALE GOVERNANCE E CAPACITÀ ISTITUZIONALE 2014-2020 E DEL RELATIVO PROGRAMMA OPERATIVO COMPLEMENTARE",
+      "importo": 99804.0,
+      "importo_mln": 0.1,
+      "procedura": "PROCEDURA DI GARA",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "B4409D799D"
+    },
+    {
+      "anno": 2019,
+      "ministry": "Ministero della Difesa",
+      "firm": "PwC",
+      "oggetto": "REINGEGNERIZZAZIONE DEL SISTEMA INFORMATIVO LAVORO DIFESA (SILDIFESA) PER IL RICOLLOCAMENTO PROFESSIONALE DEI VOLONTARI CONGEDATI",
+      "importo": 97544.0,
+      "importo_mln": 0.1,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "PACCHETTI SOFTWARE PER L'ELABORAZIONE DI PAGINE WEB",
+      "pnrr": false,
+      "cig": "8048873C1C"
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero della Difesa",
+      "firm": "PwC",
+      "oggetto": "REALIZZAZIONE DI UN SOFTWARE PER LA GENERAZIONE DI QUESTIONARI A RISPOSTA MULTIPLA, DA IMPIEGARE NELLE PROVE DI PRESELEZIONE/SELEZIONE DEL PERSONALE MILITARE NELL",
+      "importo": 93648.0,
+      "importo_mln": 0.09,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI SVILUPPO DI SOFTWARE PERSONALIZZATI",
+      "pnrr": false,
+      "cig": "8272494601"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero dell'Agricoltura",
+      "firm": "KPMG",
+      "oggetto": "SISTEMA DI RENDICONTAZIONE ECONOMICA DEGLI IPPODROMI E SISTEMA DEI CONTROLLI",
+      "importo": 90000.0,
+      "importo_mln": 0.09,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "B7E255B390"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero dell'Interno",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZIO DI ASSISTENZA TECNICA NELLA REDAZIONE DEGLI ACCORDI DI COLLABORAZIONE, NELLA REDAZIONE DELLA DOCUMENTAZIONE E NELL'ESPLETAMENTO DELLE PROCEDURE DI AFFIDAMENTO DIRETTO, NONCHÉ NELL'ATTIVITÀ DI",
+      "importo": 89600.0,
+      "importo_mln": 0.09,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "B9B4AFBAA8"
+    },
+    {
+      "anno": 2018,
+      "ministry": "Ministero dell'Interno",
+      "firm": "EY",
+      "oggetto": "SERVIZI ANALOGHI CONTRATTO PRINCIPALE SERVICE PROVIDER EMN",
+      "importo": 88775.0,
+      "importo_mln": 0.09,
+      "procedura": "PROCEDURA NEGOZIATA SENZA PREVIA INDIZIONE DI GARA (SETTORI SPECIALI)",
+      "cpv": "PROGETTAZIONE E REALIZZAZIONE DI RICERCA E SVILUPPO",
+      "pnrr": false,
+      "cig": "7680043BF7"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "Deloitte",
+      "oggetto": "AFFIDAMENTO DIRETTO PER L'ANALISI, STUDIO, RICERCA NORMATIVA ED ESAME DEGLI ASPETTI GIURIDICI E DI ATTUAZIONE AMMINISTRATIVA CON RIFERIMENTO ALLE MISURE PROGETTATE DAL DIPARTIMENTO",
+      "importo": 80000.0,
+      "importo_mln": 0.08,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA GIURIDICA",
+      "pnrr": false,
+      "cig": "B7330B182A"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "Deloitte",
+      "oggetto": "PRIMO ORDINATIVO PER IL SERVIZIO DI SUPPORTO SPECIALISTICO.",
+      "importo": 77858.0,
+      "importo_mln": 0.08,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI SUPPORTO TECNICO",
+      "pnrr": false,
+      "cig": "A023E4BCBA"
+    },
+    {
+      "anno": 2022,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "EY",
+      "oggetto": "SUPPORTO TECNICO SPECIALISTICO",
+      "importo": 74200.0,
+      "importo_mln": 0.07,
+      "procedura": "PROCEDURA NEGOZIATA PER AFFIDAMENTI SOTTO SOGLIA",
+      "cpv": "SERVIZI DI SUPPORTO TECNICO",
+      "pnrr": false,
+      "cig": "9415156086"
+    },
+    {
+      "anno": 2020,
+      "ministry": "Ministero della Salute",
+      "firm": "PwC",
+      "oggetto": "RACCOLTA E PREDISPOSIZIONE DATI EMERGENZA CORONAVIRUS PER PUBBLICAZIONE SU PORTALE ISTITUZIONALE",
+      "importo": 71962.0,
+      "importo_mln": 0.07,
+      "procedura": "AFFIDAMENTO DIRETTO IN ADESIONE AD ACCORDO QUADRO/CONVENZIONE",
+      "cpv": "SERVIZI DI TRATTAMENTO DATI",
+      "pnrr": false,
+      "cig": "8192793AA7"
+    },
+    {
+      "anno": 2021,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "SERVIZI DI SUPPORTO SPECIALISTICO PER LA PREDISPOSIZIONE DI UN DOCUMENTO DI MASTERPLAN AL FINE DI ARMONIZZARE E INDIRIZZARE LE INIZIATIVE DI TRASFORMAZIONE DIGITALE IN CORSO E DI INTERESSE DEL DIPARTI",
+      "importo": 64000.0,
+      "importo_mln": 0.06,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "87456334A9"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Ministero delle Infrastrutture e dei Trasporti",
+      "firm": "KPMG",
+      "oggetto": "SERVIZIO DI SUPPORTO TECNICO FINALIZZATO ALL'ATTIVITÀ DI ASSEVERAZIONE DI CUI ALL'ART. 2 COMMA 8- SEXIES DEL DECRETO-LEGGE N. 35 DEL 31 MARZO 2023",
+      "importo": 60000.0,
+      "importo_mln": 0.06,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA DI VALUTAZIONE",
+      "pnrr": false,
+      "cig": "B467E2EF5A"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero dell'Interno",
+      "firm": "Deloitte",
+      "oggetto": "RINNOVO DELLA FORNITURA DELLE LICENZE - HEROKU - 1 DYNO UNIT - SKU 200000147 - SKU 200012768",
+      "importo": 48000.0,
+      "importo_mln": 0.05,
+      "procedura": "AFFIDAMENTO DIRETTO A SOCIETA' IN HOUSE",
+      "cpv": "SERVIZI DI PROGRAMMAZIONE DI SOFTWARE DI GESTIONE DELLE LICENZE",
+      "pnrr": false,
+      "cig": "B515528B08"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero della Giustizia",
+      "firm": "EY",
+      "oggetto": "SERVIZIO ASSISTENZA TECNICA SUPPORTO E CONSULENZA GESTIONALE PROGETTO EJNITA 3.0",
+      "importo": 39600.0,
+      "importo_mln": 0.04,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA DI GESTIONE FINANZIARIA",
+      "pnrr": false,
+      "cig": "B906808DA9"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "EY",
+      "oggetto": "SERVIZI CONSULENZA TECNICA DI PARTE",
+      "importo": 39500.0,
+      "importo_mln": 0.04,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA GIURIDICA",
+      "pnrr": false,
+      "cig": "B7EFD580CB"
+    },
+    {
+      "anno": 2023,
+      "ministry": "Ministero dell'Economia e delle Finanze",
+      "firm": "KPMG",
+      "oggetto": "SERVIZIO CONSULENZIALE PROGETTO DR",
+      "importo": 30000.0,
+      "importo_mln": 0.03,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONSULENZA PER LA SCELTA DI ATTREZZATURE INFORMATICHE",
+      "pnrr": false,
+      "cig": "972807449F"
+    },
+    {
+      "anno": 2024,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "Deloitte",
+      "oggetto": "SERVIZIO SPECIALISTICO PER LA GESTIONE AMMINISTRATIVO – CONTABILE, COMPRENSIVA DEGLI ADEMPIMENTI PREVIDENZIALI, FISCALI E CONTABILI CONNESSI E CONSEGUENTI, DEGLI ESPERTI A SUPPORTO DEL DIPARTIMENTO PE",
+      "importo": 30000.0,
+      "importo_mln": 0.03,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI CONTABILITÀ, REVISIONE DEI CONTI E SERVIZI FISCALI",
+      "pnrr": false,
+      "cig": "B3A40F7308"
+    },
+    {
+      "anno": 2020,
+      "ministry": "Presidenza del Consiglio dei Ministri",
+      "firm": "KPMG",
+      "oggetto": "SERVIZI DI SUPPORTO SPECIALISTICO PER LA GESTIONE AMMINISTRATIVO - CONTABILE DEGLI ESPERTI ALLE DIPENDENZE DEL DIPARTIMENTO COMPRENSIVA DEGLI ADEMPIMENTI PREVIDENZIALI, FISCALI E CONTABILI CONNESSI E ",
+      "importo": 28000.0,
+      "importo_mln": 0.03,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI GESTIONE DEL PERSONALE, ESCLUSI I SERVIZI DI COLLOCAMENTO E MESSA A DISPOSIZIONE",
+      "pnrr": false,
+      "cig": "8239644155"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero degli Affari Esteri",
+      "firm": "EY",
+      "oggetto": "SERVIZIO DI ELABORAZIONE DEL C.D.: PIANO ECONOMICO FINANZIARIO PER AFFIDAMENTO DEL SERVIZIO AUSILIARIO PER IL RILASCIO DEI VISTI INGRESSO",
+      "importo": 19151.0,
+      "importo_mln": 0.02,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI DI ASSISTENZA PROFESSIONALE",
+      "pnrr": false,
+      "cig": "B878460F56"
+    },
+    {
+      "anno": 2025,
+      "ministry": "Ministero dell'Interno",
+      "firm": "KPMG",
+      "oggetto": "SERVIZI SPECIALISTICI DI SUPPORTO ALLA DIGITAL TRASFORMATION PER LA PA",
+      "importo": 0.0,
+      "importo_mln": 0.0,
+      "procedura": "AFFIDAMENTO DIRETTO",
+      "cpv": "SERVIZI GENERALI DI CONSULENZA GESTIONALE",
+      "pnrr": false,
+      "cig": "B5CC4B9286"
+    }
+  ]
+}
