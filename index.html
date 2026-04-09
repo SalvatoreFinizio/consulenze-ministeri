@@ -759,7 +759,7 @@ function renderHero() {
   const l = t().hero;
   const cards = [
     { number: fmtEur(s.total_mln), label: l.total, gradient: 'linear-gradient(135deg, #3b82f6, #8b5cf6)' },
-    { number: fmtNum(s.n_contracts), label: l.contracts, gradient: 'linear-gradient(135deg, #8b5cf6, #ec4899)' },
+    { number: fmtNum(s.n_awards || s.n_contracts), label: l.contracts, gradient: 'linear-gradient(135deg, #8b5cf6, #ec4899)' },
     { number: s.n_ministries, label: l.ministries, gradient: 'linear-gradient(135deg, #ec4899, #f97316)' },
     { number: s.n_firms, label: l.firms, gradient: 'linear-gradient(135deg, #f97316, #eab308)' },
     { number: `${s.year_min}–${s.year_max}`, label: l.period, gradient: 'linear-gradient(135deg, #22c55e, #3b82f6)' },

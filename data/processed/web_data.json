@@ -3,6 +3,7 @@
     "total_eur": 693061963.8900001,
     "total_mln": 693.1,
     "n_contracts": 167,
+    "n_awards": 183,
     "n_ministries": 15,
     "n_firms": 5,
     "firms_list": [
@@ -595,7 +596,7 @@
     },
     {
       "ministry": "Ministero della Salute",
-      "top_firm": "McKinsey",
+      "top_firm": "EY",
       "share_pct": 29.5,
       "total_mln": 41.8
     }
