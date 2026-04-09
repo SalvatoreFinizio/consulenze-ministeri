@@ -1304,6 +1304,8 @@
     "projects": [
       {
         "cig": "94251610E9",
+        "name": "Sanità Digitale — Sistemi Informativi Clinico-Assistenziali",
+        "ref": "SIGEF 2202, Lotto 6",
         "category": "Sanità Digitale",
         "oggetto": "CONTRATTO ESECUTIVO IN ADESIONE ALL'ACCORDO QUADRO CONSIP AVENTE AD OGGETTO L'AFFIDAMENTO DI SERVIZI APPLICATIVI E L'AFFIDAMENTO DI SERVIZI DI SUPPORTO IN AMBITO 'SANITÀ DIGITALE - SISTEMI INFORMATIVI",
         "importo_mln": 21.5,
@@ -1320,6 +1322,8 @@
       },
       {
         "cig": "B2A39512F3",
+        "name": "Digitalizzazione dei processi — PCM",
+        "ref": null,
         "category": "Digital Transformation",
         "oggetto": "SERVIZI PER LA DIGITALIZZAZIONE DEI PROCESSI",
         "importo_mln": 15.3,
@@ -1334,7 +1338,9 @@
       },
       {
         "cig": "955359974B",
-        "category": "Competenze Digitali",
+        "name": "Digital Transformation PA — Capitale Umano",
+        "ref": "M1C1, Sub-inv. 2.3.1",
+        "category": "Digital Transformation",
         "oggetto": "ADESIONE ALL'ACCORDO QUADRO PER L'AFFIDAMENTO DI SERVIZI DI DIGITAL TRANSFORMATION PER LE PA LOTTO 2 - 'SERVIZI PER LA DIGITALIZZAZIONE DEI PROCESSI'-SUB-INVESTIMENTO 2.3.1. 'INVESTIMENTI IN ISTRUZION",
         "importo_mln": 3.0,
         "firms": [
@@ -1348,6 +1354,8 @@
       },
       {
         "cig": "B2BA1841E0",
+        "name": "Digital Transformation — Min. Ambiente",
+        "ref": null,
         "category": "Digital Transformation",
         "oggetto": "SERVIZI DI DIGITAL TRANSFORMATION",
         "importo_mln": 3.0,
@@ -1363,6 +1371,8 @@
       },
       {
         "cig": "A0004B1FE7",
+        "name": "Cybersecurity e Compliance PA Centrali",
+        "ref": null,
         "category": "Cybersecurity",
         "oggetto": "AFFIDAMENTO DI SERVIZI DI SICUREZZA DA REMOTO, DI COMPLIANCE E CONTROLLO PER LE PUBBLICHE AMMINISTRAZIONI CENTRALI",
         "importo_mln": 2.7,
@@ -1377,6 +1387,8 @@
       },
       {
         "cig": "A05B9BBFEC",
+        "name": "Software Magazzini VECA — Min. Interno",
+        "ref": null,
         "category": "Software Development",
         "oggetto": "SERVIZI APPLICATIVI PER LA REALIZZAZIONE DEL SOFTWARE PER LA GESTIONE DEI MAGAZZINI VECA",
         "importo_mln": 1.9,
@@ -1391,6 +1403,8 @@
       },
       {
         "cig": "B2D0F369E2",
+        "name": "Competenze Digitali di Base",
+        "ref": "M1C1, Inv. 1.7, Misure 1.7.1–1.7.2",
         "category": "Competenze Digitali",
         "oggetto": "AFFIDAMENTO DEI SERVIZI PER LA REALIZZAZIONE DI ATTIVITÀ DI CAPACITY BUILDING, FORMAZIONE E SUPPORTO TECNICO-SPECIALISTICO STRUMENTALI ALL'INVESTIMENTO 1.7 COMPETENZE DIGITALI DI BASE MISSIONE 1, COMP",
         "importo_mln": 1.3,
@@ -1406,6 +1420,8 @@
       },
       {
         "cig": "A05C264576",
+        "name": "Fleet Management — Min. Interno",
+        "ref": null,
         "category": "Software Development",
         "oggetto": "SERVIZI APPLICATIVI PER IL PROGETTO DI FLEET MANAGEMENT",
         "importo_mln": 1.2,
@@ -1420,6 +1436,8 @@
       },
       {
         "cig": "9814322AB7",
+        "name": "Servizi di Supporto IT — Sanità",
+        "ref": "Lotto 6, ID 2365",
         "category": "Servizi di Supporto IT",
         "oggetto": "ADESIONE ALL'ACCORDO QUADRO, AI SENSI DEL D.LGS. 50/2016, AVENTE AD OGGETTO L'AFFIDAMENTO DEI SERVIZI DI SIPPORTO LOTTO 6 ID 2365",
         "importo_mln": 0.4,
