@@ -497,9 +497,6 @@ body::before {
   <!-- PNRR hero cards -->
   <div class="hero-grid" id="pnrrHero" style="margin-bottom:1.5rem"></div>
 
-  <!-- Callout box -->
-  <div id="pnrrCallout" class="chart-card" style="border-left:3px solid var(--orange);margin-bottom:1.5rem"></div>
-
   <!-- PNRR by firm + by ministry side by side -->
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem">
     <div class="chart-card"><div style="position:relative;height:220px"><canvas id="chartPnrrFirm"></canvas></div></div>
@@ -997,12 +994,6 @@ function renderPnrr() {
       <div class="stat-label">${c.label}</div>
     </div>`
   ).join('');
-
-  // Callout
-  document.getElementById('pnrrCallout').innerHTML = `
-    <div style="font-weight:700;color:var(--orange);margin-bottom:.5rem;font-size:.95rem">${l.callout_title}</div>
-    <div style="color:var(--muted);font-size:.88rem;line-height:1.7">${l.callout_text}</div>
-  `;
 
   // By firm
   charts.pnrrFirm = new Chart(document.getElementById('chartPnrrFirm'), {
