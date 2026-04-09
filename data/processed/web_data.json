@@ -1297,9 +1297,9 @@
       }
     ],
     "consip": {
-      "consip_mln": 25.0,
-      "direct_mln": 25.4,
-      "consip_pct": 50.0
+      "consip_mln": 30.7,
+      "direct_mln": 19.6,
+      "consip_pct": 61.0
     },
     "projects": [
       {
@@ -1373,7 +1373,7 @@
         "shared": false,
         "ministry": "Ministero dell'Interno",
         "anno": 2023,
-        "consip": false
+        "consip": true
       },
       {
         "cig": "A05B9BBFEC",
@@ -1387,7 +1387,7 @@
         "shared": false,
         "ministry": "Ministero dell'Interno",
         "anno": 2024,
-        "consip": false
+        "consip": true
       },
       {
         "cig": "B2D0F369E2",
@@ -1416,7 +1416,7 @@
         "shared": false,
         "ministry": "Ministero dell'Interno",
         "anno": 2024,
-        "consip": false
+        "consip": true
       },
       {
         "cig": "9814322AB7",
